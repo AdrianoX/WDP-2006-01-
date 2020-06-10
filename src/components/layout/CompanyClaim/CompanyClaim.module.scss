@@ -33,7 +33,7 @@
 
       .cartIcon {
         background-color: $primary;
-        width: 55px;
+        width: 90px;
         height: 50px;
         border-radius: 3px;
         display: flex;
@@ -42,12 +42,12 @@
         font-size: 20px;
 
         .icon {
-          margin-right: 5px;
+          margin-right: 48px;
         }
       }
 
       .cartCounter {
-        width: 28px;
+        width: 60px;
         height: 27px;
         border-radius: 14px;
         background-color: $header-bg;
@@ -60,6 +60,7 @@
         top: 50%;
         right: 0;
         transform: translate(50%, -50%);
+        margin-right: 20px;
       }
 
       &:hover {
