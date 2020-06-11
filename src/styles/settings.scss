@@ -1,11 +1,12 @@
 $base-padding: 24px;
 
-//COLORS
+/* COLOR PALETTE */
 $darkGray1: #292929;
 $darkGray2: #2a2a2a;
 $gray1: #363636;
 $gray2: #434343;
 $lightGray: #b6b6b6;
+$lightGray1: #a9a9a9;
 $orange: #d58e32;
 $lightSilver: #d8d8d8;
 $light: #e2e2e2;
@@ -14,17 +15,19 @@ $light2: #f4f5f7;
 $light3: #e0e3ed;
 $white: #ffffff;
 
-//main color settings
+/* Global color settings */
+$primary: $orange;
+
+$text-color: $darkGray2;
+$text-color-light: $white;
+
+/*Component color settings */
 $header-topbar-bg: $gray2;
 $header-bg: $gray1;
 
 $footer-claim-bg: $darkGray2;
 $footer-bg: $gray1;
-
-$primary: $orange;
-
-$text-color: $darkGray2;
-$text-color-light: $white;
+$footer-text: $lightGray1;
 
 $form-border-color: $darkGray1;
 
