@@ -9,7 +9,7 @@
     position: relative;
     padding: 80% 10px 0 10px;
     background: {
-      color: $photo-bg;
+      color: $productBox-photo-bg;
       size: contain;
       position: center;
       repeat: no-repeat;
@@ -55,7 +55,7 @@
 
   .line {
     margin: 0 10px;
-    border-bottom: 1px solid $line;
+    border-bottom: 1px solid $productBox-line;
     position: relative;
 
     &::before {
