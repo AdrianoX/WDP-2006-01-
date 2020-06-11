@@ -101,7 +101,7 @@ const Footer = ({ children }) => (
       <div className='container'>
         <div className='row align-items-center'>
           <div className='col-12 text-center'>
-            <p></p>
+            <p>asdasdasd</p>
           </div>
           <div
             className={
@@ -115,12 +115,12 @@ const Footer = ({ children }) => (
             <ul>
               <li>
                 <a href='#'>
-                  <FontAwesomeIcon icon={faTwitter}>Twitter</FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faTwitter}>Pinterest</FontAwesomeIcon>
                 </a>
               </li>
               <li>
                 <a href='#'>
-                  <FontAwesomeIcon icon={faFacebookF}>Facebook</FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faFacebookF}>Pinterest</FontAwesomeIcon>
                 </a>
               </li>
               <li>
