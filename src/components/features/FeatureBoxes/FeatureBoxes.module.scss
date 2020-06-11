@@ -3,3 +3,12 @@
 .root {
   padding: 5rem 0;
 }
+
+@media (max-width: 576px) {
+  .FeatureBox {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+  }
+}
