@@ -12,6 +12,47 @@
     align-items: center;
     position: relative;
 
+
+    .mainCategoryList {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      height: 100%;
+      width:100%;
+
+      .mainCategory {
+        display: block;
+        border: none;
+        margin: 0 60px;
+        left:-20%;
+        background-color: transparent;
+        top: 25%;
+      }
+
+      .secCategory a {
+        margin: 0 55px;
+      }
+
+
+      li {
+        display:none;
+        position: relative;
+        padding-left: 25px;
+        background-color: white ;
+        width: 119.5%;
+        height: 100%;
+        border: 1px solid $form-border-color;
+      }
+    }
+
+    .mainCategoryList:hover {
+      .secCategory {
+        display: block;
+        left:-19%;
+      }
+    }
+
+
     .icon:first-child {
       color: $primary;
       position: absolute;
