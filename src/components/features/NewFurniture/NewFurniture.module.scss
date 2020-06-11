@@ -11,6 +11,8 @@
 
     .heading {
       position: relative;
+      border-bottom: 4px solid #e2e2e2;
+      margin-bottom: 20px;
 
       h3 {
         color: $primary;
@@ -99,3 +101,9 @@
     }
   }
 }
+
+// @media (max-width: 575.98px) {
+//   .heading {
+//     margin-bottom: 20px;
+//   }
+//  }
