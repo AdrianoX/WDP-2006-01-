@@ -76,7 +76,6 @@
     justify-content: space-between;
     align-items: center;
   }
-
   &:hover {
     .buttons {
       visibility: visible;
@@ -84,5 +83,13 @@
     .price > div { 
     background-color: $primary;
     }
+  }
+  .oldPrice {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+    text-decoration-color: $text-color;
   }
 }
