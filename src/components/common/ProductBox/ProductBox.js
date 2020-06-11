@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -11,9 +10,9 @@ import {
 import { faStar as farStar, faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 
-const ProductBox = ({ name, price, promo, stars, compare, favorite }) => (
+const ProductBox = ({ name, price, promo, stars, compare, favorite, oldPrice, bgImageUrl }) => (
   <div className={styles.root}>
-    <div className={styles.photo}>
+    <div className={styles.photo} style={{ backgroundImage: bgImageUrl }}>
       {promo && <div className={styles.sale}>{promo}</div>}
       <div className={styles.buttons}>
         <Button variant='small'>Quick View</Button>
@@ -46,6 +45,7 @@ const ProductBox = ({ name, price, promo, stars, compare, favorite }) => (
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
+      {oldPrice && <div className={styles.oldPrice}>$ {oldPrice}</div>}
       <div className={styles.price}>
         <Button noHover variant='small'>
           $ {price}
@@ -59,10 +59,12 @@ ProductBox.propTypes = {
   children: PropTypes.node,
   name: PropTypes.string,
   price: PropTypes.number,
+  oldPrice: PropTypes.number,
   promo: PropTypes.string,
   stars: PropTypes.number,
   favorite: PropTypes.string,
   compare: PropTypes.string,
+  bgImageUrl: PropTypes.string,
 };
 
 export default ProductBox;
