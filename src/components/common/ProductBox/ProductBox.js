@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -46,11 +45,7 @@ const ProductBox = ({ name, price, promo, stars, oldPrice }) => (
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
-      {oldPrice ? (
-        <div className={styles.price}>
-          <span className={styles.oldPrice}>$ {oldPrice}</span>
-        </div>
-      ) : null}
+      {oldPrice && <div className={styles.oldPrice}>$ {oldPrice}</div>}
       <div className={styles.price}>
         <Button noHover variant='small'>
           $ {price}
