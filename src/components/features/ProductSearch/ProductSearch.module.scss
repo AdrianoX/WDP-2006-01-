@@ -21,17 +21,29 @@
 
     .icon:last-child {
       position: absolute;
-      right: 10px;
+      right: 5px;
       z-index: 0;
     }
 
     select {
+      --accentFg: #d58e32;
+      font-size: 14px;
+      color: #2a2a2a;
       -webkit-appearance: none;
-      border: 0;
-      background-color: transparent;
-      padding: 5px 30px 5px 35px;
-      position: relative;
-      z-index: 1;
+      appearance: none;
+      border: none;
+      outline: 0;
+      padding: 11px 25px 11px 35px;
+      background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+      background-size: 1px 100%, 20px 22px, 20px 22px, 20px 100%;
+      background-position: right 20px center, right bottom, right bottom, right bottom;
+    }
+
+    select:hover {
+      background-image: linear-gradient(var(--accentFg), var(--accentFg)),
+        linear-gradient(0deg, transparent 50%, var(--accentFg) 50%),
+        linear-gradient(0deg, transparent 50%, var(--accentFg) 50%),
+        linear-gradient(var(--accentFg) 50%, var(--accentFg) 50%);
     }
   }
 
