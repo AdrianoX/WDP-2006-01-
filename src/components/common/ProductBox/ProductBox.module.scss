@@ -68,7 +68,9 @@
       transform: translateX(-50%);
     }
   }
-
+.active {
+  background-color: #d58e32;
+}
   .actions {
     padding: 15px 10px 10px 10px;
     display: flex;
