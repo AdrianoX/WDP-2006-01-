@@ -31,6 +31,7 @@
     .buttons {
       display: flex;
       justify-content: space-between;
+      visibility: hidden;
     }
   }
 
@@ -75,7 +76,14 @@
     justify-content: space-between;
     align-items: center;
   }
-
+  &:hover {
+    .buttons {
+      visibility: visible;
+    }
+    .price > div { 
+    background-color: $primary;
+    }
+  }
   .oldPrice {
     display: inline-block;
     font-size: 18px;
