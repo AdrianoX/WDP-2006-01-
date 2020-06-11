@@ -12,7 +12,7 @@ const ProductSearch = () => (
       <FontAwesomeIcon className={styles.icon} icon={faListUl} />
       <ul className={styles.mainCategoryList}>
         <li className={styles.mainCategory}>
-          <a value='#'>Furniture</a>
+          <a value='#'>Select a category</a>
         </li>
         <li className={styles.secCategory}>
           <a value='#'> CHAIR</a>

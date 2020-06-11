@@ -30,16 +30,16 @@
       }
 
       .secCategory a {
-        margin: 0 55px;
+        margin: 0 35px;
       }
 
 
       li {
         display:none;
         position: relative;
-        padding-left: 25px;
+        // padding-left: 25px;
         background-color: white ;
-        width: 119.5%;
+        width: 116%;
         height: 100%;
         border: 1px solid $form-border-color;
       }
@@ -48,7 +48,8 @@
     .mainCategoryList:hover {
       .secCategory {
         display: block;
-        left:-19%;
+        left:-15.7%;
+        padding: 12px;
       }
     }
 
