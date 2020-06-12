@@ -12,6 +12,47 @@
     align-items: center;
     position: relative;
 
+
+    .mainCategoryList {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      height: 100%;
+      width:100%;
+
+      .mainCategory {
+        display: block;
+        border: none;
+        margin: 0 60px;
+        left:-20%;
+        background-color: transparent;
+        top: 25%;
+      }
+
+      .secCategory a {
+        margin: 0 55px;
+      }
+
+
+      li {
+        display:none;
+        position: relative;
+        padding-left: 25px;
+        background-color: white ;
+        width: 119.5%;
+        height: 100%;
+        border: 1px solid $form-border-color;
+      }
+    }
+
+    .mainCategoryList:hover {
+      .secCategory {
+        display: block;
+        left:-19%;
+      }
+    }
+
+
     .icon:first-child {
       color: $primary;
       position: absolute;
@@ -21,17 +62,29 @@
 
     .icon:last-child {
       position: absolute;
-      right: 10px;
+      right: 5px;
       z-index: 0;
     }
 
     select {
+      --accentFg: #d58e32;
+      font-size: 14px;
+      color: #2a2a2a;
       -webkit-appearance: none;
-      border: 0;
-      background-color: transparent;
-      padding: 5px 30px 5px 35px;
-      position: relative;
-      z-index: 1;
+      appearance: none;
+      border: none;
+      outline: 0;
+      padding: 11px 25px 11px 35px;
+      background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+      background-size: 1px 100%, 20px 22px, 20px 22px, 20px 100%;
+      background-position: right 20px center, right bottom, right bottom, right bottom;
+    }
+
+    select:hover {
+      background-image: linear-gradient(var(--accentFg), var(--accentFg)),
+        linear-gradient(0deg, transparent 50%, var(--accentFg) 50%),
+        linear-gradient(0deg, transparent 50%, var(--accentFg) 50%),
+        linear-gradient(var(--accentFg) 50%, var(--accentFg) 50%);
     }
   }
 
