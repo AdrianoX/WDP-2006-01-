@@ -3,7 +3,7 @@
 .root {
   background-color: $header-bg;
 
-  :global(.container) > :global(.row) {
+  :global(.container)> :global(.row) {
     height: 145px;
   }
 
@@ -71,3 +71,76 @@
     }
   }
 }
+
+@media (max-width: 320px) {
+  .root {
+    div{
+      bottom: 25%;
+    }
+
+    img {
+      margin: 0 125px 0 0;
+    }
+
+    .phoneNumber {
+      top: 70%;
+      p {
+        text-align: right;
+        font-size: 14px;
+      }
+    }
+
+    .cart {
+      bottom: 59%;
+    }
+  }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+  .root {
+    div{
+      bottom: 25%;
+    }
+
+    img {
+      margin: 0 180px 0 0;
+    }
+
+    .phoneNumber {
+      top: 70%;
+      p {
+        text-align: right;
+        font-size: 14px;
+      }
+    }
+
+    .cart {
+      bottom: 59%;
+    }
+  }
+}
+
+@media (min-width: 376px) and (max-width: 450px) {
+  .root {
+    div{
+      bottom: 25%;
+    }
+
+    img {
+      margin: 0 230px 0 0;
+    }
+
+    .phoneNumber {
+      top: 70%;
+      p {
+        text-align: right;
+        font-size: 14px;
+      }
+    }
+
+    .cart {
+      bottom: 59%;
+    }
+  }
+}
+
