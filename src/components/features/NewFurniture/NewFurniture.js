@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styles from './NewFurniture.module.scss';
+import SwipeAbleWrapper from '../../common/SwipeAbleWrapper/SwipeAbleWrapper';
 import ProductBox from '../../common/ProductBox/ProductBox';
 
 class NewFurniture extends React.Component {
@@ -9,6 +9,16 @@ class NewFurniture extends React.Component {
     activePage: 0,
     activeCategory: 'bed',
   };
+
+  leftAction() {
+    const newPage = this.state.activePage;
+    this.setState({ activePage: newPage - 1 });
+  }
+
+  rightAction() {
+    const newPage = this.state.activePage;
+    this.setState({ activePage: newPage + 1 });
+  }
 
   handlePageChange(newPage) {
     this.setState({ activePage: newPage });
@@ -25,7 +35,9 @@ class NewFurniture extends React.Component {
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
 
+    const newPages = [];
     const dots = [];
+
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
         <li>
@@ -37,7 +49,20 @@ class NewFurniture extends React.Component {
           </a>
         </li>
       );
+      newPages.push(
+        <div className={'row' + ' ' + styles.changeForNewPage}>
+          {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
+            <div key={item.id} className='col-3'>
+              <ProductBox {...item} />
+            </div>
+          ))}
+        </div>
+      );
     }
+
+    const changeNewPages = () => {
+      return newPages;
+    };
 
     return (
       <div className={styles.root}>
@@ -66,13 +91,7 @@ class NewFurniture extends React.Component {
               </div>
             </div>
           </div>
-          <div className='row'>
-            {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div key={item.id} className='col-lg-3 col-md-6 col-sm-12'>
-                <ProductBox {...item} />
-              </div>
-            ))}
-          </div>
+          <SwipeAbleWrapper>{changeNewPages()}</SwipeAbleWrapper>
         </div>
       </div>
     );
