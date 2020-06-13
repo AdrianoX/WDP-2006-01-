@@ -4,16 +4,8 @@ import Swiper from 'react-id-swiper';
 import 'swiper/css/swiper.css';
 
 const SwipeAbleWrapper = ({ leftAction, rightAction, children }) => {
-  // <Swipeable onSwipedRight={rightAction} onSwipedLeft={leftAction}>
-
-  // </Swipeable>
-
   const params = {
     spaceBetween: 15,
-    // on: {
-    //   rightActionButton: nextPage,
-    //   leftActionButton: nextPage,
-    // },
   };
 
   return (
