@@ -2,7 +2,7 @@ import React from 'react';
 import Feedback from '../../features/Feedback/FeedbackContainer';
 
 import styles from './Homepage.module.scss';
-
+import Gallery from '../../features/Gallery/GalleryContainer';
 import FeatureBoxes from '../../features/FeatureBoxes/FeatureBoxes';
 import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
 import RightSlider from '../../features/RightSlider/RightSlider';
@@ -20,7 +20,9 @@ const Homepage = () => (
     </div>
     <FeatureBoxes />
     <NewFurniture />
+    <Gallery />
     <Feedback />
+    
   </div>
 );
 
