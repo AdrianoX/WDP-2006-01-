@@ -10,11 +10,13 @@
   line-height: 24px;
   font-weight: 600;
   padding: 10px 30px;
+  margin: 0 2px;
 
   &:not(.noHover):hover {
     color: $button-text !important;
     background-color: $primary;
     text-decoration: none;
+    @extend %hover-animation;
   }
 }
 
@@ -33,9 +35,11 @@
   color: $button-bg;
   font-size: 13px;
   line-height: 22px;
+  margin: 2px;
 
   &:not(.noHover):hover {
     background-color: $button-bg;
     color: $button-text;
+    @extend %hover-animation;
   }
 }

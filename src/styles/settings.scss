@@ -50,3 +50,16 @@ $newFurniture-dots-color: $light1;
 
 $companyClaim-phoneNum: $lightSilver;
 $companyClaim-cart: $light3;
+
+/*  Hover animation settings*/
+$property-1: background;
+$property-2: color;
+$duration-1: 250ms;
+$duration-2: 250ms;
+$transform: translateY(-5%);
+
+%hover-animation {
+  transition-property: $property-1, $property-2;
+  transition-duration: $duration-1, $duration-2;
+  transform: $transform;
+}
