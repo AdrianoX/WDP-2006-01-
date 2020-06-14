@@ -1,0 +1,48 @@
+@import "../../../styles/settings.scss";
+
+
+.panelBar {
+    position: relative;
+    background: #000000;
+    padding: 15px;
+    justify-content: space-between;
+
+
+    .title {
+        font-size: 16px;
+        color:  #f8f5f5;
+    }
+}
+
+.dots {
+    position: absolute;
+    right: 10px;
+    top: 0;
+
+    ul {
+        margin: 0;
+        list-style: none;
+        background-color: #000000;
+        transform: translateY(5px);
+
+        li {
+            display: inline-block;
+            margin-left: 10px;
+  
+            a {
+              font-size: 0;
+              display: block;
+              width: 12px;
+              height: 12px;
+              border-radius: 10px;
+              background-color: #ffffff;
+              
+  
+              &.active,
+              &:hover {
+                background-color:#d58e32;
+              }
+            }
+        }
+    }
+}
