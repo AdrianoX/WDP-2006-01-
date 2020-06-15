@@ -10,8 +10,9 @@ class RightSlider extends React.Component {
     activePage: 0,
   };
 
-  handlePageChange(action, length) {
+  handlePageChange(e, action, length) {
     let newPage = this.state.activePage;
+    e.preventDefault();
 
     if (action === 'next' && newPage < length - 1) {
       this.setState({ activePage: newPage + 1 });
@@ -47,13 +48,13 @@ class RightSlider extends React.Component {
             <div className={styles.button}>
               <Button
                 className='col-6'
-                onClick={e => this.handlePageChange('next', pages)}
+                onClick={e => this.handlePageChange(e, 'next', pages)}
               >
                 <FontAwesomeIcon icon={faAngleLeft} />
               </Button>
               <Button
                 className='col-6'
-                onClick={e => this.handlePageChange('back', pages)}
+                onClick={e => this.handlePageChange(e, 'back', pages)}
               >
                 <FontAwesomeIcon icon={faAngleRight} />
               </Button>

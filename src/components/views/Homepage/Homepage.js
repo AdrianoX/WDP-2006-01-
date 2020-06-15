@@ -10,11 +10,11 @@ import LeftSlider from '../../features/LeftSlider/LeftSlider';
 
 const Homepage = () => (
   <div className={styles.root}>
-    <div className={'container'}>
-      <div className='row'>
+    <div className={styles.content}>
+      <div className={styles.item}>
         <LeftSlider />
       </div>
-      <div className='row'>
+      <div className={styles.item2}>
         <RightSlider />
       </div>
     </div>
