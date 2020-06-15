@@ -3,9 +3,7 @@ export const imageData = [
   {
     image: 'https://cdn.pixabay.com/photo/2016/06/10/01/05/hotel-room-1447201__340.jpg',
   },
-  {
-    image: 'https://cdn.pixabay.com/photo/2016/06/10/01/05/hotel-room-1447201__340.jpg',
-  },
+  { image: 'https://cdn.pixabay.com/photo/2015/12/05/23/45/sofa-1078931__340.jpg' },
 ];
 
 const initialState = {

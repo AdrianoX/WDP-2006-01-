@@ -97,7 +97,6 @@ class LeftSlider extends React.Component {
             <div key={item.id}>
               <div className={styles.component}>
                 <img src={item.image} alt={item.title} />
-                <div className={styles.wrapper}></div>
               </div>
             </div>
           ))}

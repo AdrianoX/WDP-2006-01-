@@ -3,3 +3,19 @@
 // .root {
 // }
 
+.content {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    align-items: stretch;
+}
+
+.item {
+    min-width: 300px;
+    margin: 10px;
+}
+
+.item2 {
+    min-width: 300px;
+    margin: 10px;
+}
