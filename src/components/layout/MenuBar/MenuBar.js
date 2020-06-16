@@ -5,14 +5,17 @@ import ProductSearch from '../../features/ProductSearch/ProductSearch';
 
 import styles from './MenuBar.module.scss';
 
+import NavBar from '../../common/NavBar/NavBar';
+
 const MenuBar = ({ children }) => (
   <div className={styles.root}>
     <div className='container'>
       <div className='row align-items-center'>
-        <div className='col'>
+        <div className='col-md-12 col-8'>
           <ProductSearch />
         </div>
-        <div className={'col-auto ' + styles.menu}>
+
+        <div className={'col-md-12 ' + styles.menu}>
           <ul>
             <li>
               <a href='#' className={styles.active}>
@@ -38,6 +41,10 @@ const MenuBar = ({ children }) => (
               <a href='#'>Blog</a>
             </li>
           </ul>
+        </div>
+
+        <div className='col-4'>
+          <NavBar />
         </div>
       </div>
     </div>
