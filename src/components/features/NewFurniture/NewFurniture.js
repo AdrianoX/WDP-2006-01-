@@ -19,11 +19,21 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    const { categories, products } = this.props;
+    const { categories, products, viewport } = this.props;
     const { activeCategory, activePage } = this.state;
 
+    let productsOnPage;
+
+    if (viewport === 'desktop') {
+      productsOnPage = 8;
+    } else if (viewport === 'tablet') {
+      productsOnPage = 2;
+    } else {
+      productsOnPage = 1;
+    }
+
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryProducts.length / 8);
+    const pagesCount = Math.ceil(categoryProducts.length / productsOnPage);
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
@@ -67,11 +77,13 @@ class NewFurniture extends React.Component {
             </div>
           </div>
           <div className='row'>
-            {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div key={item.id} className='col-lg-3 col-md-6 col-sm-12'>
-                <ProductBox {...item} />
-              </div>
-            ))}
+            {categoryProducts
+              .slice(activePage * productsOnPage, (activePage + 1) * productsOnPage)
+              .map(item => (
+                <div key={item.id} className='col-lg-3 col-md-6 col-sm-12'>
+                  <ProductBox {...item} />
+                </div>
+              ))}
           </div>
         </div>
       </div>
@@ -98,6 +110,7 @@ NewFurniture.propTypes = {
       newFurniture: PropTypes.bool,
     })
   ),
+  viewport: PropTypes.string,
 };
 
 NewFurniture.defaultProps = {

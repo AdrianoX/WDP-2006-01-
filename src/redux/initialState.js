@@ -19,7 +19,7 @@ const initialState = {
       favorite: 'yes',
       compare: '',
       bgImageUrl:
-        'url("https://cdn.pixabay.com/photo/2016/04/18/13/53/room-1336497__340.jpg")'
+        'url("https://cdn.pixabay.com/photo/2016/04/18/13/53/room-1336497__340.jpg")',
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -33,7 +33,7 @@ const initialState = {
       favorite: '',
       compare: 'yes',
       bgImageUrl:
-        'url("https://cdn.pixabay.com/photo/2017/03/28/12/13/chairs-2181968__340.jpg")'
+        'url("https://cdn.pixabay.com/photo/2017/03/28/12/13/chairs-2181968__340.jpg")',
     },
     {
       id: 'aenean-ru-bristique-3',
@@ -61,7 +61,8 @@ const initialState = {
       favorite: '',
       compare: '',
       bgImageUrl:
-        'url("https://cdn.pixabay.com/photo/2018/01/26/08/15/dining-room-3108037_960_720.jpg")',    },
+        'url("https://cdn.pixabay.com/photo/2018/01/26/08/15/dining-room-3108037_960_720.jpg")',
+    },
     {
       id: 'aenean-ru-bristique-5',
       name: 'Aenean Ru Bristique 5',
@@ -347,6 +348,8 @@ const initialState = {
   cart: {
     products: [],
   },
+
+  viewport: '',
 };
 
 export default initialState;
