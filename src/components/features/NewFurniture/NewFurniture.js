@@ -43,11 +43,13 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    const { categories, products } = this.props;
+    const { categories, products, viewport } = this.props;
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryProducts.length / this.productsOnPage);
+    const pagesCount = Math.ceil(
+      categoryProducts.length / this.productsOnPage(viewport)
+    );
 
     const newPages = [];
     const dots = [];
