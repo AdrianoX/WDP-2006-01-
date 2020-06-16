@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import Feedback from '../../features/Feedback/FeedbackContainer';
 
 import styles from './Homepage.module.scss';
 
@@ -10,9 +10,8 @@ const Homepage = () => (
   <div className={styles.root}>
     <FeatureBoxes />
     <NewFurniture />
+    <Feedback />
   </div>
 );
-
-// Homepage.propTypes = {};
 
 export default Homepage;
