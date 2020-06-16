@@ -1,0 +1,114 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  color: $text-color-light;
+
+  .leftBanner {
+    margin-bottom: 60px;
+    width: 540px;
+    height: 430px;
+    text-align: left;
+    background-image: url("https://cdn.pixabay.com/photo/2017/08/02/01/01/living-room-2569325_1280.jpg");
+    overflow: hidden;
+    align-items: flex-end;
+
+    background: {
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+
+    }
+
+    h1 {
+      font-size: 60px;
+      margin-left: 25px;
+
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-left: 25px;
+      padding-top: 200px;
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: 25px;
+      margin-left: 25px;
+      padding: 10px;
+      border: 3px solid $white;
+      width: 100px;
+      text-align: center;
+    }
+
+  }
+
+  .rightTopBanner {
+    color: $text-color;
+    width: 540px;
+    height: 200px;
+    margin-left: 570px;
+    margin-bottom: 30px;
+    margin-top: -490px;
+    background-image: url("https://cdn.pixabay.com/photo/2016/10/23/17/24/chair-1763659_1280.jpg");
+    text-align: center;
+
+    background: {
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+    }
+
+    h1 {
+      font-size: 15px;
+      margin-right: 110px;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-left: -5px;
+      padding-top: 50px;
+      margin-bottom: 0;
+    }
+
+    p {
+      color: $orange;
+      margin-right: 80px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+  }
+
+  .rightBottomBanner {
+    width: 540px;
+    height: 200px;
+    margin-left: 570px;
+    margin-bottom: 60px;
+    margin-top: 30px;
+    background-image: url("https://cdn.pixabay.com/photo/2018/07/31/20/08/interior-3575815_1280.jpg");
+    text-align: right;
+
+    background: {
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+    }
+
+    h1 {
+      color: $text-color;
+      margin-right: 25px;
+      font-size: 22px;
+    }
+
+    h2 {
+      color: $orange;
+      font-size: 35px;
+      padding-top: 60px;
+      margin-bottom: 0;
+      margin-right: 25px;
+    }
+
+  }
+}

@@ -379,6 +379,27 @@ const initialState = {
     },
   ],
 
+  sales: [
+    {
+      title: 'GUEST ROOM',
+      subtitle: 'SOFA',
+      discount: '-20%',
+      image: 'https://cdn.pixabay.com/photo/2016/04/18/13/53/room-1336497__340.jpg',
+    },
+    {
+      title: 'OFFICE CHAIR',
+      subtitle: 'COLLECTION',
+      discount: '$ 200.00',
+      image: 'https://cdn.pixabay.com/photo/2016/04/18/13/53/room-1336497__340.jpg',
+    },
+    {
+      title: 'SPECIAL COLLECTION',
+      subtitle: 'SAVE UP 45% OF FURNITURE',
+      discount: '',
+      image: 'https://cdn.pixabay.com/photo/2016/04/18/13/53/room-1336497__340.jpg',
+    },
+  ],
+
   cart: {
     products: [],
   },
