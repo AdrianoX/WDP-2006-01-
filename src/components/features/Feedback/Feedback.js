@@ -13,11 +13,10 @@ class Feedback extends React.Component {
     setTimeout(() => this.setState({ activePage: newPage }), 700);
   };
 
-  render() {
+  getDotsList = () => {
     const { activePage } = this.state;
-    const { ratings } = this.props;
-
     const dots = [];
+
     for (let i = 0; i < 3; i++) {
       dots.push(
         <li>
@@ -30,6 +29,11 @@ class Feedback extends React.Component {
         </li>
       );
     }
+    return dots;
+  };
+
+  render() {
+    const { ratings } = this.props;
 
     return (
       <div className={styles.root}>
@@ -40,7 +44,7 @@ class Feedback extends React.Component {
                 <h3>Client Feedback</h3>
               </div>
               <div className={'col-auto ' + styles.dots}>
-                <ul>{dots}</ul>
+                <ul>{this.getDotsList()}</ul>
               </div>
             </div>
           </div>
