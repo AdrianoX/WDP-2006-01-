@@ -17,9 +17,7 @@ const checkViewportWidth = () => {
 const MainLayout = ({ children, changeViewportWidth }) => {
   useEffect(() => {
     changeViewportWidth(checkViewportWidth());
-    window.addEventListener('resize', newWidth =>
-      changeViewportWidth(checkViewportWidth(newWidth))
-    );
+    window.addEventListener('resize', () => changeViewportWidth(checkViewportWidth()));
   });
 
   return (
