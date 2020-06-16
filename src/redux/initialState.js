@@ -392,6 +392,7 @@ const initialState = {
       image: 'https://i.postimg.cc/TP9JJgYB/managerr.png',
     },
   ],
+  viewport: '',
 };
 
 export default initialState;

@@ -29,11 +29,21 @@ class NewFurniture extends React.Component {
   }
 
   render() {
-    const { categories, products } = this.props;
+    const { categories, products, viewport } = this.props;
     const { activeCategory, activePage } = this.state;
 
+    let productsOnPage;
+
+    if (viewport === 'desktop') {
+      productsOnPage = 8;
+    } else if (viewport === 'tablet') {
+      productsOnPage = 2;
+    } else {
+      productsOnPage = 1;
+    }
+
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryProducts.length / 8);
+    const pagesCount = Math.ceil(categoryProducts.length / productsOnPage);
 
     const newPages = [];
     const dots = [];
@@ -117,6 +127,7 @@ NewFurniture.propTypes = {
       newFurniture: PropTypes.bool,
     })
   ),
+  viewport: PropTypes.string,
 };
 
 NewFurniture.defaultProps = {
