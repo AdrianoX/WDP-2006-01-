@@ -382,6 +382,8 @@ const initialState = {
   cart: {
     products: [],
   },
+
+  viewport: '',
 };
 
 export default initialState;
