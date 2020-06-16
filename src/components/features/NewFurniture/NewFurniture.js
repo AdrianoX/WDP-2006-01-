@@ -52,7 +52,7 @@ class NewFurniture extends React.Component {
       newPages.push(
         <div className={'row' + ' ' + styles.changeForNewPage}>
           {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-            <div key={item.id} className='col-3'>
+            <div key={item.id} className='col-lg-3 col-md-6 col-sm-12'>
               <ProductBox {...item} />
             </div>
           ))}

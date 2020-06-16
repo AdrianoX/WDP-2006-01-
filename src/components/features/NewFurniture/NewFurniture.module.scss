@@ -53,6 +53,9 @@
 
             &.active,
             &:hover {
+
+              cursor: pointer;
+
               &::before {
                 content: "";
                 position: absolute;
@@ -94,6 +97,7 @@
             &.active,
             &:hover {
               background-color: $primary;
+              cursor: pointer;
             }
           }
         }
