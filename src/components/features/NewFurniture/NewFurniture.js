@@ -28,10 +28,7 @@ class NewFurniture extends React.Component {
     this.setState({ activeCategory: newCategory });
   }
 
-  render() {
-    const { categories, products, viewport } = this.props;
-    const { activeCategory, activePage } = this.state;
-
+  productsOnPage(viewport) {
     let productsOnPage;
 
     if (viewport === 'desktop') {
@@ -42,8 +39,15 @@ class NewFurniture extends React.Component {
       productsOnPage = 1;
     }
 
+    return productsOnPage;
+  }
+
+  render() {
+    const { categories, products } = this.props;
+    const { activeCategory, activePage } = this.state;
+
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryProducts.length / productsOnPage);
+    const pagesCount = Math.ceil(categoryProducts.length / this.productsOnPage);
 
     const newPages = [];
     const dots = [];
