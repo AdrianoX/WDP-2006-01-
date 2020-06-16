@@ -18,10 +18,7 @@ class NewFurniture extends React.Component {
     this.setState({ activeCategory: newCategory });
   }
 
-  render() {
-    const { categories, products, viewport } = this.props;
-    const { activeCategory, activePage } = this.state;
-
+  productsOnPage(viewport) {
     let productsOnPage;
 
     if (viewport === 'desktop') {
@@ -32,8 +29,15 @@ class NewFurniture extends React.Component {
       productsOnPage = 1;
     }
 
+    return productsOnPage;
+  }
+
+  render() {
+    const { categories, products } = this.props;
+    const { activeCategory, activePage } = this.state;
+
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryProducts.length / productsOnPage);
+    const pagesCount = Math.ceil(categoryProducts.length / this.productsOnPage);
 
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
@@ -78,7 +82,10 @@ class NewFurniture extends React.Component {
           </div>
           <div className='row'>
             {categoryProducts
-              .slice(activePage * productsOnPage, (activePage + 1) * productsOnPage)
+              .slice(
+                activePage * this.productsOnPage,
+                (activePage + 1) * this.productsOnPage
+              )
               .map(item => (
                 <div key={item.id} className='col-lg-3 col-md-6 col-sm-12'>
                   <ProductBox {...item} />
