@@ -55,7 +55,10 @@
             &:hover {
 
               cursor: pointer;
+<<<<<<< HEAD
 
+=======
+>>>>>>> add more pictures and unmount effect to the gallery
               &::before {
                 content: "";
                 position: absolute;
@@ -106,6 +109,7 @@
     // }
   }
 }
+<<<<<<< HEAD
 
 @media (max-width: 575.98px) {
   .root {
@@ -118,3 +122,5 @@
     }
   }
 }
+=======
+>>>>>>> add more pictures and unmount effect to the gallery

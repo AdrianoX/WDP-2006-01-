@@ -4,6 +4,8 @@ import styles from './NewFurniture.module.scss';
 import SwipeAbleWrapper from '../../common/SwipeAbleWrapper/SwipeAbleWrapper';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 
+import { Spring } from 'react-spring/renderprops';
+
 class NewFurniture extends React.Component {
   state = {
     activePage: 0,
@@ -67,7 +69,15 @@ class NewFurniture extends React.Component {
             ).map(
               item => (
                 <div key={item.id} className='col-lg-3 col-md-6 col-sm-12'>
-                  <ProductBox {...item} />
+                  <Spring
+                    from={{ opacity: 0 }}
+                    to={{ opacity: 1 }}>
+                    {props => (
+                      <div style={props}>
+                        <ProductBox {...item} />
+                      </div>
+                    )}
+                  </Spring>
                 </div>
               )
             )
