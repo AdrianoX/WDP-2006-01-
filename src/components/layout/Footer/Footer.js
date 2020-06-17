@@ -91,7 +91,6 @@ const Footer = ({ children }) => (
                   <a href='#'>Shipping</a>
                 </li>
               </ul>
-              <img src='./images/cards.png' alt='Supported credit cards' />
             </div>
           </div>
         </div>
@@ -101,7 +100,7 @@ const Footer = ({ children }) => (
       <div className='container'>
         <div className='row align-items-center'>
           <div className='col-12 text-center'>
-            <p>asdasdasd</p>
+            <p></p>
           </div>
           <div
             className={

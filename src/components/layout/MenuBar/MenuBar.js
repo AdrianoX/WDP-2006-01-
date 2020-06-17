@@ -10,13 +10,12 @@ import NavBar from '../../common/NavBar/NavBar';
 const MenuBar = ({ children }) => (
   <div className={styles.root}>
     <div className='container'>
-      <div className='row align-items-center'>
-        <div className='col-md-12 col-8'>
+      <div className='row justify-content-around flex-xl-row flex-md-column align-items-center'>
+        <div className='col-auto mt-3 '>
           <ProductSearch />
         </div>
-
-        <div className={'col-md-12 ' + styles.menu}>
-          <ul>
+        <div className={'col-auto ' + styles.menu}>
+          <ul className={'flex-wrap justify-content-around'}>
             <li>
               <a href='#' className={styles.active}>
                 Home
