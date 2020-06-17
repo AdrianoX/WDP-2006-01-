@@ -14,6 +14,7 @@ $light1: #e1e1e1;
 $light2: #f4f5f7;
 $light3: #e0e3ed;
 $white: #ffffff;
+$green: #2F8F64;
 
 /* Global color settings */
 $primary: $orange;
@@ -63,3 +64,8 @@ $transform: translateY(-5%);
   transition-duration: $duration-1, $duration-2;
   transform: $transform;
 }
+$gallery-bg: $lightGray1;
+$gallery-border: $light;
+$gallery-bg2: $light1;
+$gallery-price: $gray2;
+$gallery-green: $green;
