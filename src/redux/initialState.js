@@ -598,6 +598,7 @@ const initialState = {
       bgImageUrl:
         'url("https://cdn.pixabay.com/photo/2013/09/24/12/08/apartment-185779_960_720.jpg")',
     },
+<<<<<<< HEAD
     {
       id: 'aenean-ru-bristique-25',
       name: 'Aenean Ru Bristique 25',
@@ -822,6 +823,8 @@ const initialState = {
       bgImageUrl:
         'url("https://cdn.pixabay.com/photo/2013/09/24/12/08/apartment-185779_960_720.jpg")',
     },
+=======
+>>>>>>> add more pictures and unmount effect to the gallery
   ],
 
   sales: [
