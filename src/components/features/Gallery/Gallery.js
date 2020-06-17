@@ -83,7 +83,7 @@ class Gallery extends Component {
                 bgImageUrl={image[1]}
                 name={products[1].name}
                 price={products[1].price}
-                category={products[0].category}
+                category={products[1].category}
               />
             </div>
           </div>
