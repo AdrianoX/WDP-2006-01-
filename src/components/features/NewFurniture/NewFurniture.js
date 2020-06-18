@@ -48,9 +48,7 @@ class NewFurniture extends React.Component {
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
 
-    const pagesCount = Math.ceil(
-      categoryProducts.length / this.productsOnPage(viewport)
-    );
+    const pagesCount = Math.ceil(categoryProducts.length / 8);
 
     const newPages = [];
     const dots = [];
@@ -67,7 +65,7 @@ class NewFurniture extends React.Component {
         </li>
       );
       newPages.push(
-        <div className={'row' + ' ' + styles.changeForNewPage}>
+        <div className={'row ' + styles.changeForNewPage}>
           {categoryProducts
             .slice(
               activePage * this.productsOnPage(viewport),
