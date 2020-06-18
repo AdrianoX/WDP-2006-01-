@@ -121,3 +121,213 @@
 
   }
 }
+
+@media (max-width: 320px) {
+  .root {
+
+    .leftBanner {
+      margin-bottom: 20px;
+      max-width: 300px;
+      height: 330px;
+
+      &::before {
+        top: 118%;
+        border: 135px solid rgba(0, 0, 0, 0.5);
+        height: 310px;
+        max-width: 270px;
+      }
+
+
+      h1 {
+        padding-top: 170px;
+      }
+
+      h2 {
+        padding-top: 140px;
+      }
+
+      p {
+        top: 1360px;
+      }
+
+    }
+
+    .rightTopBanner {
+      width: 300px;
+      height: 200px;
+      margin: 0;
+      margin-bottom: 20px;
+
+
+      h1 {
+        font-size: 15px;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 30px;
+      }
+
+    }
+
+    .rightBottomBanner {
+      width: 300px;
+      height: 200px;
+      margin: 0;
+      margin-bottom: 20px;
+
+
+      h1 {
+        font-size: 17px;
+      }
+
+      h2 {
+        font-size: 25px;
+      }
+
+    }
+  }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+  .root {
+
+    .leftBanner {
+      margin-bottom: 20px;
+      max-width: 350px;
+      height: 330px;
+
+      &::before {
+        top: 118%;
+        border: 135px solid rgba(0, 0, 0, 0.5);
+        height: 305px;
+        max-width: 320px;
+      }
+
+
+      h1 {
+        padding-top: 170px;
+      }
+
+      h2 {
+        padding-top: 140px;
+      }
+
+      p {
+        top: 1360px;
+      }
+
+    }
+
+    .rightTopBanner {
+      width: 350px;
+      height: 200px;
+      margin: 0;
+      margin-bottom: 20px;
+
+
+      h1 {
+        font-size: 15px;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 30px;
+      }
+
+    }
+
+    .rightBottomBanner {
+      width: 350px;
+      height: 200px;
+      margin: 0;
+      margin-bottom: 20px;
+
+
+      h1 {
+        font-size: 20px;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+
+    }
+  }
+}
+
+@media (min-width: 376px) and (max-width: 450px) {
+  .root {
+
+    .leftBanner {
+      margin-bottom: 20px;
+      max-width: 400px;
+      height: 330px;
+
+      &::before {
+        top: 116%;
+        border: 150px solid rgba(0, 0, 0, 0.5);
+        height: 300px;
+        max-width: 370px;
+      }
+
+
+      h1 {
+        padding-top: 170px;
+      }
+
+      h2 {
+        padding-top: 140px;
+      }
+
+      p {
+        top: 1330px;
+      }
+
+    }
+
+    .rightTopBanner {
+      width: 400px;
+      height: 200px;
+      margin: 0;
+      margin-bottom: 20px;
+
+
+      h1 {
+        font-size: 15px;
+      }
+
+      h2 {
+        font-size: 35px;
+        margin-left: 27px;
+      }
+
+      p {
+        font-size: 30px;
+      }
+
+    }
+
+    .rightBottomBanner {
+      width: 400px;
+      height: 200px;
+      margin: 0;
+      margin-bottom: 20px;
+
+
+      h1 {
+        font-size: 20px;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+
+    }
+  }
+}
