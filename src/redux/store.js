@@ -5,11 +5,9 @@ import cartReducer from './cartRedux';
 import categoriesReducer from './categoriesRedux';
 import productsReducer from './productsRedux';
 import ratingsReducer from './ratingsRedux';
-<<<<<<< HEAD
-import viewportReducer from './viewportRedux';
-=======
 import favoriteRedux from './favoriteRedux';
->>>>>>> add SetFavorite and RemoveFavorite function in redux
+import viewportReducer from './viewportRedux';
+
 
 // define reducers
 const reducers = {
@@ -17,12 +15,9 @@ const reducers = {
   categories: categoriesReducer,
   products: productsReducer,
   ratings: ratingsReducer,
-<<<<<<< HEAD
-  viewport: viewportReducer,
-=======
   favorites: favoriteRedux,
+  viewport: viewportReducer,
 
->>>>>>> add SetFavorite and RemoveFavorite function in redux
 };
 
 // add blank reducers for initial state properties without reducers
