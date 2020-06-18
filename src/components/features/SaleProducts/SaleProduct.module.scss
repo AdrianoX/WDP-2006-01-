@@ -14,8 +14,8 @@
     &::before {
       content: "";
       position: absolute;
-      bottom: -135px;
       margin-left: 15px;
+      margin-top: 15px;
       width: 510px;
       border: 200px solid rgba(0,0,0,0.5);
     }
@@ -42,10 +42,10 @@
     }
 
     p {
-      top: 103vh;
       position: absolute;
       font-size: 25px;
       margin-left: 25px;
+      margin-top: 320px;
       padding: 10px;
       border: 3px solid $white;
       width: 100px;
@@ -127,14 +127,13 @@
 
     .leftBanner {
       margin-bottom: 20px;
-      max-width: 300px;
+      max-width: 290px;
       height: 330px;
 
       &::before {
-        top: 118%;
-        border: 135px solid rgba(0, 0, 0, 0.5);
-        height: 310px;
-        max-width: 270px;
+        border: 130px solid rgba(0, 0, 0, 0.5);
+        height: 300px;
+        max-width: 230px;
       }
 
 
@@ -147,13 +146,13 @@
       }
 
       p {
-        top: 1360px;
+        top: 1035px;
       }
 
     }
 
     .rightTopBanner {
-      width: 300px;
+      width: 290px;
       height: 200px;
       margin: 0;
       margin-bottom: 20px;
@@ -174,7 +173,7 @@
     }
 
     .rightBottomBanner {
-      width: 300px;
+      width: 290px;
       height: 200px;
       margin: 0;
       margin-bottom: 20px;
@@ -196,14 +195,14 @@
 
     .leftBanner {
       margin-bottom: 20px;
-      max-width: 350px;
+      max-width: 345px;
       height: 330px;
 
       &::before {
-        top: 118%;
-        border: 135px solid rgba(0, 0, 0, 0.5);
-        height: 305px;
-        max-width: 320px;
+        margin-top: 10px;
+        border: 155px solid rgba(0, 0, 0, 0.5);
+        height: 280px;
+        max-width: 315px;
       }
 
 
@@ -216,13 +215,13 @@
       }
 
       p {
-        top: 1360px;
+        top: 1035px;
       }
 
     }
 
     .rightTopBanner {
-      width: 350px;
+      width: 345px;
       height: 200px;
       margin: 0;
       margin-bottom: 20px;
@@ -243,7 +242,7 @@
     }
 
     .rightBottomBanner {
-      width: 350px;
+      width: 345px;
       height: 200px;
       margin: 0;
       margin-bottom: 20px;
@@ -266,14 +265,13 @@
 
     .leftBanner {
       margin-bottom: 20px;
-      max-width: 400px;
+      max-width: 395px;
       height: 330px;
 
       &::before {
-        top: 116%;
         border: 150px solid rgba(0, 0, 0, 0.5);
         height: 300px;
-        max-width: 370px;
+        max-width: 365px;
       }
 
 
@@ -286,13 +284,13 @@
       }
 
       p {
-        top: 1330px;
+        top: 1010px;
       }
 
     }
 
     .rightTopBanner {
-      width: 400px;
+      width: 395px;
       height: 200px;
       margin: 0;
       margin-bottom: 20px;
@@ -314,7 +312,7 @@
     }
 
     .rightBottomBanner {
-      width: 400px;
+      width: 395px;
       height: 200px;
       margin: 0;
       margin-bottom: 20px;
