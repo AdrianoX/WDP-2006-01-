@@ -3,10 +3,12 @@ import styles from './Feedback.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
+import SwipeAbleWrapper from '../../common/SwipeAbleWrapper/SwipeAbleWrapper';
 
 class Feedback extends React.Component {
   state = {
     activePage: 0,
+    isUnmounted: false,
   };
 
   handlePageChange = newPage => {
@@ -35,6 +37,7 @@ class Feedback extends React.Component {
 
   render() {
     const { ratings } = this.props;
+    const { activePage } = this.state;
 
     return (
       <div className={styles.root}>
@@ -50,24 +53,32 @@ class Feedback extends React.Component {
             </div>
           </div>
 
-          <div className='row'>
-            <div className={'col ' + styles.quote}>
-              <FontAwesomeIcon icon={faQuoteRight} className={styles.quotes}>
-                {' '}
-                stars
-              </FontAwesomeIcon>
-              <div className={styles.rating}>{ratings[0].rating}</div>
-              <div className={styles.person}>
-                <div className={styles.person_image}>
-                  <img src={ratings[0].image} alt={ratings[0].occupation}></img>
-                </div>
-                <div className={styles.person_name}>
-                  <h5>{ratings[0].person}</h5>
-                  <p>{ratings[0].occupation}</p>
+          <SwipeAbleWrapper>
+            <div className='row'>
+              <div
+                className={'col ' + styles.quote}
+                isUnmounted={this.state.isUnmmounted}
+              >
+                <FontAwesomeIcon icon={faQuoteRight} className={styles.quotes}>
+                  {' '}
+                  stars
+                </FontAwesomeIcon>
+                <div className={styles.rating}>{ratings[activePage].rating}</div>
+                <div className={styles.person}>
+                  <div className={styles.person_image}>
+                    <img
+                      src={ratings[activePage].image}
+                      alt={ratings[activePage].occupation}
+                    ></img>
+                  </div>
+                  <div className={styles.person_name}>
+                    <h5>{ratings[activePage].person}</h5>
+                    <p>{ratings[activePage].occupation}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </SwipeAbleWrapper>
         </div>
       </div>
     );

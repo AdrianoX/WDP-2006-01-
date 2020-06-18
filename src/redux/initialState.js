@@ -415,6 +415,20 @@ const initialState = {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       image: 'https://i.postimg.cc/TP9JJgYB/managerr.png',
     },
+    {
+      person: 'George Bregs',
+      occupation: 'Furniture client',
+      rating:
+        'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.',
+      image: 'https://i.postimg.cc/RhB8V5jL/333.png',
+    },
+    {
+      person: 'Susan Howl',
+      occupation: 'Furniture client',
+      rating:
+        'Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda es.',
+      image: 'https://i.postimg.cc/SKmpV9ZG/777.jpg',
+    },
   ],
   viewport: '',
 };

@@ -18,7 +18,7 @@ const ProductBox = ({
   rated,
   stars,
   id,
-  bgImageUrl
+  bgImageUrl,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo} style={{ backgroundImage: bgImageUrl }}>
