@@ -17,7 +17,7 @@
       margin-left: 15px;
       margin-top: 15px;
       width: 510px;
-      border: 200px solid rgba(0,0,0,0.5);
+      border: 200px solid rgba(0, 0, 0, 0.5);
     }
 
     background: {
@@ -136,7 +136,6 @@
         max-width: 230px;
       }
 
-
       h1 {
         padding-top: 170px;
       }
@@ -156,7 +155,6 @@
       height: 200px;
       margin: 0;
       margin-bottom: 20px;
-
 
       h1 {
         font-size: 15px;
@@ -178,7 +176,6 @@
       margin: 0;
       margin-bottom: 20px;
 
-
       h1 {
         font-size: 17px;
       }
@@ -190,6 +187,7 @@
     }
   }
 }
+
 @media (min-width: 321px) and (max-width: 375px) {
   .root {
 
@@ -205,7 +203,6 @@
         max-width: 315px;
       }
 
-
       h1 {
         padding-top: 170px;
       }
@@ -226,7 +223,6 @@
       margin: 0;
       margin-bottom: 20px;
 
-
       h1 {
         font-size: 15px;
       }
@@ -246,7 +242,6 @@
       height: 200px;
       margin: 0;
       margin-bottom: 20px;
-
 
       h1 {
         font-size: 20px;
@@ -265,15 +260,14 @@
 
     .leftBanner {
       margin-bottom: 20px;
-      max-width: 395px;
+      max-width: 405px;
       height: 330px;
 
       &::before {
         border: 150px solid rgba(0, 0, 0, 0.5);
         height: 300px;
-        max-width: 365px;
+        max-width: 375px;
       }
-
 
       h1 {
         padding-top: 170px;
@@ -290,11 +284,10 @@
     }
 
     .rightTopBanner {
-      width: 395px;
+      width: 405px;
       height: 200px;
       margin: 0;
       margin-bottom: 20px;
-
 
       h1 {
         font-size: 15px;
@@ -312,11 +305,184 @@
     }
 
     .rightBottomBanner {
-      width: 395px;
+      width: 405px;
       height: 200px;
       margin: 0;
       margin-bottom: 20px;
 
+      h1 {
+        font-size: 20px;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+
+    }
+  }
+}
+
+@media (min-width: 451px) and (max-width: 768px) {
+  .root {
+
+    .leftBanner {
+      margin-bottom: 20px;
+      max-width: 330px;
+      height: 390px;
+
+      &::before {
+        border: 150px solid rgba(0, 0, 0, 0.5);
+        height: 360px;
+        max-width: 280px;
+      }
+
+      h1 {
+        padding-top: 210px;
+      }
+
+      h2 {
+        padding-top: 180px;
+      }
+
+      p {
+        top: 1060px;
+      }
+
+    }
+
+    .rightTopBanner {
+      width: 330px;
+      height: 180px;
+      margin-left: 360px;
+      margin-top: -410px;
+
+      h2 {
+        font-size: 35px;
+        margin-left: 27px;
+      }
+    }
+
+    .rightBottomBanner {
+      width: 330px;
+      height: 180px;
+      margin-bottom: 20px;
+      margin-left: 360px;
+
+      h1 {
+        font-size: 17px;
+      }
+
+      h2 {
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .root {
+
+    .leftBanner {
+      margin-bottom: 20px;
+      max-width: 330px;
+      height: 390px;
+
+      &::before {
+        border: 150px solid rgba(0, 0, 0, 0.5);
+        height: 360px;
+        max-width: 280px;
+      }
+
+      h1 {
+        padding-top: 210px;
+      }
+
+      h2 {
+        padding-top: 180px;
+      }
+
+      p {
+        top: 1110px;
+      }
+
+    }
+
+    .rightTopBanner {
+      width: 330px;
+      height: 180px;
+      margin-left: 360px;
+      margin-top: -410px;
+
+      h2 {
+        font-size: 35px;
+        margin-left: 27px;
+      }
+    }
+
+    .rightBottomBanner {
+      width: 330px;
+      height: 180px;
+      margin-bottom: 20px;
+      margin-left: 360px;
+
+      h1 {
+        font-size: 17px;
+      }
+
+      h2 {
+        font-size: 25px;
+      }
+
+    }
+  }
+
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .root {
+
+    .leftBanner {
+      margin-bottom: 20px;
+      max-width: 450px;
+      height: 390px;
+
+      &::before {
+        border: 180px solid rgba(0, 0, 0, 0.5);
+        height: 360px;
+        max-width: 420px;
+      }
+
+      h1 {
+        padding-top: 210px;
+      }
+
+      h2 {
+        padding-top: 180px;
+      }
+
+      p {
+        top: 1140px;
+      }
+
+    }
+
+    .rightTopBanner {
+      width: 450px;
+      height: 180px;
+      margin-left: 480px;
+      margin-top: -410px;
+
+      h2 {
+        font-size: 35px;
+        margin-left: 27px;
+      }
+    }
+
+    .rightBottomBanner {
+      width: 450px;
+      height: 180px;
+      margin-bottom: 20px;
+      margin-left: 480px;
 
       h1 {
         font-size: 20px;
