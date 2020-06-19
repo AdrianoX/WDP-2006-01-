@@ -6,6 +6,7 @@
   height: 45px;
   color: $text-color;
 
+
   .category {
     border-right: 1px solid $form-border-color;
     display: flex;
@@ -57,6 +58,9 @@
       }
     }
 
+    @media (max-width: 768px) {
+      display: none;
+   }  
 
     .icon:first-child {
       color: $primary;
