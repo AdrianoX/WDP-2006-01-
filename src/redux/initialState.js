@@ -1,3 +1,13 @@
+export const imageData = [
+  { image: 'https://cdn.pixabay.com/photo/2017/03/28/12/13/chairs-2181968__340.jpg' },
+  {
+    image: 'https://cdn.pixabay.com/photo/2016/06/10/01/05/hotel-room-1447201__340.jpg',
+  },
+  {
+    image: 'https://cdn.pixabay.com/photo/2016/06/10/01/05/hotel-room-1447201__340.jpg',
+  },
+];
+
 const initialState = {
   categories: [
     { id: 'bed', name: 'Bed' },
@@ -13,13 +23,14 @@ const initialState = {
       category: 'bed',
       price: 30,
       oldPrice: 50,
-      stars: 2,
+      stars: 4,
+      rated: true,
       promo: 'sale',
       newFurniture: true,
       favorite: 'yes',
       compare: '',
       bgImageUrl:
-        'url("https://cdn.pixabay.com/photo/2016/04/18/13/53/room-1336497__340.jpg")'
+        'url("https://cdn.pixabay.com/photo/2016/04/18/13/53/room-1336497__340.jpg")',
     },
     {
       id: 'aenean-ru-bristique-2',
@@ -28,12 +39,13 @@ const initialState = {
       price: 30,
       oldPrice: 45,
       stars: 2,
+      rated: false,
       promo: 'sale',
       newFurniture: true,
       favorite: '',
       compare: 'yes',
       bgImageUrl:
-        'url("https://cdn.pixabay.com/photo/2017/03/28/12/13/chairs-2181968__340.jpg")'
+        'url("https://cdn.pixabay.com/photo/2017/03/28/12/13/chairs-2181968__340.jpg")',
     },
     {
       id: 'aenean-ru-bristique-3',
@@ -41,7 +53,8 @@ const initialState = {
       category: 'bed',
       price: 30,
       oldPrice: null,
-      stars: 2,
+      stars: 3,
+      rated: true,
       promo: 'sale',
       newFurniture: true,
       favorite: 'yes',
@@ -55,13 +68,15 @@ const initialState = {
       category: 'bed',
       price: 30,
       oldPrice: 63,
-      stars: 2,
+      stars: 4,
+      rated: true,
       promo: 'sale',
       newFurniture: true,
       favorite: '',
       compare: '',
       bgImageUrl:
-        'url("https://cdn.pixabay.com/photo/2018/01/26/08/15/dining-room-3108037_960_720.jpg")',    },
+        'url("https://cdn.pixabay.com/photo/2018/01/26/08/15/dining-room-3108037_960_720.jpg")',
+    },
     {
       id: 'aenean-ru-bristique-5',
       name: 'Aenean Ru Bristique 5',
@@ -69,6 +84,7 @@ const initialState = {
       price: 30,
       oldPrice: 55,
       stars: 2,
+      rated: false,
       promo: 'sale',
       newFurniture: true,
       favorite: '',
@@ -83,6 +99,7 @@ const initialState = {
       price: 30,
       oldPrice: null,
       stars: 2,
+      rated: false,
       promo: 'sale',
       newFurniture: true,
       favorite: '',
@@ -96,7 +113,8 @@ const initialState = {
       category: 'bed',
       price: 30,
       oldPrice: 70,
-      stars: 2,
+      stars: 5,
+      rated: true,
       promo: 'sale',
       newFurniture: true,
       favorite: '',
@@ -111,6 +129,7 @@ const initialState = {
       price: 30,
       oldPrice: 40,
       stars: 2,
+      rated: false,
       promo: 'sale',
       newFurniture: true,
       favorite: '',
@@ -124,7 +143,8 @@ const initialState = {
       category: 'bed',
       price: 30,
       oldPrice: 52,
-      stars: 2,
+      stars: 3,
+      rated: true,
       promo: 'sale',
       newFurniture: true,
       favorite: '',
@@ -139,6 +159,7 @@ const initialState = {
       price: 30,
       oldPrice: null,
       stars: 2,
+      rated: false,
       promo: 'sale',
       newFurniture: true,
       favorite: '',
@@ -153,6 +174,7 @@ const initialState = {
       price: 30,
       oldPrice: 50,
       stars: 2,
+      rated: false,
       promo: 'sale',
       newFurniture: true,
       favorite: '',
@@ -166,7 +188,8 @@ const initialState = {
       category: 'bed',
       price: 30,
       oldPrice: 42,
-      stars: 2,
+      stars: 4,
+      rated: true,
       promo: 'sale',
       newFurniture: true,
       favorite: '',
@@ -180,7 +203,8 @@ const initialState = {
       category: 'bed',
       price: 30,
       oldPrice: 35,
-      stars: 2,
+      stars: 5,
+      rated: true,
       promo: 'sale',
       newFurniture: true,
       favorite: '',
@@ -195,6 +219,7 @@ const initialState = {
       price: 30,
       oldPrice: null,
       stars: 2,
+      rated: false,
       promo: 'sale',
       newFurniture: true,
       favorite: '',
@@ -209,6 +234,7 @@ const initialState = {
       price: 30,
       oldPrice: 45,
       stars: 2,
+      rated: false,
       promo: 'sale',
       newFurniture: true,
       favorite: '',
@@ -222,7 +248,8 @@ const initialState = {
       category: 'bed',
       price: 30,
       oldPrice: 48,
-      stars: 2,
+      stars: 3,
+      rated: true,
       promo: 'sale',
       newFurniture: true,
       favorite: '',
@@ -237,6 +264,7 @@ const initialState = {
       price: 30,
       oldPrice: 51,
       stars: 2,
+      rated: true,
       promo: 'sale',
       newFurniture: true,
       favorite: '',
@@ -251,6 +279,7 @@ const initialState = {
       price: 30,
       oldPrice: 50,
       stars: 2,
+      rated: false,
       promo: 'sale',
       newFurniture: true,
       favorite: '',
@@ -265,6 +294,7 @@ const initialState = {
       price: 30,
       oldPrice: null,
       stars: 2,
+      rated: false,
       promo: 'sale',
       newFurniture: true,
       favorite: '',
@@ -279,6 +309,7 @@ const initialState = {
       price: 30,
       oldPrice: 40,
       stars: 2,
+      rated: false,
       promo: 'sale',
       newFurniture: true,
       favorite: '',
@@ -292,7 +323,8 @@ const initialState = {
       category: 'bed',
       price: 30,
       oldPrice: 35,
-      stars: 2,
+      stars: 3,
+      rated: false,
       promo: 'sale',
       newFurniture: true,
       favorite: '',
@@ -306,7 +338,8 @@ const initialState = {
       category: 'bed',
       price: 30,
       oldPrice: 40,
-      stars: 2,
+      stars: 3,
+      rated: true,
       promo: 'sale',
       newFurniture: true,
       favorite: '',
@@ -321,6 +354,7 @@ const initialState = {
       price: 30,
       oldPrice: 45,
       stars: 2,
+      rated: false,
       promo: 'sale',
       newFurniture: true,
       favorite: '',
@@ -335,6 +369,7 @@ const initialState = {
       price: 30,
       oldPrice: null,
       stars: 2,
+      rated: true,
       promo: 'sale',
       newFurniture: true,
       favorite: '',
@@ -344,9 +379,43 @@ const initialState = {
     },
   ],
 
+  sales: [
+    {
+      title: 'GUEST ROOM',
+      subtitle: 'SOFA',
+      discount: '-20%',
+      image:
+        'url("https://cdn.pixabay.com/photo/2017/08/02/01/01/living-room-2569325_1280.jpg")',
+    },
+    {
+      title: 'OFFICE CHAIR',
+      subtitle: 'COLLECTION',
+      discount: '$ 200.00',
+      image:
+        'url("https://cdn.pixabay.com/photo/2016/10/23/17/24/chair-1763659_1280.jpg")',
+    },
+    {
+      title: 'SPECIAL COLLECTION',
+      subtitle: 'SAVE UP 45% OF FURNITURE',
+      discount: '',
+      image:
+        'url("https://cdn.pixabay.com/photo/2018/07/31/20/08/interior-3575815_1280.jpg")',
+    },
+  ],
+
   cart: {
     products: [],
   },
+
+  ratings: [
+    {
+      person: 'John Smith',
+      occupation: 'Furniture client',
+      rating:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      image: 'https://i.postimg.cc/TP9JJgYB/managerr.png',
+    },
+  ],
 };
 
 export default initialState;
