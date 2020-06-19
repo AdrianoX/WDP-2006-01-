@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 // import styles from './SwipeTest.module.scss';
 // import Swiper from 'react-id-swiper';
 // import 'swiper/css/swiper.css';
-import { Swipe } from 'react-swipe-component';
+import {Swipe} from 'react-swipe-component';
 
 class SwipeTest extends React.Component {
   render() {
