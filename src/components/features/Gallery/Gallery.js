@@ -7,7 +7,7 @@ import GalleryRightSide from './GalleryRightSide';
 
 class Gallery extends Component {
   render() {
-    const { products } = this.props;
+    const { products, updateRating } = this.props;
 
     const image = products.map(p => {
       return p.bgImageUrl;
@@ -56,6 +56,8 @@ class Gallery extends Component {
                         price={products[0].price}
                         oldPrice={products[0].oldPrice}
                         stars={products[0].stars}
+                        rated={products[0].rated}
+                        updateRating={updateRating}
                       />
                     </div>
                   </div>
@@ -102,8 +104,10 @@ Gallery.propTypes = {
       stars: PropTypes.number,
       bgImageUrl: PropTypes.string,
       category: PropTypes.string,
+      rated: PropTypes.bool,
     })
   ),
+  updateRating: PropTypes.func,
 };
 
 Gallery.defaultProps = {
