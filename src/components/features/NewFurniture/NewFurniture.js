@@ -64,13 +64,23 @@ class NewFurniture extends React.Component {
           </a>
         </li>
       );
+
+      const productsOnPage = this.productsOnPage(viewport);
+
       newPages.push(
         <div className={'row' + ' ' + styles.changeForNewPage}>
-          {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-            <div key={item.id} className='col-lg-3 col-md-6 col-sm-12'>
-              <ProductBox {...item} />
-            </div>
-          ))}
+          {
+            categoryProducts.slice(
+              activePage * productsOnPage,
+              (activePage + 1) * productsOnPage
+            ).map(
+              item => (
+                <div key={item.id} className='col-lg-3 col-md-6 col-sm-12'>
+                  <ProductBox {...item} />
+                </div>
+              )
+            )
+          }
         </div>
       );
     }
