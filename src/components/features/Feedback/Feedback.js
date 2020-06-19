@@ -10,9 +10,11 @@ class Feedback extends React.Component {
     activePage: 0,
   };
 
+
   handlePageChange = newPage => {
     setTimeout(() => this.setState({ activePage: newPage }), 200);
   };
+
 
   getDotsList = () => {
     const { activePage } = this.state;
@@ -52,24 +54,20 @@ class Feedback extends React.Component {
             </div>
           </div>
 
+
+
           <Swipe
             itemsCount={3}
             currentItem={this.state.activePage}
             currentAction={this.handlePageChange}
           >
             <div className='row'>
-              <div className={'col ' + styles.quote}>
-                <FontAwesomeIcon icon={faQuoteRight} className={styles.quotes}>
-                  {' '}
-                  stars
-                </FontAwesomeIcon>
+              <div className={'col ' + styles.quote} >
+                <FontAwesomeIcon icon={faQuoteRight} className={styles.quotes}> stars</FontAwesomeIcon>
                 <div className={styles.rating}>{ratings[activePage].rating}</div>
                 <div className={styles.person}>
                   <div className={styles.person_image}>
-                    <img
-                      src={ratings[activePage].image}
-                      alt={ratings[activePage].occupation}
-                    ></img>
+                    <img src={ratings[activePage].image} alt={ratings[activePage].occupation}></img>
                   </div>
                   <div className={styles.person_name}>
                     <h5>{ratings[activePage].person}</h5>

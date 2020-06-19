@@ -77,6 +77,7 @@ class NewFurniture extends React.Component {
     }
 
     const changeNewPages = () => {
+
       return newPages;
     };
 
