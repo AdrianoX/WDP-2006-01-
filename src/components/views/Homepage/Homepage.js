@@ -1,12 +1,16 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import Feedback from '../../features/Feedback/FeedbackContainer';
 
 import styles from './Homepage.module.scss';
 
 import FeatureBoxes from '../../features/FeatureBoxes/FeatureBoxes';
 import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
+
 import RightSlider from '../../features/RightSlider/RightSlider';
 import LeftSlider from '../../features/LeftSlider/LeftSlider';
+
+import SaleProduct from '../../features/SaleProducts/SaleProductContainer';
+
 
 const Homepage = () => (
   <div className={styles.root}>
@@ -19,10 +23,10 @@ const Homepage = () => (
       </div>
     </div>
     <FeatureBoxes />
+    <SaleProduct />
     <NewFurniture />
+    <Feedback />
   </div>
 );
-
-// Homepage.propTypes = {};
 
 export default Homepage;

@@ -1,0 +1,98 @@
+.root {
+  border: 1px solid #292929;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 45px;
+  color: #2a2a2a;
+}
+
+.root .category {
+  border-right: 1px solid #292929;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .root .category {
+    display: none;
+  }
+}
+
+.root .category .icon:first-child {
+  color: #d58e32;
+  position: absolute;
+  left: 10px;
+  z-index: 0;
+}
+
+.root .category .icon:last-child {
+  position: absolute;
+  right: 5px;
+  z-index: 0;
+}
+
+.root .category select {
+  --accentFg: #d58e32;
+  font-size: 14px;
+  color: #2a2a2a;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  border: none;
+  outline: 0;
+  padding: 11px 25px 11px 35px;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 1px 100%, 20px 22px, 20px 22px, 20px 100%;
+  background-position: right 20px center, right bottom, right bottom, right bottom;
+}
+
+.root .category select:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--accentFg)), to(var(--accentFg))), -webkit-gradient(linear, left bottom, left top, color-stop(50%, transparent), color-stop(50%, var(--accentFg))), -webkit-gradient(linear, left bottom, left top, color-stop(50%, transparent), color-stop(50%, var(--accentFg))), -webkit-gradient(linear, left top, left bottom, color-stop(50%, var(--accentFg)), color-stop(50%, var(--accentFg)));
+  background-image: linear-gradient(var(--accentFg), var(--accentFg)), linear-gradient(0deg, transparent 50%, var(--accentFg) 50%), linear-gradient(0deg, transparent 50%, var(--accentFg) 50%), linear-gradient(var(--accentFg) 50%, var(--accentFg) 50%);
+}
+
+.root .searchField {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.root .searchField input {
+  border: 0;
+  padding-left: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.root .searchField input::-webkit-input-placeholder {
+  color: #2a2a2a;
+}
+
+.root .searchField input:-ms-input-placeholder {
+  color: #2a2a2a;
+}
+
+.root .searchField input::-ms-input-placeholder {
+  color: #2a2a2a;
+}
+
+.root .searchField input::placeholder {
+  color: #2a2a2a;
+}
+
+.root .searchField button {
+  border: 0;
+  background-color: transparent;
+  outline: none;
+}
+/*# sourceMappingURL=ProductSearch.module.css.map */
