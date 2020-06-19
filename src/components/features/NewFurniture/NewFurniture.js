@@ -10,16 +10,6 @@ class NewFurniture extends React.Component {
     activeCategory: 'bed',
   };
 
-  leftAction() {
-    const newPage = this.state.activePage;
-    this.setState({ activePage: newPage - 1 });
-  }
-
-  rightAction() {
-    const newPage = this.state.activePage;
-    this.setState({ activePage: newPage + 1 });
-  }
-
   handlePageChange(newPage) {
     this.setState({ activePage: newPage });
   }

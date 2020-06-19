@@ -3,16 +3,15 @@ import styles from './Feedback.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
-import SwipeAbleWrapper from '../../common/SwipeAbleWrapper/SwipeAbleWrapper';
+import Swipe from '../../common/SwipeTest/SwipeTest';
 
 class Feedback extends React.Component {
   state = {
     activePage: 0,
-    isUnmounted: false,
   };
 
   handlePageChange = newPage => {
-    setTimeout(() => this.setState({ activePage: newPage }), 700);
+    setTimeout(() => this.setState({ activePage: newPage }), 200);
   };
 
   getDotsList = () => {
@@ -53,12 +52,13 @@ class Feedback extends React.Component {
             </div>
           </div>
 
-          <SwipeAbleWrapper>
+          <Swipe
+            itemsCount={3}
+            currentItem={this.state.activePage}
+            currentAction={this.handlePageChange}
+          >
             <div className='row'>
-              <div
-                className={'col ' + styles.quote}
-                isUnmounted={this.state.isUnmmounted}
-              >
+              <div className={'col ' + styles.quote}>
                 <FontAwesomeIcon icon={faQuoteRight} className={styles.quotes}>
                   {' '}
                   stars
@@ -78,7 +78,7 @@ class Feedback extends React.Component {
                 </div>
               </div>
             </div>
-          </SwipeAbleWrapper>
+          </Swipe>
         </div>
       </div>
     );
