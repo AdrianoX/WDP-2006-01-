@@ -20,6 +20,13 @@ const initialState = {
     { id: 'custom', label: 'Custom tab' },
   ],
 
+  galTabs:[
+    { id: 'featured', name: 'Featured', active: true },
+    { id: 'top seller', name: 'Top seller' },
+    { id: 'sale off', name: 'Sale off' },
+    { id: 'top rated', name: 'Top rated' },
+  ],
+
   products: [
     {
       id: 'aenean-ru-bristique-1',
