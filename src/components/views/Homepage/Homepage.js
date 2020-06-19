@@ -5,7 +5,6 @@ import styles from './Homepage.module.scss';
 import Gallery from '../../features/Gallery/GalleryContainer';
 import FeatureBoxes from '../../features/FeatureBoxes/FeatureBoxes';
 import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
-
 import RightSlider from '../../features/RightSlider/RightSlider';
 import LeftSlider from '../../features/LeftSlider/LeftSlider';
 
@@ -14,7 +13,7 @@ import SaleProduct from '../../features/SaleProducts/SaleProductContainer';
 
 const Homepage = () => (
   <div className={styles.root}>
-    <div className={styles.content}>
+    <div className={'flex-column flex-md-row col-md-12 ' + styles.content}>
       <div className={styles.item}>
         <LeftSlider />
       </div>
@@ -27,7 +26,7 @@ const Homepage = () => (
     <NewFurniture />
     <Gallery />
     <Feedback />
-    
+
   </div>
 );
 

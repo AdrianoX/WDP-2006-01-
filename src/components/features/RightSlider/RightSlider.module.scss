@@ -3,11 +3,6 @@
 
 .component {
   position: relative;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 }
 
 img {
@@ -27,7 +22,6 @@ img {
   a {
     padding: 10px 0;
     background: #000000;
-    
       &:hover {
         background: #c77a32;
       }

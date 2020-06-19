@@ -2,8 +2,9 @@
 
 .root {
   border: 1px solid $form-border-color;
-  display: inline-flex;
+  display: flex;
   height: 45px;
+  max-width: 500px;
   color: $text-color;
 
 
@@ -12,6 +13,49 @@
     display: flex;
     align-items: center;
     position: relative;
+    flex-wrap: wrap;
+    max-width: 55%;
+
+
+    .mainCategoryList {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      height: 100%;
+      width: 200px;
+
+      .mainCategory {
+        display: block;
+        border: none;
+        margin: 0 20px;
+        left:-10%;
+        background-color: transparent;
+        top: 25%;
+      }
+
+      .secCategory a {
+        margin: 0 55px;
+      }
+
+
+      li {
+        display:none;
+        position: relative;
+        padding-left: 25px;
+        background-color: white ;
+        width: 119.5%;
+        height: 100%;
+        border: 1px solid $form-border-color;
+      }
+    }
+
+    .mainCategoryList:hover {
+      .secCategory {
+        display: block;
+        left:-19%;
+      }
+    }
+
 
 
     .mainCategoryList {
@@ -82,6 +126,7 @@
     display: flex;
     align-items: center;
     position: relative;
+    width: 100%;
 
     input {
       border: 0;

@@ -4,14 +4,15 @@
   box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
   background-color: $text-color-light;
 
-  :global(.container) > :global(.row) {
-    height: 84px;
-  }
+  // :global(.container) > :global(.row) {
+  //   margin: 10px;
+  // }
 
 
   .menu {
     display: flex;
-    align-self: stretch;
+    margin: 10px;
+    // align-self: stretch;
 
 
    @media (max-width: 768px) {

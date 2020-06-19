@@ -91,7 +91,6 @@ const Footer = ({ children }) => (
                   <a href='#'>Shipping</a>
                 </li>
               </ul>
-              <img src='./images/cards.png' alt='Supported credit cards' />
             </div>
           </div>
         </div>
@@ -115,12 +114,12 @@ const Footer = ({ children }) => (
             <ul>
               <li>
                 <a href='#'>
-                  <FontAwesomeIcon icon={faTwitter}>Twitter</FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faTwitter}>Pinterest</FontAwesomeIcon>
                 </a>
               </li>
               <li>
                 <a href='#'>
-                  <FontAwesomeIcon icon={faFacebookF}>Facebook</FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faFacebookF}>Pinterest</FontAwesomeIcon>
                 </a>
               </li>
               <li>
