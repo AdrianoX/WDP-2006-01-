@@ -28,11 +28,26 @@ class NewFurniture extends React.Component {
     this.setState({ activeCategory: newCategory });
   }
 
+  productsOnPage(viewport) {
+    let productsOnPage;
+
+    if (viewport === 'desktop') {
+      productsOnPage = 8;
+    } else if (viewport === 'tablet') {
+      productsOnPage = 2;
+    } else {
+      productsOnPage = 1;
+    }
+
+    return productsOnPage;
+  }
+
   render() {
-    const { categories, products } = this.props;
+    const { categories, products, viewport } = this.props;
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
+
     const pagesCount = Math.ceil(categoryProducts.length / 8);
 
     const newPages = [];
@@ -50,12 +65,17 @@ class NewFurniture extends React.Component {
         </li>
       );
       newPages.push(
-        <div className={'row' + ' ' + styles.changeForNewPage}>
-          {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-            <div key={item.id} className='col-3'>
-              <ProductBox {...item} />
-            </div>
-          ))}
+        <div className={'row ' + styles.changeForNewPage}>
+          {categoryProducts
+            .slice(
+              activePage * this.productsOnPage(viewport),
+              (activePage + 1) * this.productsOnPage(viewport)
+            )
+            .map(item => (
+              <div key={item.id} className='col-lg-3 col-md-6 col-sm-12'>
+                <ProductBox {...item} />
+              </div>
+            ))}
         </div>
       );
     }
@@ -117,6 +137,7 @@ NewFurniture.propTypes = {
       newFurniture: PropTypes.bool,
     })
   ),
+  viewport: PropTypes.string,
 };
 
 NewFurniture.defaultProps = {
