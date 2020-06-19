@@ -3,36 +3,39 @@ import PropTypes from 'prop-types';
 // import styles from './SwipeTest.module.scss';
 // import Swiper from 'react-id-swiper';
 // import 'swiper/css/swiper.css';
-// import { Swipe } from 'react-swipe-component';
+import { Swipe } from 'react-swipe-component';
 
-const SwipeTest = ({ itemsCount, currentAction, currentItem, children }) => {
-  const params = {
-    spaceBetween: 20,
-  };
+class SwipeTest extends React.Component {
+  render() {
+    const { itemsCount, currentAction, currentItem, children } = this.props;
 
-  const onSwipeLeftListener = () => {
-    if (currentItem + 1 < itemsCount) {
-      currentAction(currentItem + 1);
-    }
-  };
+    const params = {
+      spaceBetween: 20,
+    };
 
-  const onSwipeRightListener = () => {
-    if (currentItem - 1 < itemsCount) {
-      currentAction(currentItem - 1);
-    }
-  };
+    const onSwipeLeftListener = () => {
+      if (currentItem + 1 < itemsCount) {
+        currentAction(currentItem + 1);
+      }
+    };
 
-  return (
-    // <Swipe
-    //   {...params}
-    //   onSwipedRight={onSwipeRightListener}
-    //   onSwipedLeft={onSwipeLeftListener}
-    // >
-    //   {children}
-    // </Swipe>
-    <div>123</div>
-  );
-};
+    const onSwipeRightListener = () => {
+      if (currentItem - 1 < itemsCount) {
+        currentAction(currentItem - 1);
+      }
+    };
+
+    return (
+      <Swipe
+        {...params}
+        onSwipedRight={onSwipeRightListener}
+        onSwipedLeft={onSwipeLeftListener}
+      >
+        {children}
+      </Swipe>
+    );
+  }
+}
 
 SwipeTest.propTypes = {
   itemsCount: PropTypes.number,
