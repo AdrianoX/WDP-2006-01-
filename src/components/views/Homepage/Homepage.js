@@ -7,9 +7,9 @@ import FeatureBoxes from '../../features/FeatureBoxes/FeatureBoxes';
 import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
 import RightSlider from '../../features/RightSlider/RightSlider';
 import LeftSlider from '../../features/LeftSlider/LeftSlider';
+import Brands from '../../features/Brands/BrandsContainer';
 
 import SaleProduct from '../../features/SaleProducts/SaleProductContainer';
-
 
 const Homepage = () => (
   <div className={styles.root}>
@@ -25,8 +25,8 @@ const Homepage = () => (
     <SaleProduct />
     <NewFurniture />
     <Gallery />
+    <Brands />
     <Feedback />
-
   </div>
 );
 

@@ -416,6 +416,45 @@ const initialState = {
       image: 'https://i.postimg.cc/TP9JJgYB/managerr.png',
     },
   ],
+
+  brands: [
+    {
+      id: 'Brand-1',
+      name: 'Brand 1',
+      logo: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png',
+    },
+
+    {
+      id: 'Brand-2',
+      name: 'Brand 2',
+      logo: 'https://i.postimg.cc/CLxsBjkZ/Layer-139.png',
+    },
+
+    {
+      id: 'Brand-3',
+      name: 'Brand 3',
+      logo: 'https://i.postimg.cc/d0r2PnPf/Layer-140.png',
+    },
+
+    {
+      id: 'Brand-4',
+      name: 'Brand 4',
+      logo: 'https://i.postimg.cc/VkS94m7m/Layer-141.png',
+    },
+
+    {
+      id: 'Brand-5',
+      name: 'Brand 5',
+      logo: 'https://i.postimg.cc/vZprNkj9/Layer-142.png',
+    },
+
+    {
+      id: 'Brand-6',
+      name: 'Brand 6',
+      logo: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png',
+    },
+  ],
+
   viewport: '',
 };
 
