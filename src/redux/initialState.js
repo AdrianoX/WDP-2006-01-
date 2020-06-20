@@ -409,6 +409,7 @@ const initialState = {
 
   ratings: [
     {
+      id: 0,
       person: 'John Smith',
       occupation: 'Furniture client',
       rating:
@@ -416,6 +417,7 @@ const initialState = {
       image: 'https://i.postimg.cc/TP9JJgYB/managerr.png',
     },
     {
+      id: 1,
       person: 'George Bregs',
       occupation: 'Furniture client',
       rating:
@@ -423,6 +425,7 @@ const initialState = {
       image: 'https://i.postimg.cc/RhB8V5jL/333.png',
     },
     {
+      id: 2,
       person: 'Susan Howl',
       occupation: 'Furniture client',
       rating:
