@@ -41,7 +41,7 @@ const ProductBox = ({
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button variant='outline' className={ isFavorite ? styles.active : ''}
+        <Button variant='outline' className={ isFavorite ? styles.active : styles.favor}
           onClick={e =>{
             e.preventDefault(); 
             isFavorite ?  removeFavorite(id): setFavorite(id);
