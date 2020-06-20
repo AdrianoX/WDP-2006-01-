@@ -6,13 +6,20 @@ import GalleryIcons from './GalleryIcon';
 import GalleryRightSide from './GalleryRightSide';
 
 class Gallery extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { activeTab: 'featured' };
+  }
   render() {
-    const { products, updateRating } = this.props;
+    const { products, updateRating, tabs } = this.props;
+    const { activeTab } = this.state;
 
     const image = products.map(p => {
       return p.bgImageUrl;
     });
 
+    // eslint-disable-next-line no-console
+    console.log('tabs', tabs);
     return (
       <div className={styles.root}>
         <div className='container'>
@@ -27,18 +34,17 @@ class Gallery extends Component {
               </div>
               <div className={styles.menu}>
                 <ul className='row'>
-                  <li className='col-3'>
-                    <a href='#test'>FEATURED</a>
-                  </li>
-                  <li className='col-3'>
-                    <a href='#test'>TOP SELLER</a>
-                  </li>
-                  <li className='col-3'>
-                    <a href='#test'>SALE OFF</a>
-                  </li>
-                  <li className='col-3'>
-                    <a href='#test'>TOP RATED</a>
-                  </li>
+                  {tabs.map(tab => (
+                    <li key={tab.id}>
+                      <a
+                        href='#'
+                        className={tab.id === activeTab && styles.active}
+                        onClick={() => this.TabChange(tab.id)}
+                      >
+                        {tab.name}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div className={styles.photoContainer}>
@@ -108,6 +114,7 @@ Gallery.propTypes = {
     })
   ),
   updateRating: PropTypes.func,
+  tabs: PropTypes.array,
 };
 
 Gallery.defaultProps = {
