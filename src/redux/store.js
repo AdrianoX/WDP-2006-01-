@@ -9,7 +9,6 @@ import brandsReducer from './brandsRedux';
 import favoriteRedux from './favoriteRedux';
 import viewportReducer from './viewportRedux';
 
-
 // define reducers
 const reducers = {
   cart: cartReducer,
@@ -19,7 +18,6 @@ const reducers = {
   brands: brandsReducer,
   favorites: favoriteRedux,
   viewport: viewportReducer,
-
 };
 
 // add blank reducers for initial state properties without reducers

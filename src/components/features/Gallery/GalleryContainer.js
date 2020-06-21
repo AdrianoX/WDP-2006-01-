@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import Gallery from './Gallery';
 import { updateRating } from '../../../redux/productsRedux';
-import { getAll, getAllTabs } from '../../../redux/GalleryRedux';
+import { getAllTabs, getAll } from '../../../redux/GalleryRedux';
 const mapStateToProps = state => ({
   products: getAll(state),
   galTabs: getAllTabs(state),

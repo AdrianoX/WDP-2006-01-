@@ -5,7 +5,6 @@ import GalleryPriceDetails from './GalleryPriceDetails';
 import GalleryIcons from './GalleryIcon';
 import GalleryRightSide from './GalleryRightSide';
 
-
 class Gallery extends Component {
   constructor(props) {
     super(props);
@@ -18,6 +17,7 @@ class Gallery extends Component {
   };
 
   itemInd = () => {
+    // eslint-disable-next-line no-unused-vars
     let item;
     const rand = Math.floor(Math.random() * 5);
 
@@ -33,10 +33,6 @@ class Gallery extends Component {
   render() {
     const { products, updateRating, tabs } = this.props;
     const { activeTab, visible } = this.state;
-
-    const image = products.map(p => {
-      return p.bgImageUrl;
-    });
 
     return (
       <div className={styles.root}>
@@ -56,7 +52,7 @@ class Gallery extends Component {
                     <li key={tab.id}>
                       <a
                         href='#'
-                        className={tab.id === activeTab && styles.active}
+                        className={tab.id === activeTab ? styles.active : undefined}
                         onClick={e => this.tabChange(tab.id, e)}
                       >
                         {tab.name}
@@ -67,35 +63,29 @@ class Gallery extends Component {
               </div>
               <div className={visible ? 'fadeIn' : 'fadeOut'}>
                 <div className={styles.photoContainer}>
-                  <div
+                  <img
                     className={styles.photo}
-                    style={{ backgroundImage: products[this.itemInd()].bgImageUrl }}
-                  >
-                    <div className={styles.row}>
-                      <div className='col-4'>
-                        <GalleryIcons />
-                      </div>
-                      <div className='col-7'>
-                        <GalleryPriceDetails
-                          name={products[this.itemInd()].name}
-                          price={products[this.itemInd()].price}
-                          oldPrice={products[this.itemInd()].oldPrice}
-                          stars={products[this.itemInd()].stars}
-                          rated={products[this.itemInd()].rated}
-                          updateRating={updateRating}
-                        />
-                      </div>
-                    </div>
-                  </div>
+                    src={products[this.itemInd()].bgImageUrl}
+                    alt={products[this.itemInd()].name}
+                  />
+                  <GalleryIcons />
+                  <GalleryPriceDetails
+                    name={products[this.itemInd()].name}
+                    price={products[this.itemInd()].price}
+                    oldPrice={products[this.itemInd()].oldPrice}
+                    stars={products[this.itemInd()].stars}
+                    rated={products[this.itemInd()].rated}
+                    updateRating={updateRating}
+                  />
                 </div>
                 <div className={styles.slider}>
                   <div className={styles.navigation}>
                     <a href='#'>&#x3c;</a>
                   </div>
                   <div className={styles.thumbnailBox}>
-                    {image.slice(5, 11).map(i => (
-                      <div key={i} className={styles.thumbnail}>
-                        <img src={i} alt={i} />
+                    {products.slice(5, 11).map(product => (
+                      <div key={product.id} className={styles.thumbnail}>
+                        <img src={product.bgImageUrl} alt={product.name} />
                       </div>
                     ))}
                   </div>
@@ -108,7 +98,7 @@ class Gallery extends Component {
             {/* Left column end */}
             <div className='col-6'>
               <GalleryRightSide
-                bgImageUrl={image[1]}
+                bgImageUrl={products[1].bgImageUrl}
                 name={products[1].name}
                 price={products[1].price}
                 category={products[1].category}

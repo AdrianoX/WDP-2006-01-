@@ -1,10 +1,9 @@
 @import "../../../styles/settings.scss";
 
 .icons {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  height: 100%;
+  position: absolute;
+  left: 2%;
+   align-self: center;
 
   ul {
     margin: 10px;
