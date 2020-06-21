@@ -23,7 +23,7 @@ const ProductBox = ({
   bgImageUrl,
   isFavorite,
   setFavorite,
-  removeFavorite
+  removeFavorite,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -49,7 +49,7 @@ const ProductBox = ({
       <div className={styles.outlines}>
         <Button variant='outline' className={ isFavorite ? styles.active : styles.favor}
           onClick={e =>{
-            e.preventDefault(); 
+            e.preventDefault();
             isFavorite ?  removeFavorite(id): setFavorite(id);
           }}
         >
