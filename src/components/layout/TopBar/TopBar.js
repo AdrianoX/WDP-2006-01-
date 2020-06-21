@@ -13,17 +13,17 @@ const TopBar = () => (
         <div className={`col text-left ${styles.topOptions}`}>
           <ul>
             <li>
-              <a href='#'>
+              <a href='#test'>
                 USD <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
               </a>
             </li>
             <li>
-              <a href='#'>
+              <a href='#test'>
                 English <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
               </a>
             </li>
             <li>
-              <a href='#'>
+              <a href='#test'>
                 Help <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />
               </a>
             </li>
@@ -32,19 +32,19 @@ const TopBar = () => (
         <div className={`col text-right ${styles.topMenu}`}>
           <ul>
             <li>
-              <a href='#'>
+              <a href='#test'>
                 <FontAwesomeIcon className={styles.icon} icon={faUser} />{' '}
                 <span>Login</span>
               </a>
             </li>
             <li>
-              <a href='#'>
+              <a href='#test'>
                 <FontAwesomeIcon className={styles.icon} icon={faLock} />{' '}
                 <span>Register</span>
               </a>
             </li>
             <li>
-              <a href='#'>
+              <a href='#test'>
                 <FontAwesomeIcon className={styles.icon} icon={faBars} />
               </a>
             </li>

@@ -17,27 +17,27 @@ const MenuBar = ({ children }) => (
         <div className={'col-auto ' + styles.menu}>
           <ul className={'flex-wrap justify-content-around'}>
             <li>
-              <a href='#' className={styles.active}>
+              <a href='#test' className={styles.active}>
                 Home
               </a>
             </li>
             <li>
-              <a href='#'>Furniture</a>
+              <a href='#test'>Furniture</a>
             </li>
             <li>
-              <a href='#'>Chair</a>
+              <a href='#test'>Chair</a>
             </li>
             <li>
-              <a href='#'>Table</a>
+              <a href='#test'>Table</a>
             </li>
             <li>
-              <a href='#'>Sofa</a>
+              <a href='#test'>Sofa</a>
             </li>
             <li>
-              <a href='#'>Bedroom</a>
+              <a href='#test'>Bedroom</a>
             </li>
             <li>
-              <a href='#'>Blog</a>
+              <a href='#test'>Blog</a>
             </li>
           </ul>
         </div>

@@ -17,12 +17,12 @@ const CompanyClaim = () => (
           </p>
         </div>
         <div className='col text-center'>
-          <a href='#'>
-            <img id='main-logo' src='/images/logo.png' alt='Bazar' />
+          <a href='#test'>
+            <img src='/images/logo.png' alt='Bazar' />
           </a>
         </div>
         <div className={`col text-right ${styles.cart}`}>
-          <a href='#' className={styles.cartBox}>
+          <a href='#test' className={styles.cartBox}>
             <div className={styles.cartIcon}>
               <FontAwesomeIcon className={styles.icon} icon={faShoppingBasket} />
             </div>

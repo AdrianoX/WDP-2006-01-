@@ -28,16 +28,16 @@ class Gallery extends Component {
               <div className={styles.menu}>
                 <ul className='row'>
                   <li className='col-3'>
-                    <a href='#'>FEATURED</a>
+                    <a href='#test'>FEATURED</a>
                   </li>
                   <li className='col-3'>
-                    <a href='#'>TOP SELLER</a>
+                    <a href='#test'>TOP SELLER</a>
                   </li>
                   <li className='col-3'>
-                    <a href='#'>SALE OFF</a>
+                    <a href='#test'>SALE OFF</a>
                   </li>
                   <li className='col-3'>
-                    <a href='#'>TOP RATED</a>
+                    <a href='#test'>TOP RATED</a>
                   </li>
                 </ul>
               </div>
@@ -63,7 +63,7 @@ class Gallery extends Component {
               </div>
               <div className={styles.slider}>
                 <div className={styles.navigation}>
-                  <a href='#'>&#x3c;</a>
+                  <a href='#test'>&#x3c;</a>
                 </div>
                 <div className={styles.thumbnailBox}>
                   {image.slice(5, 11).map(i => (
@@ -73,7 +73,7 @@ class Gallery extends Component {
                   ))}
                 </div>
                 <div className={styles.navigation}>
-                  <a href='#'>&#x3e;</a>
+                  <a href='#test'>&#x3e;</a>
                 </div>
               </div>
             </div>
