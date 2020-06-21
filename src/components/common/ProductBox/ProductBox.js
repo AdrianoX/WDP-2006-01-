@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './ProductBox.module.scss';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import StarRating from '../StarRating/StarRating';
+
 
 const ProductBox = ({
   name,
@@ -18,11 +20,17 @@ const ProductBox = ({
   rated,
   stars,
   id,
-  bgImageUrl
+  bgImageUrl,
+  isFavorite,
+  setFavorite,
+  removeFavorite
 }) => (
   <div className={styles.root}>
-    <div className={styles.photo} style={{ backgroundImage: bgImageUrl }}>
+    <div className={styles.photo}>
       {promo && <div className={styles.sale}>{promo}</div>}
+      <Link to={`/product/${id}`}>
+        <img src={bgImageUrl} alt={name} />
+      </Link>
       <div className={styles.buttons}>
         <Button variant='small'>Quick View</Button>
         <Button variant='small'>
@@ -31,13 +39,20 @@ const ProductBox = ({
       </div>
     </div>
     <div className={styles.content}>
-      <h5>{name}</h5>
+      <Link to={`/product/${id}`}>
+        <h5>{name}</h5>
+      </Link>
       <StarRating stars={stars} rated={rated} updateRating={updateRating} id={id} />
     </div>
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button variant='outline' className={favorite === 'yes' ? styles.active : ''}>
+        <Button variant='outline' className={ isFavorite ? styles.active : styles.favor}
+          onClick={e =>{
+            e.preventDefault(); 
+            isFavorite ?  removeFavorite(id): setFavorite(id);
+          }}
+        >
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
         <Button variant='outline' className={compare === 'yes' ? styles.active : ''}>
@@ -67,6 +82,9 @@ ProductBox.propTypes = {
   updateRating: PropTypes.func,
   rated: PropTypes.bool,
   id: PropTypes.string,
+  isFavorite: PropTypes.number,
+  setFavorite: PropTypes.func,
+  removeFavorite: PropTypes.func,
 };
 
 export default ProductBox;
