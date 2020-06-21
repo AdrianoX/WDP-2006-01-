@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './ProductBox.module.scss';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faHeart } from '@fortawesome/free-regular-svg-icons';
@@ -18,11 +19,14 @@ const ProductBox = ({
   rated,
   stars,
   id,
-  bgImageUrl
+  bgImageUrl,
 }) => (
   <div className={styles.root}>
-    <div className={styles.photo} style={{ backgroundImage: bgImageUrl }}>
+    <div className={styles.photo}>
       {promo && <div className={styles.sale}>{promo}</div>}
+      <Link to={`/product/${id}`}>
+        <img src={bgImageUrl} alt={name} />
+      </Link>
       <div className={styles.buttons}>
         <Button variant='small'>Quick View</Button>
         <Button variant='small'>
@@ -31,7 +35,9 @@ const ProductBox = ({
       </div>
     </div>
     <div className={styles.content}>
-      <h5>{name}</h5>
+      <Link to={`/product/${id}`}>
+        <h5>{name}</h5>
+      </Link>
       <StarRating stars={stars} rated={rated} updateRating={updateRating} id={id} />
     </div>
     <div className={styles.line}></div>
