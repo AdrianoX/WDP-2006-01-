@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './NewFurniture.module.scss';
 import SwipeAbleWrapper from '../../common/SwipeAbleWrapper/SwipeAbleWrapper';
-import ProductBox from '../../common/ProductBox/ProductBox.Container';
+import ProductBox from '../../common/ProductBox/ProductBoxContainer';
 
 class NewFurniture extends React.Component {
   state = {
