@@ -10,16 +10,6 @@ class NewFurniture extends React.Component {
     activeCategory: 'bed',
   };
 
-  leftAction() {
-    const newPage = this.state.activePage;
-    this.setState({ activePage: newPage - 1 });
-  }
-
-  rightAction() {
-    const newPage = this.state.activePage;
-    this.setState({ activePage: newPage + 1 });
-  }
-
   handlePageChange(newPage) {
     this.setState({ activePage: newPage });
   }
@@ -87,6 +77,7 @@ class NewFurniture extends React.Component {
     }
 
     const changeNewPages = () => {
+
       return newPages;
     };
 
@@ -113,9 +104,7 @@ class NewFurniture extends React.Component {
                   ))}
                 </ul>
               </div>
-              <div className={styles.dots}>
-                <ul>{dots}</ul>
-              </div>
+              <div className={styles.dots}>{/* <ul>{dots}</ul> */}</div>
             </div>
           </div>
           <SwipeAbleWrapper>{changeNewPages()}</SwipeAbleWrapper>

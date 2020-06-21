@@ -70,39 +70,40 @@
       }
     }
 
-    .dots {
-      position: absolute;
-      right: 0;
-      top: 0;
 
-      ul {
-        margin: 0;
-        padding: 0 0 0 1rem;
-        list-style: none;
-        background-color: $newFurniture-dots-bg;
-        transform: translateY(15px);
 
-        li {
-          display: inline-block;
-          margin-left: 0.5rem;
+    // .dots {
+    //   position: absolute;
+    //   right: 0;
+    //   top: 0;
 
-          a {
-            display: block;
-            width: 13px;
-            height: 13px;
-            border-radius: 6px;
-            background-color: $newFurniture-dots-color;
-            font-size: 0;
+    //   ul {
+    //     margin: 0;
+    //     padding: 0 0 0 1rem;
+    //     list-style: none;
+    //     background-color: $newFurniture-dots-bg;
+    //     transform: translateY(15px);
 
-            &.active,
-            &:hover {
-              background-color: $primary;
-              cursor: pointer;
-            }
-          }
-        }
-      }
-    }
+    //     li {
+    //       display: inline-block;
+    //       margin-left: 0.5rem;
+
+    //       a {
+    //         display: block;
+    //         width: 13px;
+    //         height: 13px;
+    //         border-radius: 6px;
+    //         background-color: $newFurniture-dots-color;
+    //         font-size: 0;
+
+    //         &.active,
+    //         &:hover {
+    //           background-color: $primary;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
   }
 }
 

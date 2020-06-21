@@ -3,6 +3,8 @@ import styles from './Feedback.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
+// import Swipe from '../../common/SwipeTest/SwipeTest';
+import SwipeAbleWrapper from '../../common/SwipeAbleWrapper/SwipeAbleWrapper';
 
 class Feedback extends React.Component {
   state = {
@@ -10,7 +12,7 @@ class Feedback extends React.Component {
   };
 
   handlePageChange = newPage => {
-    setTimeout(() => this.setState({ activePage: newPage }), 700);
+    setTimeout(() => this.setState({ activePage: newPage }), 200);
   };
 
   getDotsList = () => {
@@ -19,11 +21,10 @@ class Feedback extends React.Component {
 
     for (let i = 0; i < 3; i++) {
       dots.push(
-        <li key={i}>
+        <li>
           <a
-            href='#test'
             onClick={() => this.handlePageChange(i)}
-            className={(i === activePage && styles.active).toString()}
+            className={i === activePage && styles.active}
           >
             page {i}
           </a>
@@ -33,9 +34,37 @@ class Feedback extends React.Component {
     return dots;
   };
 
-  render() {
-    const { ratings } = this.props;
+  preparePerson = () =>
+    this.props.ratings.map((...ratings) => {
+      // const { ratings } = this.props;
+      const { activePage } = this.state;
+      // console.log(ratings);
+      return (
+        <div className='row' key={ratings.id}>
+          <div className={'col ' + styles.quote}>
+            <FontAwesomeIcon icon={faQuoteRight} className={styles.quotes}>
+              {' '}
+              stars
+            </FontAwesomeIcon>
+            <div className={styles.rating}>{ratings[activePage].rating}</div>
+            <div className={styles.person}>
+              <div className={styles.person_image}>
+                <img
+                  src={ratings[activePage].image}
+                  alt={ratings[activePage].occupation}
+                ></img>
+              </div>
+              <div className={styles.person_name}>
+                <h5>{ratings[activePage].person}</h5>
+                <p>{ratings[activePage].occupation}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    });
 
+  render() {
     return (
       <div className={styles.root}>
         <div className='container'>
@@ -45,29 +74,11 @@ class Feedback extends React.Component {
                 <h3>Client Feedback</h3>
               </div>
               <div className={'col-auto ' + styles.dots}>
-                <ul>{this.getDotsList()}</ul>
+                {/* <ul>{this.getDotsList()}</ul> */}
               </div>
             </div>
           </div>
-
-          <div className='row'>
-            <div className={'col ' + styles.quote}>
-              <FontAwesomeIcon icon={faQuoteRight} className={styles.quotes}>
-                {' '}
-                stars
-              </FontAwesomeIcon>
-              <div className={styles.rating}>{ratings[0].rating}</div>
-              <div className={styles.person}>
-                <div className={styles.person_image}>
-                  <img src={ratings[0].image} alt={ratings[0].occupation}></img>
-                </div>
-                <div className={styles.person_name}>
-                  <h5>{ratings[0].person}</h5>
-                  <p>{ratings[0].occupation}</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <SwipeAbleWrapper>{this.preparePerson()}</SwipeAbleWrapper>
         </div>
       </div>
     );
