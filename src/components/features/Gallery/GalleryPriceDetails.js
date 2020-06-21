@@ -18,7 +18,7 @@ const GalleryDetails = ({ name, stars, price, oldPrice }) => {
         <h5>{name}</h5>
         <div className={styles.stars}>
           {starsArray.map(i => (
-            <a key={i}>
+            <a href='#test' key={i}>
               {i <= stars ? (
                 <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
               ) : (
