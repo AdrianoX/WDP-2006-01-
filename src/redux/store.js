@@ -5,6 +5,7 @@ import cartReducer from './cartRedux';
 import categoriesReducer from './categoriesRedux';
 import productsReducer from './productsRedux';
 import ratingsReducer from './ratingsRedux';
+import brandsReducer from './brandsRedux';
 import favoriteRedux from './favoriteRedux';
 import viewportReducer from './viewportRedux';
 
@@ -15,6 +16,7 @@ const reducers = {
   categories: categoriesReducer,
   products: productsReducer,
   ratings: ratingsReducer,
+  brands: brandsReducer,
   favorites: favoriteRedux,
   viewport: viewportReducer,
 
