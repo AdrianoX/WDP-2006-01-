@@ -79,11 +79,20 @@
 .active {
   background-color: #d58e32;
 }
+
+.active:hover {
+  background-color: #ffcc99;
+}
+
   .actions {
     padding: 15px 10px 10px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    .favor:hover {
+      background-color: #ffcc99;
+    }
   }
   &:hover {
     .buttons {
@@ -91,7 +100,7 @@
     }
     .price > div {
     background-color: $primary;
-    }
+    } 
   }
   .oldPrice {
     display: inline-block;
@@ -102,3 +111,4 @@
     text-decoration-color: $text-color;
   }
 }
+

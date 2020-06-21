@@ -8,6 +8,7 @@ import { faStar as faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import StarRating from '../StarRating/StarRating';
 
+
 const ProductBox = ({
   name,
   price,
@@ -20,6 +21,9 @@ const ProductBox = ({
   stars,
   id,
   bgImageUrl,
+  isFavorite,
+  setFavorite,
+  removeFavorite
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -43,7 +47,12 @@ const ProductBox = ({
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button variant='outline' className={favorite === 'yes' ? styles.active : ''}>
+        <Button variant='outline' className={ isFavorite ? styles.active : styles.favor}
+          onClick={e =>{
+            e.preventDefault(); 
+            isFavorite ?  removeFavorite(id): setFavorite(id);
+          }}
+        >
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
         <Button variant='outline' className={compare === 'yes' ? styles.active : ''}>
@@ -73,6 +82,9 @@ ProductBox.propTypes = {
   updateRating: PropTypes.func,
   rated: PropTypes.bool,
   id: PropTypes.string,
+  isFavorite: PropTypes.number,
+  setFavorite: PropTypes.func,
+  removeFavorite: PropTypes.func,
 };
 
 export default ProductBox;
