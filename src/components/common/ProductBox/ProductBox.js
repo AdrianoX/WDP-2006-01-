@@ -76,7 +76,7 @@ ProductBox.propTypes = {
   updateRating: PropTypes.func,
   rated: PropTypes.bool,
   id: PropTypes.string,
-  isFavorite: PropTypes.string,
+  isFavorite: PropTypes.number,
   setFavorite: PropTypes.func,
   removeFavorite: PropTypes.func,
 };
