@@ -33,38 +33,6 @@
   }
 }
 
-// .dots {
-//   position: absolute;
-//   right: 0;
-//   top: 0;
-
-//   ul {
-//     margin: 0;
-//     padding: 0 0 0 1rem;
-//     list-style: none;
-//     background-color: $newFurniture-dots-bg;
-//     transform: translateY(15px);
-
-//     li {
-//       display: inline-block;
-//       margin-left: 0.5rem;
-
-//       a {
-//         display: block;
-//         width: 13px;
-//         height: 13px;
-//         border-radius: 6px;
-//         background-color: $newFurniture-dots-color;
-//         font-size: 0;
-
-//         &.active,
-//         &:hover {
-//           background-color: $primary;
-//         }
-//       }
-//     }
-//   }
-// }
 
 .quote {
   display: flex;
@@ -115,20 +83,3 @@
   }
 }
 
-// .swiper-pagination {
-//   bottom: 150px;
-//   left: 0;
-//   width: 100%;
-
-//   .swiper-pagination-clickable {
-//     bottom: 150px;
-//     left: 0;
-//     width: 100%;
-//   }
-
-//   .swiper-pagination-bullets {
-//     bottom: 150px;
-//     left: 0;
-//     width: 100%;
-//   }
-// }

@@ -104,9 +104,7 @@ class NewFurniture extends React.Component {
                   ))}
                 </ul>
               </div>
-              <div className={styles.dots}>
-                <ul>{dots}</ul>
-              </div>
+              <div className={styles.dots}>{/* <ul>{dots}</ul> */}</div>
             </div>
           </div>
           <SwipeAbleWrapper>{changeNewPages()}</SwipeAbleWrapper>
