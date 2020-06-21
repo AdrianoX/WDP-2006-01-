@@ -5,21 +5,39 @@ import GalleryPriceDetails from './GalleryPriceDetails';
 import GalleryIcons from './GalleryIcon';
 import GalleryRightSide from './GalleryRightSide';
 
+
 class Gallery extends Component {
   constructor(props) {
     super(props);
-    this.state = { activeTab: 'featured' };
+    this.state = { activeTab: 'featured', visible: false };
   }
+
+  tabChange = (newTab, e) => {
+    e.preventDefault();
+    this.setState({ activeTab: newTab, visible: true });
+  };
+
+  itemInd = () => {
+    let item;
+    const rand = Math.floor(Math.random() * 5);
+
+    if (this.state.activeTab === 'featured') {
+      return (item = rand);
+    } else if (this.state.activeTab === 'top seller') {
+      return (item = rand + 5);
+    } else if (this.state.activeTab === 'sale off') {
+      return (item = rand + 10);
+    } else return (item = rand + 15);
+  };
+
   render() {
     const { products, updateRating, tabs } = this.props;
-    const { activeTab } = this.state;
+    const { activeTab, visible } = this.state;
 
     const image = products.map(p => {
       return p.bgImageUrl;
     });
 
-    // eslint-disable-next-line no-console
-    console.log('tabs', tabs);
     return (
       <div className={styles.root}>
         <div className='container'>
@@ -39,7 +57,7 @@ class Gallery extends Component {
                       <a
                         href='#'
                         className={tab.id === activeTab && styles.active}
-                        onClick={() => this.TabChange(tab.id)}
+                        onClick={e => this.tabChange(tab.id, e)}
                       >
                         {tab.name}
                       </a>
@@ -47,41 +65,43 @@ class Gallery extends Component {
                   ))}
                 </ul>
               </div>
-              <div className={styles.photoContainer}>
-                <div
-                  className={styles.photo}
-                  style={{ backgroundImage: `url(${products[0].bgImageUrl})` }}
-                >
-                  <div className={styles.row}>
-                    <div className='col-4'>
-                      <GalleryIcons />
-                    </div>
-                    <div className='col-7'>
-                      <GalleryPriceDetails
-                        name={products[0].name}
-                        price={products[0].price}
-                        oldPrice={products[0].oldPrice}
-                        stars={products[0].stars}
-                        rated={products[0].rated}
-                        updateRating={updateRating}
-                      />
+              <div className={visible ? 'fadeIn' : 'fadeOut'}>
+                <div className={styles.photoContainer}>
+                  <div
+                    className={styles.photo}
+                    style={{ backgroundImage: products[this.itemInd()].bgImageUrl }}
+                  >
+                    <div className={styles.row}>
+                      <div className='col-4'>
+                        <GalleryIcons />
+                      </div>
+                      <div className='col-7'>
+                        <GalleryPriceDetails
+                          name={products[this.itemInd()].name}
+                          price={products[this.itemInd()].price}
+                          oldPrice={products[this.itemInd()].oldPrice}
+                          stars={products[this.itemInd()].stars}
+                          rated={products[this.itemInd()].rated}
+                          updateRating={updateRating}
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className={styles.slider}>
-                <div className={styles.navigation}>
-                  <a href='#test'>&#x3c;</a>
-                </div>
-                <div className={styles.thumbnailBox}>
-                  {image.slice(5, 11).map(i => (
-                    <div key={i} className={styles.thumbnail}>
-                      <img src={i} alt={i} />
-                    </div>
-                  ))}
-                </div>
-                <div className={styles.navigation}>
-                  <a href='#test'>&#x3e;</a>
+                <div className={styles.slider}>
+                  <div className={styles.navigation}>
+                    <a href='#'>&#x3c;</a>
+                  </div>
+                  <div className={styles.thumbnailBox}>
+                    {image.slice(5, 11).map(i => (
+                      <div key={i} className={styles.thumbnail}>
+                        <img src={i} alt={i} />
+                      </div>
+                    ))}
+                  </div>
+                  <div className={styles.navigation}>
+                    <a href='#'>&#x3e;</a>
+                  </div>
                 </div>
               </div>
             </div>
