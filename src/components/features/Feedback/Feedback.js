@@ -21,8 +21,9 @@ class Feedback extends React.Component {
 
     for (let i = 0; i < 3; i++) {
       dots.push(
-        <li>
+        <li key={i}>
           <a
+            href="#person"
             onClick={() => this.handlePageChange(i)}
             className={i === activePage && styles.active}
           >
@@ -35,28 +36,25 @@ class Feedback extends React.Component {
   };
 
   preparePerson = () =>
-    this.props.ratings.map((...ratings) => {
-      // const { ratings } = this.props;
-      const { activePage } = this.state;
-      // console.log(ratings);
+    this.props.ratings.map((rating) => {
       return (
-        <div className='row' key={ratings.id}>
+        <div className='row' key={rating.id}>
           <div className={'col ' + styles.quote}>
             <FontAwesomeIcon icon={faQuoteRight} className={styles.quotes}>
               {' '}
               stars
             </FontAwesomeIcon>
-            <div className={styles.rating}>{ratings[activePage].rating}</div>
+            <div className={styles.rating}>{rating.rating}</div>
             <div className={styles.person}>
               <div className={styles.person_image}>
                 <img
-                  src={ratings[activePage].image}
-                  alt={ratings[activePage].occupation}
+                  src={rating.image}
+                  alt={rating.occupation}
                 ></img>
               </div>
               <div className={styles.person_name}>
-                <h5>{ratings[activePage].person}</h5>
-                <p>{ratings[activePage].occupation}</p>
+                <h5>{rating.person}</h5>
+                <p>{rating.occupation}</p>
               </div>
             </div>
           </div>
