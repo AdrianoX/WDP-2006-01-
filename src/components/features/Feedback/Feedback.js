@@ -23,7 +23,7 @@ class Feedback extends React.Component {
           <a
             href='#test'
             onClick={() => this.handlePageChange(i)}
-            className={i === activePage && styles.active}
+            className={(i === activePage && styles.active).toString()}
           >
             page {i}
           </a>

@@ -74,7 +74,7 @@ class LeftSlider extends React.Component {
               this.handlePageChange(i);
               this.restart();
             }}
-            className={i === activePage && styles.active}
+            className={(i === activePage && styles.active).toString()}
           >
             page {i}
           </a>

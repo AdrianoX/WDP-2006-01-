@@ -57,8 +57,9 @@ class NewFurniture extends React.Component {
       dots.push(
         <li key={i}>
           <a
+            href='#test'
             onClick={() => this.handlePageChange(i)}
-            className={i === activePage && styles.active}
+            className={(i === activePage && styles.active).toString()}
           >
             page {i}
           </a>
@@ -68,11 +69,11 @@ class NewFurniture extends React.Component {
       const productsOnPage = this.productsOnPage(viewport);
 
       newPages.push(
-        <div key={i}className={'row ' + styles.changeForNewPage}>
+        <div key={i} className={'row ' + styles.changeForNewPage}>
           {
             categoryProducts.slice(
               activePage * productsOnPage,
-              (activePage + 1) * productsOnPage
+              (activePage + 8) * productsOnPage
             ).map(
               item => (
                 <div key={item.id} className='col-lg-3 col-md-6 col-sm-12'>
@@ -102,7 +103,8 @@ class NewFurniture extends React.Component {
                   {categories.map(item => (
                     <li key={item.id}>
                       <a
-                        className={item.id === activeCategory && styles.active}
+                        href='#test'
+                        className={(item.id === activeCategory && styles.active).toString()}
                         onClick={() => this.handleCategoryChange(item.id)}
                       >
                         {item.name}
