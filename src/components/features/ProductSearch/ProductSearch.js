@@ -12,19 +12,19 @@ const ProductSearch = () => (
       <FontAwesomeIcon className={styles.icon} icon={faListUl} />
       <ul className={styles.mainCategoryList}>
         <li className={styles.mainCategory}>
-          <a value='#'>Furniture</a>
+          <a href='#test' value='#'>Furniture</a>
         </li>
         <li className={styles.secCategory}>
-          <a value='#'> CHAIR</a>
+          <a href='#test' value='#'> CHAIR</a>
         </li>
         <li className={styles.secCategory}>
-          <a value='#'> TABLE</a>
+          <a href='#test' value='#'> TABLE</a>
         </li>
         <li className={styles.secCategory}>
-          <a value='#'> SOFA</a>
+          <a href='#test' value='#'> SOFA</a>
         </li>
         <li className={styles.secCategory}>
-          <a value='#'> BEDROOM</a> {/*value C.L */}
+          <a href='#test' value='#'> BEDROOM</a> {/*value C.L */}
         </li>
       </ul>
       <FontAwesomeIcon className={styles.icon} icon={faCaretDown} />

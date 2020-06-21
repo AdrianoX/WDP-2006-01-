@@ -41,7 +41,7 @@ class RightSlider extends React.Component {
     return (
       <div>
         {image.slice(activePage * 1, (activePage + 1) * 1).map(item => (
-          <div key={item.id}>
+          <div key={item}>
             <div className={styles.component}>
               <img className={'right-img'} src={item.image} alt={item.title} />
             </div>

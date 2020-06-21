@@ -19,8 +19,9 @@ class Feedback extends React.Component {
 
     for (let i = 0; i < 3; i++) {
       dots.push(
-        <li>
+        <li key={i}>
           <a
+            href='#test'
             onClick={() => this.handlePageChange(i)}
             className={i === activePage && styles.active}
           >

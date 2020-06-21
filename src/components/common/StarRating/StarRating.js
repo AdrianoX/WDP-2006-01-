@@ -15,7 +15,7 @@ const StarsRating = ({ stars, id, updateRating, rated }) => {
   return (
     <div className={rated ? styles.starsRated : styles.stars}>
       {[1, 2, 3, 4, 5].map(i => (
-        <a key={i} href='#' onClick={e => ratingHandler(e, id, i)}>
+        <a key={i} href='#test' onClick={e => ratingHandler(e, id, i)}>
           {i <= stars ? (
             <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
           ) : (

@@ -55,7 +55,7 @@ class NewFurniture extends React.Component {
 
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
-        <li>
+        <li key={i}>
           <a
             onClick={() => this.handlePageChange(i)}
             className={i === activePage && styles.active}
@@ -68,7 +68,7 @@ class NewFurniture extends React.Component {
       const productsOnPage = this.productsOnPage(viewport);
 
       newPages.push(
-        <div className={'row' + ' ' + styles.changeForNewPage}>
+        <div key={i}className={'row ' + styles.changeForNewPage}>
           {
             categoryProducts.slice(
               activePage * productsOnPage,

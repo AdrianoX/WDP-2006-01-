@@ -68,8 +68,8 @@ class LeftSlider extends React.Component {
 
     for (let i = 0; i < pages; i++) {
       dots.push(
-        <li>
-          <a
+        <li key={i}>
+          <a href='#test'
             onClick={() => {
               this.handlePageChange(i);
               this.restart();
@@ -94,7 +94,7 @@ class LeftSlider extends React.Component {
         </div>
         <div>
           {image.slice(activePage * 1, (activePage + 1) * 1).map(item => (
-            <div key={item.id}>
+            <div key={item}>
               <div className={styles.component}>
                 <img src={item.image} alt={item.title} />
                 <div className={styles.wrapper}></div>
