@@ -10,7 +10,7 @@ class Gallery extends Component {
     const { products } = this.props;
 
     const image = products.map(p => {
-      return p.bgImageUrl.slice(5, -2);
+      return p.bgImageUrl;
     });
 
     return (
@@ -44,7 +44,7 @@ class Gallery extends Component {
               <div className={styles.photoContainer}>
                 <div
                   className={styles.photo}
-                  style={{ backgroundImage: products[0].bgImageUrl }}
+                  style={{ backgroundImage: `url(${products[0].bgImageUrl})` }}
                 >
                   <div className={styles.row}>
                     <div className='col-4'>
