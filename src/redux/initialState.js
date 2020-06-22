@@ -401,7 +401,7 @@ const initialState = {
   ],
 
   favorites: ['aenean-ru-bristique-1'],
-  
+
   cart: {
     products: [],
   },
