@@ -606,21 +606,21 @@ const initialState = {
       subtitle: 'SOFA',
       discount: '-20%',
       image:
-        'https://cdn.pixabay.com/photo/2017/08/02/01/01/living-room-2569325_1280.jpg',
+        'url("https://cdn.pixabay.com/photo/2017/08/02/01/01/living-room-2569325_1280.jpg")',
     },
     {
       title: 'OFFICE CHAIR',
       subtitle: 'COLLECTION',
       discount: '$ 200.00',
       image:
-        'https://cdn.pixabay.com/photo/2016/10/23/17/24/chair-1763659_1280.jpg',
+        'url("https://cdn.pixabay.com/photo/2016/10/23/17/24/chair-1763659_1280.jpg")',
     },
     {
       title: 'SPECIAL COLLECTION',
       subtitle: 'SAVE UP 45% OF FURNITURE',
       discount: '',
       image:
-        'https://cdn.pixabay.com/photo/2018/07/31/20/08/interior-3575815_1280.jpg',
+        'url("https://cdn.pixabay.com/photo/2018/07/31/20/08/interior-3575815_1280.jpg")',
     },
   ],
 
