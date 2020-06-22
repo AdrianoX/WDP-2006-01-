@@ -17,7 +17,7 @@ const Newsletter = ({ children }) => (
           <form className={styles.NewsletterForm}>
             <div>
               <div className={styles.iconContainer}>
-                <a href='#'>
+                <a href='#test'>
                   <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
                 </a>
                 <input type='email' placeholder='email here' />
@@ -25,7 +25,7 @@ const Newsletter = ({ children }) => (
             </div>
           </form>
           <button className={styles.NewsletterSendButton}>
-            <a href='#'>
+            <a href='#test'>
               <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
             </a>
           </button>
