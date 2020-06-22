@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import Newsletter from '../Newsletter/Newsletter';
 
 const checkViewportWidth = () => {
   if (window.innerWidth < 768) {
@@ -26,6 +27,7 @@ const MainLayout = ({ children, changeViewportWidth }) => {
     <div>
       <Header />
       {children}
+      <Newsletter />
       <Footer />
     </div>
   );
