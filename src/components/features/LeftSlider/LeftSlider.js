@@ -1,6 +1,11 @@
 import React from 'react';
 import styles from './LeftSlider.module.scss';
 import { imageData } from '../../../redux/initialState';
+import StarRating from '../../common/StarRating/StarRating';
+
+import PropTypes from 'prop-types';
+
+import { Link } from 'react-router-dom';
 
 class LeftSlider extends React.Component {
   state = {
@@ -87,7 +92,7 @@ class LeftSlider extends React.Component {
       <div>
         <div className={'row no-gutters ' + styles.panelBar}>
           <div className={'col-auto'}>
-            <h2 className={styles.title}>Hot Deals</h2>
+            <h2 className={styles.title}>HOT DEALS</h2>
           </div>
           <div className={'col-auto ' + styles.dots}>
             <ul>{dots}</ul>
@@ -106,5 +111,9 @@ class LeftSlider extends React.Component {
     );
   }
 }
+
+LeftSlider.propTypes = {
+  oldPrice: PropTypes.number,
+};
 
 export default LeftSlider;
