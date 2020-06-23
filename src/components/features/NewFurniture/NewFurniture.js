@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import styles from './NewFurniture.module.scss';
 import SwipeAbleWrapper from '../../common/SwipeAbleWrapper/SwipeAbleWrapper';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
+
 //import {Spring} from 'react-spring/renderprops';
+
+import StickyBar from '../StickyBar/StickyBarContainer';
 
 class NewFurniture extends React.Component {
   state = {
@@ -117,6 +120,7 @@ class NewFurniture extends React.Component {
             </div>
           </div>
           <SwipeAbleWrapper>{changeNewPages()}</SwipeAbleWrapper>
+          <StickyBar/>
         </div>
       </div>
     );

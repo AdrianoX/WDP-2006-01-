@@ -24,6 +24,9 @@ const ProductBox = ({
   isFavorite,
   setFavorite,
   removeFavorite,
+  isCompare,
+  setCompare,
+  removeCompare,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -55,7 +58,12 @@ const ProductBox = ({
         >
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
-        <Button variant='outline' className={compare === 'yes' ? styles.active : ''}>
+        <Button variant='outline' className={ isCompare ? styles.active : styles.favor}
+          onClick={e =>{
+            e.preventDefault(); 
+            isCompare ?  removeCompare(bgImageUrl): setCompare(bgImageUrl);
+          }}
+        >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
@@ -85,6 +93,9 @@ ProductBox.propTypes = {
   isFavorite: PropTypes.number,
   setFavorite: PropTypes.func,
   removeFavorite: PropTypes.func,
+  isCompare: PropTypes.number,
+  setCompare: PropTypes.func,
+  removeCompare: PropTypes.func,
 };
 
 export default ProductBox;
