@@ -37,9 +37,15 @@ class NewFurniture extends React.Component {
     const { categories, products, viewport } = this.props;
     const { activeCategory, activePage } = this.state;
 
+    const viewPathname = window.location.pathname
+      .split('/')
+      .slice(0, -1)
+      .join('/');
+
     const categoryProducts = products.filter(item => item.category === activeCategory);
 
-    const pagesCount = Math.ceil(categoryProducts.length / 8);
+    const productCount = this.productsOnPage(viewport);
+    const pagesCount = Math.ceil(categoryProducts.length / productCount);
 
     const newPages = [];
     const dots = [];
@@ -57,36 +63,31 @@ class NewFurniture extends React.Component {
         </li>
       );
 
-      const productsOnPage = this.productsOnPage(viewport);
-
       newPages.push(
-        <div key={i} className={'row ' + styles.changeForNewPage}>
-          {
-            categoryProducts.slice(
-              activePage * productsOnPage,
-              (activePage + 1) * productsOnPage
-            ).map(
-              item => (
-                <div key={item.id} className='col-lg-3 col-md-6 col-sm-12'>
-                  <Spring
-                    from={{ opacity: 0 }}
-                    to={{ opacity: 1 }}>
-                    {props => (
-                      <div style={props}>
-                        <ProductBox {...item} />
-                      </div>
-                    )}
-                  </Spring>
-                </div>
-              )
-            )
-          }
+        <div
+          key={'ProductList' + i + '-' + activePage}
+          className={'row ' + styles.changeForNewPage}
+        >
+          {categoryProducts
+            .slice(i * (viewPathname === '/product' ? 4 : productCount), (i + 1) * (viewPathname === '/product' ? 4 : productCount))
+            .map(item => (
+              <div key={item.id} className='col-lg-3 col-md-6 col-sm-12'>
+                <Spring
+                  from={{ opacity: 0 }}
+                  to={{ opacity: 1 }}>
+                  {props => (
+                    <div style={props}>
+                      <ProductBox {...item} />
+                    </div>
+                  )}
+                </Spring>
+              </div>
+            ))}
         </div>
       );
     }
 
     const changeNewPages = () => {
-
       return newPages;
     };
 
@@ -95,7 +96,11 @@ class NewFurniture extends React.Component {
         <div className='container'>
           <div className={styles.panelBar}>
             <div className='row no-gutters align-items-end'>
-              <div className={styles.heading}>
+              <div
+                className={'col-auto ' +
+                  (viewPathname === '/product' ? styles.headingProduct : styles.heading)
+                }
+              >
                 <h3>New furniture</h3>
               </div>
               <div className={'col-sm-12 ' + styles.menu}>
