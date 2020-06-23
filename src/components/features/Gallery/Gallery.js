@@ -8,32 +8,58 @@ import GalleryRightSide from './GalleryRightSide';
 class Gallery extends Component {
   constructor(props) {
     super(props);
-    this.state = { activeTab: 'featured', visible: false };
+    this.state = {
+      activeTab: 'featured',
+      activeProduct: {},
+      startIndex: 0,
+      finishIndex: 6,
+    };
   }
 
   tabChange = (newTab, e) => {
     e.preventDefault();
-    this.setState({ activeTab: newTab, visible: true });
+    this.setState({ activeTab: newTab });
+    this.handleProductChange({});
   };
 
-  itemInd = () => {
-    // eslint-disable-next-line no-unused-vars
-    let item;
-    const rand = Math.floor(Math.random() * 5);
+  handleProductChange(newProduct) {
+    this.setState({ activeProduct: newProduct });
+  }
 
-    if (this.state.activeTab === 'featured') {
-      return (item = rand);
-    } else if (this.state.activeTab === 'top seller') {
-      return (item = rand + 5);
-    } else if (this.state.activeTab === 'sale off') {
-      return (item = rand + 10);
-    } else return (item = rand + 15);
-  };
+  handleNext(event) {
+    const { startIndex, finishIndex } = this.state;
+
+    const subcategoryProducts = this.props.products.filter(
+      item => item.subcategory === this.state.activeSubcategory
+    );
+
+    event.preventDefault();
+
+    if (finishIndex < subcategoryProducts.length) {
+      this.setState({
+        startIndex: startIndex + 6,
+        finishIndex: finishIndex + 6,
+      });
+    }
+  }
+
+  handlePrev(event) {
+    const { startIndex, finishIndex } = this.state;
+
+    event.preventDefault();
+    if (startIndex > 0 && finishIndex > 0) {
+      this.setState({
+        startIndex: startIndex - 6,
+        finishIndex: finishIndex - 6,
+      });
+    }
+  }
 
   render() {
-    const { products, updateRating, tabs } = this.props;
-    const { activeTab, visible } = this.state;
+    const { products, updateRating, galTabs } = this.props;
+    const { activeTab, startIndex, finishIndex, activeProduct } = this.state;
 
+    const subcategoryProducts = products.filter(item => item.subcategory === activeTab);
     return (
       <div className={styles.root}>
         <div className='container'>
@@ -48,7 +74,7 @@ class Gallery extends Component {
               </div>
               <div className={styles.menu}>
                 <ul className='row'>
-                  {tabs.map(tab => (
+                  {galTabs.map(tab => (
                     <li key={tab.id}>
                       <a
                         href='#'
@@ -61,36 +87,51 @@ class Gallery extends Component {
                   ))}
                 </ul>
               </div>
-              <div className={visible ? 'fadeIn' : 'fadeOut'}>
-                <div className={styles.photoContainer}>
-                  <img
-                    className={styles.photo}
-                    src={products[this.itemInd()].bgImageUrl}
-                    alt={products[this.itemInd()].name}
-                  />
-                  <GalleryIcons />
-                  <GalleryPriceDetails
-                    name={products[this.itemInd()].name}
-                    price={products[this.itemInd()].price}
-                    oldPrice={products[this.itemInd()].oldPrice}
-                    stars={products[this.itemInd()].stars}
-                    rated={products[this.itemInd()].rated}
-                    updateRating={updateRating}
-                  />
-                </div>
+              <div className='fadeInAndOut'>
+                {activeProduct.id
+                  ? ''
+                  : this.handleProductChange(subcategoryProducts[0])}
+                {subcategoryProducts
+                  .filter(product => product.id === activeProduct.id)
+                  .map(item => (
+                    <div className={styles.photoContainer} key={item.id}>
+                      <img
+                        className={styles.photo}
+                        src={item.bgImageUrl}
+                        alt={item.name}
+                      />
+                      <GalleryIcons />
+                      <GalleryPriceDetails
+                        name={item.name}
+                        price={item.price}
+                        oldPrice={item.oldPrice}
+                        stars={item.stars}
+                        rated={item.rated}
+                        updateRating={updateRating}
+                      />
+                    </div>
+                  ))}
                 <div className={styles.slider}>
                   <div className={styles.navigation}>
-                    <a href='#'>&#x3c;</a>
+                    <a href='#' onClick={event => this.handleNext(event)}>
+                      &#x3c;
+                    </a>
                   </div>
                   <div className={styles.thumbnailBox}>
-                    {products.slice(5, 11).map(product => (
-                      <div key={product.id} className={styles.thumbnail}>
-                        <img src={product.bgImageUrl} alt={product.name} />
+                    {subcategoryProducts.slice(startIndex, finishIndex).map(item => (
+                      <div key={item.id} className={styles.thumbnail}>
+                        <img
+                          onClick={() => this.handleProductChange(item)}
+                          src={item.bgImageUrl}
+                          alt={item.name}
+                        />
                       </div>
                     ))}
                   </div>
                   <div className={styles.navigation}>
-                    <a href='#'>&#x3e;</a>
+                    <a href='#' onClick={event => this.handlePrev(event)}>
+                      &#x3e;
+                    </a>
                   </div>
                 </div>
               </div>
@@ -124,7 +165,7 @@ Gallery.propTypes = {
     })
   ),
   updateRating: PropTypes.func,
-  tabs: PropTypes.array,
+  galTabs: PropTypes.array,
 };
 
 Gallery.defaultProps = {
