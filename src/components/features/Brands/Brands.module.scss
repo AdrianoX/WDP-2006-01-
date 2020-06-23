@@ -39,12 +39,14 @@
       justify-content: space-between;
       width: 100%;
       padding: 0 30px;
+      overflow: hidden;
 
       .logo {
         height: 92px;
         width: 142px;
         border: 2px solid $newFurniture-line;
         padding: 10px;
+
 
         img {
           object-fit: contain;
