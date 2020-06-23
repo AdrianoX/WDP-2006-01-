@@ -45,13 +45,15 @@ class NewFurniture extends React.Component {
     const categoryProducts = products.filter(item => item.category === activeCategory);
 
     const productCount = this.productsOnPage(viewport);
-    const pagesCount = Math.ceil(categoryProducts.length / productCount);
+    const pagesCount = Math.ceil(
+      categoryProducts.length / (viewPathname === '/product' ? 4 : productCount)
+    );
 
     const newPages = [];
-    const dots = [];
+    //const dots = [];
 
     for (let i = 0; i < pagesCount; i++) {
-      dots.push(
+      /*dots.push(
         <li key={i}>
           <a
             href='#test'
@@ -81,6 +83,24 @@ class NewFurniture extends React.Component {
                     </div>
                   )}
                 </Spring>
+              </div>
+            ))}
+        </div>
+      );*/
+
+      newPages.push(
+        <div
+          key={'ProductList' + i + '-' + activePage}
+          className={'row ' + styles.changeForNewPage}
+        >
+          {categoryProducts
+            .slice(
+              i * (viewPathname === '/product' ? 4 : productCount),
+              (i + 1) * (viewPathname === '/product' ? 4 : productCount)
+            )
+            .map(item => (
+              <div key={item.id} className='col-lg-3 col-md-6 col-sm-12'>
+                <ProductBox {...item} />
               </div>
             ))}
         </div>
@@ -118,7 +138,7 @@ class NewFurniture extends React.Component {
                   ))}
                 </ul>
               </div>
-              <div className={styles.dots}>{/* <ul>{dots}</ul> */}</div>
+              {/*<div className={styles.dots}><ul>{dots}</ul></div>*/}
             </div>
           </div>
           <SwipeAbleWrapper>{changeNewPages()}</SwipeAbleWrapper>
