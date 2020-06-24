@@ -1,10 +1,15 @@
 import { connect } from 'react-redux';
 import StickyBar from './StickyBar';
-import { compareId, setCompare, removeCompare, compareProduct } from '../../../redux/compareRedux';
+import {
+  compareId,
+  setCompare,
+  removeCompare,
+  compareProduct,
+} from '../../../redux/compareRedux';
 
 const mapStateToProps = (state, props) => ({
   isCompare: compareId(state, props.id),
-  compareProduct: compareProduct(state, props),
+  compareProduct: compareProduct(state),
 });
 
 const mapDispatchToProps = dispatch => ({

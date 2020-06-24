@@ -1,17 +1,18 @@
 import React from 'react';
 import styles from './StickyBar.module.scss';
 import PropTypes from 'prop-types';
+import { removeCompare } from '../../../redux/compareRedux';
 
 class StickyBar extends React.Component {
   render() {
-    const { compareProduct, removeCompare } = this.props;
+    const { compareProduct, bgImageUrl } = this.props;
 
     return (
       <div className={styles.wrapper}>
         {compareProduct.map(product => (
-          <div key={product} className={styles.image}>
+          <div key={product.toString()} className={styles.image}>
             <img src={product.bgImageUrl} alt={product.id}></img>
-            <span className={styles.close} onClick={() => removeCompare(product)}>
+            <span className={styles.close} onClick={e => removeCompare(bgImageUrl)}>
               X
             </span>
           </div>
@@ -24,7 +25,6 @@ class StickyBar extends React.Component {
 StickyBar.propTypes = {
   compareProduct: PropTypes.array,
   bgImageUrl: PropTypes.string,
-  removeCompare: PropTypes.func,
 };
 
 export default StickyBar;
