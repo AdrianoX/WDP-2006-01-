@@ -2,7 +2,6 @@
 
 .root {
   .wrapper {
-    height: 515px;
     border: 1px solid $more-border;
 
     .tabs {
@@ -44,12 +43,12 @@
       padding: 30px;
 
       .opinion {
-        height: 105px;
+        //height: 105px;
         display: flex;
         flex-direction: column;
 
         p:first-of-type {
-          margin-bottom: auto;
+          margin-bottom: 30px;
         }
 
         p:last-of-type {
@@ -105,6 +104,18 @@
         padding: 0;
         position: absolute;
         width: 1px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .tab {
+    a {
+      border-right: none !important;
+
+      &.active {
+        border-bottom: 1px solid $more-border !important;
       }
     }
   }

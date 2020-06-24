@@ -19,7 +19,10 @@ class More extends React.Component {
           <div className={styles.wrapper}>
             <ul className={'row ' + styles.tabs}>
               {tabs.map(item => (
-                <li key={item.id} className={'col-2 ' + styles.tab}>
+                <li
+                  key={item.id}
+                  className={'col-sm-12 col-md-3 col-lg-2 ' + styles.tab}
+                >
                   <Button
                     className={(item.id === activeTab && styles.active).toString()}
                   >
@@ -42,22 +45,22 @@ class More extends React.Component {
                 </div>
               </div>
               <form className={styles.form}>
-                <div className={'row'}>
+                <div className={'row '}>
                   <div className={'col-12'}>
                     <label>Your review</label>
                     <textarea />
                   </div>
                 </div>
                 <div className={'row'}>
-                  <div className={'col-5'}>
+                  <div className={'col-sm-12 col-md-6 col-lg-5 pb-sm-3'}>
                     <label className={styles.visuallyHidden}>Name:</label>
                     <input type='text' placeholder='Name*' />
                   </div>
-                  <div className={'col-5'}>
+                  <div className={'col-sm-12 col-md-6 col-lg-5 pb-sm-2'}>
                     <label className={styles.visuallyHidden}>Email:</label>
                     <input type='email' placeholder='Email*' />
                   </div>
-                  <div className={'col-2 '}>
+                  <div className={'col-lg-2 '}>
                     <input type='submit' value='Continue' />
                   </div>
                 </div>
