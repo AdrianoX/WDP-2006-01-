@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
 
 import ProductSearch from '../../features/ProductSearch/ProductSearch';
 
@@ -23,7 +22,7 @@ const MenuBar = ({ children }) => (
               </a>
             </li>
             <li>
-              <NavLink to={`/shop`}>Furniture</NavLink>
+              <a href='#test'>Furniture</a>
             </li>
             <li>
               <a href='#test'>Chair</a>
