@@ -13,13 +13,19 @@ class Gallery extends Component {
       activeProduct: {},
       startIndex: 0,
       finishIndex: 6,
+      fade: false,
     };
   }
 
   tabChange = (newTab, e) => {
     e.preventDefault();
-    this.setState({ activeTab: newTab });
-    this.handleProductChange({});
+    this.setState({ fade: true });
+
+    setTimeout(() => {
+      this.setState({ activeTab: newTab });
+      this.handleProductChange({});
+      this.setState({ fade: false });
+    }, 2600);
   };
 
   handleProductChange(newProduct) {
@@ -28,13 +34,11 @@ class Gallery extends Component {
 
   handleNext(event) {
     const { startIndex, finishIndex } = this.state;
-    //let subProducts = [];
+   
     const subcategoryProducts = this.props.products.filter(
       item => item.subcategory === this.state.activeTab
     );
 
-    // eslint-disable-next-line no-console
-    console.log('subcategoryProducts', subcategoryProducts);
     event.preventDefault();
 
     if (finishIndex < subcategoryProducts.length) {
@@ -59,7 +63,7 @@ class Gallery extends Component {
 
   render() {
     const { products, updateRating, galTabs } = this.props;
-    const { activeTab, startIndex, finishIndex, activeProduct } = this.state;
+    const { activeTab, startIndex, finishIndex, activeProduct, fade } = this.state;
 
     const subcategoryProducts = products.filter(item => item.subcategory === activeTab);
     return (
@@ -89,7 +93,7 @@ class Gallery extends Component {
                   ))}
                 </ul>
               </div>
-              <div className='fadeInAndOut'>
+              <div className={fade ? styles.fadeInAndOut : styles.fadeContainer}>
                 {activeProduct.id
                   ? ''
                   : this.handleProductChange(subcategoryProducts[0])}
@@ -173,4 +177,5 @@ Gallery.propTypes = {
 Gallery.defaultProps = {
   products: [],
 };
+
 export default Gallery;
