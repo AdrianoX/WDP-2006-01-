@@ -3,7 +3,7 @@
 .root {
   padding: $base-padding 0;
 
-  @media( max-width: 768px){
+  @media( max-width: 767px){
     .right {
       order: 1;
     }
