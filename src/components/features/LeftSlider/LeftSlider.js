@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './LeftSlider.module.scss';
 import { imageData } from '../../../redux/initialState';
-import StarRating from '../../common/StarRating/StarRating';
+import Button from '../../common/Button/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 
 import PropTypes from 'prop-types';
-
-import { Link } from 'react-router-dom';
 
 class LeftSlider extends React.Component {
   state = {
@@ -103,6 +103,31 @@ class LeftSlider extends React.Component {
             <div key={item}>
               <div className={styles.component}>
                 <img src={item.image} alt={item.title} />
+                <div className={styles.wrapper}></div>
+                <div className={styles.cart}>
+                  <Button noHover variant='small'>
+                    <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO
+                    CART
+                  </Button>
+                </div>
+                <div className={styles.times}>
+                  <div className={styles.time}>
+                    <h5>25</h5>
+                    <h6>DAYS</h6>
+                  </div>
+                  <div className={styles.time}>
+                    <h5>10</h5>
+                    <h6>HRS</h6>
+                  </div>
+                  <div className={styles.time}>
+                    <h5>45</h5>
+                    <h6>MINS</h6>
+                  </div>
+                  <div className={styles.time}>
+                    <h5>30</h5>
+                    <h6>SECS</h6>
+                  </div>
+                </div>
               </div>
             </div>
           ))}

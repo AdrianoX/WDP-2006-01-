@@ -1,0 +1,63 @@
+/* Color palette DONT'T USE IN ANY OTHER FILE THAN THIS*/
+/* Global color settings */
+/*Component color settings */
+/*  Hover animation settings*/
+.component {
+  position: relative;
+}
+
+.component::before {
+  content: "";
+  position: absolute;
+  margin: 100px 0;
+  width: 617px;
+  border: 100px solid rgba(0, 0, 0, 0.5);
+}
+
+.component .text {
+  position: absolute;
+  top: 150px;
+  left: 80px;
+}
+
+.component .text h1, .component .text h5 {
+  color: #f4f5f7;
+  text-align: center;
+}
+
+.component .text h5 {
+  font-weight: initial;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+text {
+  position: absolute;
+  top: 50px;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.button a {
+  color: #f8f2f2;
+}
+
+.button a {
+  padding: 10px 0;
+  background: #000000;
+}
+
+.button a:hover {
+  background: #c77a32;
+}
+/*# sourceMappingURL=RightSlider.module.css.map */

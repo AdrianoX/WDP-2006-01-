@@ -13,6 +13,42 @@
   }
 }
 
+.times {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 255px;
+  left: 90px;
+}
+
+.time {
+    width: 70px;
+    height: 70px;
+    background-color: $darkGray1;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: $text-color-light;
+    opacity: 0.8;
+    border-radius: 50%;
+    z-index: 5;
+    flex-direction: column;
+
+  
+    h5, h6 {
+      margin: 0;
+      opacity: 1;
+    }
+    h6 {
+        font-size: 15px;;
+    }
+}
+
+.addCart {
+  width: 10px;
+}
+
 .dots {
 
   position: relative;

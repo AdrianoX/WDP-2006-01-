@@ -44,13 +44,20 @@ class RightSlider extends React.Component {
           <div key={item}>
             <div className={styles.component}>
               <img className={'right-img'} src={item.image} alt={item.title} />
+              <div className={styles.text}>
+                <h1>
+                  INDOOR <b>FURNITURE</b>
+                </h1>
+                <h5>SAVE UP TO 50% OF ALL FURNITURE</h5>
+              </div>
+              <Button> SHOP NOW</Button>
             </div>
             <div className={styles.button}>
               <Button
                 className='col-6'
                 onClick={e => this.handlePageChange(e, 'next', pages)}
               >
-                <FontAwesomeIcon icon={faAngleLeft} />
+                <FontAwesomeIcon icon={faAngleLeft} />3
               </Button>
               <Button
                 className='col-6'
