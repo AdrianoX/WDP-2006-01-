@@ -22,14 +22,12 @@ class NewFurniture extends React.Component {
   productsOnPage(viewport) {
     let productsOnPage;
 
-    if (viewport === 'laptop') {
-      productsOnPage = 2;
+    if (viewport === 'desktop') {
+      productsOnPage = 8;
     } else if (viewport === 'tablet') {
       productsOnPage = 2;
-    } else if (viewport === 'mobile') {
-      productsOnPage = 1;
     } else {
-      productsOnPage = 8;
+      productsOnPage = 1;
     }
 
     return productsOnPage;
@@ -40,8 +38,8 @@ class NewFurniture extends React.Component {
     const { activeCategory, activePage } = this.state;
 
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const productCount = this.productsOnPage(viewport);
-    const pagesCount = Math.ceil(categoryProducts.length / productCount);
+
+    const pagesCount = Math.ceil(categoryProducts.length / 8);
 
     const newPages = [];
     const dots = [];
@@ -58,6 +56,8 @@ class NewFurniture extends React.Component {
           </a>
         </li>
       );
+
+      const productsOnPage = this.productsOnPage(viewport);
 
       newPages.push(
         <div key={i} className={'row ' + styles.changeForNewPage}>
@@ -95,7 +95,7 @@ class NewFurniture extends React.Component {
         <div className='container'>
           <div className={styles.panelBar}>
             <div className='row no-gutters align-items-end'>
-              <div className={'col-auto ' + styles.heading}>
+              <div className={styles.heading}>
                 <h3>New furniture</h3>
               </div>
               <div className={'col-sm-12 ' + styles.menu}>
@@ -104,9 +104,7 @@ class NewFurniture extends React.Component {
                     <li key={item.id}>
                       <a
                         href='#test'
-                        className={(
-                          item.id === activeCategory && styles.active
-                        ).toString()}
+                        className={(item.id === activeCategory && styles.active).toString()}
                         onClick={() => this.handleCategoryChange(item.id)}
                       >
                         {item.name}
