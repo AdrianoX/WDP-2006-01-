@@ -64,7 +64,7 @@ const ProductBox = ({
           className={isCompare ? styles.active : styles.favor}
           onClick={e => {
             e.preventDefault();
-            isCompare ? removeCompare(oldPrice) : setCompare(oldPrice);
+            isCompare ? removeCompare({ bgImageUrl }) : setCompare({ bgImageUrl });
           }}
         >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
