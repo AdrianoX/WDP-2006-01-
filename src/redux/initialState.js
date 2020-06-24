@@ -19,7 +19,7 @@ const initialState = {
 
   tabs: [
     { id: 'description', label: 'Description' },
-    { id: 'reviews', label: 'Reviews' },
+    { id: 'reviews', label: 'Reviews (0)' },
     { id: 'specification', label: 'Specification' },
     { id: 'custom', label: 'Custom tab' },
   ],

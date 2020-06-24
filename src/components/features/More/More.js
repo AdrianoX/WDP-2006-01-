@@ -52,11 +52,11 @@ class More extends React.Component {
                   </div>
                 </div>
                 <div className={'row'}>
-                  <div className={'col-sm-12 col-md-6 col-lg-5 pb-sm-3'}>
+                  <div className={'col-sm-12 col-md-6 col-lg-5 pb-3'}>
                     <label className={styles.visuallyHidden}>Name:</label>
                     <input type='text' placeholder='Name*' />
                   </div>
-                  <div className={'col-sm-12 col-md-6 col-lg-5 pb-sm-2'}>
+                  <div className={'col-sm-12 col-md-6 col-lg-5 pb-3'}>
                     <label className={styles.visuallyHidden}>Email:</label>
                     <input type='email' placeholder='Email*' />
                   </div>

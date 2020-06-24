@@ -107,16 +107,18 @@
       }
     }
   }
-}
 
-@media (max-width: 768px) {
-  .tab {
-    a {
-      border-right: none !important;
+  @media (max-width: 768px) {
+    .tab {
+      a {
+        border-right: none !important;
 
-      &.active {
-        border-bottom: 1px solid $more-border !important;
+        &.active {
+          border-bottom: 1px solid $more-border !important;
+        }
       }
     }
   }
 }
+
+
