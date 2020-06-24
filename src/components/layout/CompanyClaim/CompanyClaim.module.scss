@@ -75,11 +75,18 @@
 @media (max-width: 320px) {
   .root {
     div {
-      bottom: 25%;
+      bottom: 30px;
+
+    }
+
+    img {
+      margin: 0 180px 0 0;
+      width: 150px;
+
     }
 
     .phoneNumber {
-      top: 70%;
+      top: 115px;
 
       p {
         text-align: right;
@@ -88,7 +95,7 @@
     }
 
     .cart {
-      bottom: 59%;
+      bottom: 80px;
     }
   }
 }
@@ -96,15 +103,16 @@
 @media (min-width: 321px) and (max-width: 375px) {
   .root {
     div {
-      bottom: 25%;
+      bottom: 30px;
     }
 
     img {
       margin: 0 180px 0 0;
+      width: 160px;
     }
 
     .phoneNumber {
-      top: 70%;
+      top: 120px;
 
       p {
         text-align: right;
@@ -113,23 +121,24 @@
     }
 
     .cart {
-      bottom: 59%;
+      bottom: 80px;
     }
   }
 }
 
-@media (min-width: 376px) and (max-width: 450px) {
+@media (min-width: 376px) and (max-width: 500px) {
   .root {
     div {
-      bottom: 25%;
+      bottom: 30px;
     }
 
     img {
       margin: 0 230px 0 0;
+      width: 160px;
     }
 
     .phoneNumber {
-      top: 50%;
+      top: 120px;
 
       p {
         text-align: right;
@@ -138,7 +147,7 @@
     }
 
     .cart {
-      bottom: 59%;
+      bottom: 80px;
     }
   }
 }
