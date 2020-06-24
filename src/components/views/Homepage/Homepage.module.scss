@@ -6,14 +6,28 @@
 .content {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 40px;
     align-items: stretch;
+    
 }
 
 .item {
     margin: 10px;
+    width: 30vw;
 }
 
 .item2 {
     margin: 10px;
+    width: 60vw;
+ 
 }
+
+@media only screen and (max-width: 768px) {
+    .item {
+      width: 90vw;
+    }
+
+    .item2 {
+        width: 90vw;
+    }
+  }
