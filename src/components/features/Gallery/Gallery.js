@@ -28,17 +28,19 @@ class Gallery extends Component {
 
   handleNext(event) {
     const { startIndex, finishIndex } = this.state;
-
+    //let subProducts = [];
     const subcategoryProducts = this.props.products.filter(
-      item => item.subcategory === this.state.activeSubcategory
+      item => item.subcategory === this.state.activeTab
     );
 
+    // eslint-disable-next-line no-console
+    console.log('subcategoryProducts', subcategoryProducts);
     event.preventDefault();
 
     if (finishIndex < subcategoryProducts.length) {
       this.setState({
-        startIndex: startIndex + 6,
-        finishIndex: finishIndex + 6,
+        startIndex: startIndex + 1,
+        finishIndex: finishIndex + 1,
       });
     }
   }
@@ -49,8 +51,8 @@ class Gallery extends Component {
     event.preventDefault();
     if (startIndex > 0 && finishIndex > 0) {
       this.setState({
-        startIndex: startIndex - 6,
-        finishIndex: finishIndex - 6,
+        startIndex: startIndex - 1,
+        finishIndex: finishIndex - 1,
       });
     }
   }

@@ -423,7 +423,7 @@ const initialState = {
       compare: 'yes',
       subcategory: 'featured',
       bgImageUrl:
-        'https://cdn.pixabay.com/photo/2016/11/19/13/06/bed-1839184_960_720.jpg',
+        'https://images.pexels.com/photos/1528975/pexels-photo-1528975.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
     },
     {
       id: 'aenean-ru-bristique-26',
@@ -438,8 +438,7 @@ const initialState = {
       favorite: '',
       compare: '',
       subcategory: 'top rated',
-      bgImageUrl:
-        'https://cdn.pixabay.com/photo/2018/01/26/08/15/dining-room-3108037_960_720.jpg',
+      bgImageUrl: 'https://cdn.pixabay.com/photo/2014/08/11/21/39/wall-416060_1280.jpg',
     },
     {
       id: 'aenean-ru-bristique-27',
@@ -455,7 +454,7 @@ const initialState = {
       compare: '',
       subcategory: 'sale off',
       bgImageUrl:
-        'https://cdn.pixabay.com/photo/2016/01/26/11/09/design-1162241__340.jpg',
+        'https://cdn.pixabay.com/photo/2018/06/14/21/15/the-interior-of-the-3475656_1280.jpg',
     },
     {
       id: 'aenean-ru-bristique-28',
@@ -471,7 +470,7 @@ const initialState = {
       compare: '',
       subcategory: 'top seller',
       bgImageUrl:
-        'https://cdn.pixabay.com/photo/2015/09/04/23/29/minimal-923194__340.jpg',
+        'https://cdn.pixabay.com/photo/2018/07/31/20/08/interior-3575815_1280.jpg',
     },
     {
       id: 'aenean-ru-bristique-29',
@@ -487,7 +486,7 @@ const initialState = {
       compare: '',
       subcategory: 'top rated',
       bgImageUrl:
-        'https://cdn.pixabay.com/photo/2016/06/10/01/05/hotel-room-1447201__340.jpg',
+        'https://cdn.pixabay.com/photo/2017/04/28/22/16/room-2269594_1280.jpg',
     },
     {
       id: 'aenean-ru-bristique-30',
@@ -503,7 +502,7 @@ const initialState = {
       compare: '',
       subcategory: 'top seller',
       bgImageUrl:
-        'https://cdn.pixabay.com/photo/2019/03/23/14/14/chair-4075443__340.jpg',
+        'https://cdn.pixabay.com/photo/2018/01/03/16/25/indoors-3058658_1280.jpg',
     },
     {
       id: 'aenean-ru-bristique-31',
@@ -519,7 +518,7 @@ const initialState = {
       compare: '',
       subcategory: 'sale off',
       bgImageUrl:
-        'https://cdn.pixabay.com/photo/2017/03/10/10/07/bathroom-2132342__340.jpg',
+        'https://cdn.pixabay.com/photo/2018/07/14/17/19/interior-3538020_1280.jpg',
     },
     {
       id: 'aenean-ru-bristique-32',
@@ -535,7 +534,7 @@ const initialState = {
       compare: '',
       subcategory: 'featured',
       bgImageUrl:
-        'https://cdn.pixabay.com/photo/2017/12/27/14/42/furniture-3042835_960_720.jpg',
+        'https://cdn.pixabay.com/photo/2018/01/03/16/25/indoors-3058658_1280.jpg',
     },
     {
       id: 'aenean-ru-bristique-33',
@@ -551,12 +550,12 @@ const initialState = {
       compare: '',
       subcategory: 'top seller',
       bgImageUrl:
-        'https://cdn.pixabay.com/photo/2017/08/06/11/08/white-2591357__340.jpg',
+        'https://cdn.pixabay.com/photo/2018/08/06/16/54/interior-3587920_1280.jpg',
     },
     {
       id: 'aenean-ru-bristique-34',
       name: 'Aenean Ru Bristique 12',
-      category: 'bed',
+      category: 'chair',
       price: 30,
       oldPrice: 42,
       stars: 4,
@@ -567,7 +566,7 @@ const initialState = {
       compare: '',
       subcategory: 'top rated',
       bgImageUrl:
-        'https://cdn.pixabay.com/photo/2018/05/02/09/01/children-3368013__340.jpg',
+        'https://cdn.pixabay.com/photo/2018/08/22/10/17/kitchen-3623328_1280.jpg',
     },
     {
       id: 'aenean-ru-bristique-35',
@@ -583,7 +582,7 @@ const initialState = {
       compare: '',
       subcategory: 'top rated',
       bgImageUrl:
-        'https://cdn.pixabay.com/photo/2014/02/21/00/09/chair-270980__340.jpg',
+        'https://cdn.pixabay.com/photo/2018/04/10/06/29/apartment-3306501_1280.jpg',
     },
     {
       id: 'aenean-ru-bristique-36',
@@ -598,8 +597,7 @@ const initialState = {
       favorite: '',
       compare: '',
       subcategory: 'top seller',
-      bgImageUrl:
-        'https://cdn.pixabay.com/photo/2017/09/15/12/10/mockup-2752025__340.jpg',
+      bgImageUrl: 'https://cdn.pixabay.com/photo/2014/08/11/21/40/wall-416062_1280.jpg',
     },
     {
       id: 'aenean-ru-bristique-37',
@@ -615,7 +613,7 @@ const initialState = {
       compare: '',
       subcategory: 'featured',
       bgImageUrl:
-        'https://cdn.pixabay.com/photo/2014/11/06/18/50/living-room-519682__340.jpg',
+        'https://cdn.pixabay.com/photo/2017/12/11/13/35/interior-3012237_1280.jpg',
     },
     {
       id: 'aenean-ru-bristique-38',
@@ -631,7 +629,7 @@ const initialState = {
       compare: '',
       subcategory: 'top seller',
       bgImageUrl:
-        'https://cdn.pixabay.com/photo/2015/12/05/23/45/sofa-1078931__340.jpg',
+        'https://cdn.pixabay.com/photo/2019/02/22/13/22/living-room-4013531_1280.jpg',
     },
     {
       id: 'aenean-ru-bristique-39',
@@ -647,7 +645,7 @@ const initialState = {
       compare: '',
       subcategory: 'sale off',
       bgImageUrl:
-        'https://cdn.pixabay.com/photo/2017/03/19/09/02/sofa-2155865__340.jpg',
+        'https://cdn.pixabay.com/photo/2015/04/20/06/46/office-730681_1280.jpg',
     },
     {
       id: 'aenean-ru-bristique-40',
@@ -663,7 +661,7 @@ const initialState = {
       compare: '',
       subcategory: 'sale off',
       bgImageUrl:
-        'https://cdn.pixabay.com/photo/2018/07/14/17/19/interior-3538020__340.jpg',
+        'https://cdn.pixabay.com/photo/2014/09/15/21/46/couch-447484_1280.jpg',
     },
     {
       id: 'aenean-ru-bristique-41',
@@ -679,7 +677,7 @@ const initialState = {
       compare: '',
       subcategory: 'featured',
       bgImageUrl:
-        'https://cdn.pixabay.com/photo/2017/09/16/08/12/flowerpots-2754775__340.jpg',
+        'https://cdn.pixabay.com/photo/2018/01/18/15/32/apartment-3090517_1280.jpg',
     },
     {
       id: 'aenean-ru-bristique-42',
@@ -694,7 +692,8 @@ const initialState = {
       favorite: '',
       compare: '',
       subcategory: 'sale off',
-      bgImageUrl: 'https://cdn.pixabay.com/photo/2016/01/23/23/54/bed-1158267__340.jpg',
+      bgImageUrl:
+        'https://cdn.pixabay.com/photo/2019/05/09/16/54/interior-4191528_1280.jpg',
     },
     {
       id: 'aenean-ru-bristique-43',
@@ -709,7 +708,8 @@ const initialState = {
       favorite: '',
       compare: '',
       subcategory: 'featured',
-      bgImageUrl: 'https://cdn.pixabay.com/photo/2014/12/21/23/40/bed-575793__340.png',
+      bgImageUrl:
+        'https://cdn.pixabay.com/photo/2018/04/05/16/38/furniture-3293321_1280.jpg',
     },
     {
       id: 'aenean-ru-bristique-44',
@@ -724,7 +724,8 @@ const initialState = {
       favorite: '',
       compare: '',
       subcategory: 'top seller',
-      bgImageUrl: 'https://cdn.pixabay.com/photo/2013/08/15/04/18/teak-172642__340.jpg',
+      bgImageUrl:
+        'https://cdn.pixabay.com/photo/2019/04/26/16/47/interior-4158033_1280.jpg',
     },
     {
       id: 'aenean-ru-bristique-45',
@@ -740,7 +741,7 @@ const initialState = {
       compare: '',
       subcategory: 'sale off',
       bgImageUrl:
-        'https://cdn.pixabay.com/photo/2015/09/22/14/29/holiday-951773__340.jpg',
+        'https://cdn.pixabay.com/photo/2017/12/11/13/33/interior-3012235_1280.jpg',
     },
     {
       id: 'aenean-ru-bristique-46',
@@ -756,7 +757,7 @@ const initialState = {
       compare: '',
       subcategory: 'featured',
       bgImageUrl:
-        'https://cdn.pixabay.com/photo/2017/02/20/15/28/home-2082922__340.jpg',
+        'https://cdn.pixabay.com/photo/2016/08/21/14/49/cafe-1609795_1280.jpg',
     },
     {
       id: 'aenean-ru-bristique-25',
