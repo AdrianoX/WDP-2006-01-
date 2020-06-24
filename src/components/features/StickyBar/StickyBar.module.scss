@@ -3,27 +3,41 @@
 .wrapper {
     background-color: rgba(255,255,255, 0.8);
     position: fixed;
-    min-width: 500px;
+    max-width: 560px;
     bottom: 10px;
     margin: 2px;
     right: 100px;
-    
     border: 2px solid #e07822;
-    height: 200px;
-    z-index: 900;
-  
+    height: 150px;
+    z-index: 100;
+    display: flex;
+    overflow: hidden;
+
+    .dontshow {
+        display: none;
+    }
   
      img {
-         height: 150px;
-         width:  150px;
-         margin: 20px;
-
-        }
-    }  
-    
-    .close {
-        color: red;
-        position: absolute;
-        left: 25px;
-        top: 25px;
+        height: 120px;
+        width:  120px;
+        margin: 10px;
+        object-fit: cover;
+        position: relative;
+        overflow: hidden;
+        align-items: flex-end;
     }
+}  
+    
+.close {
+    position: absolute;
+    color: #000000;
+    left: 25px;
+    top: 25px;
+}
+
+.button {
+    position: absolute;
+    color: #000000;
+    right: 25px;
+    bottom: 25px;
+}
