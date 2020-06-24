@@ -1,11 +1,7 @@
 export const imageData = [
+  { image: 'https://cdn.pixabay.com/photo/2016/04/18/13/53/room-1336497__340.jpg' },
   { image: 'https://cdn.pixabay.com/photo/2017/03/28/12/13/chairs-2181968__340.jpg' },
-  {
-    image: 'https://cdn.pixabay.com/photo/2016/06/10/01/05/hotel-room-1447201__340.jpg',
-  },
-  {
-    image: 'https://cdn.pixabay.com/photo/2016/06/10/01/05/hotel-room-1447201__340.jpg',
-  },
+  { image: 'https://cdn.pixabay.com/photo/2016/11/19/13/06/bed-1839184_960_720.jpg' },
 ];
 
 const initialState = {

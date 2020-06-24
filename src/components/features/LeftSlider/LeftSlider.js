@@ -69,7 +69,8 @@ class LeftSlider extends React.Component {
     for (let i = 0; i < pages; i++) {
       dots.push(
         <li key={i}>
-          <a href='#test'
+          <a
+            href='#test'
             onClick={() => {
               this.handlePageChange(i);
               this.restart();
@@ -97,7 +98,6 @@ class LeftSlider extends React.Component {
             <div key={item}>
               <div className={styles.component}>
                 <img src={item.image} alt={item.title} />
-                <div className={styles.wrapper}></div>
               </div>
             </div>
           ))}

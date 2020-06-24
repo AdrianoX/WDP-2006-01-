@@ -2,22 +2,24 @@
 
 
 .panelBar {
-    position: relative;
+   
     background: #000000;
-    padding: 10px;
-    justify-content: space-between;
+    padding: 15px;
+  justify-content: space-between;
 
 
     .title {
         font-size: 16px;
+        text-transform: uppercase;
+        margin: 0;
         color:  #f8f5f5;
     }
 }
 
 .dots {
-    position: absolute;
-    right: 10px;
-    top: -5px;
+    display: flex;
+    flex-wrap: nowrap;
+    line-height: 0;
 
     ul {
         margin: 0;
@@ -45,4 +47,8 @@
             }
         }
     }
+}
+
+img {
+    height: 350px;
 }
