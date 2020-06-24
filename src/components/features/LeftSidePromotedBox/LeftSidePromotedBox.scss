@@ -5,10 +5,9 @@
   border: 1px solid $productBox-border;
   margin-bottom: 2rem;
 
-  .container {
-    .content {
-      text-align: center;
-      padding: 20px;
+  .content {
+    text-align: center;
+    padding: 20px;
 
       h5 {
         color: $primary;
@@ -37,34 +36,5 @@
         transform: translateX(-50%);
       }
     }
-
-    .actions {
-      padding: 15px 10px 10px 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      
-      .favor:hover {
-        background-color: #ffcc99;
-      }
-
-      .outlines {
-
-      }
-
-      .oldPrice {
-        display: inline-block;
-        font-size: 18px;
-        font-weight: 400;
-        text-decoration: line-through;
-        text-decoration-thickness: 2px;
-        text-decoration-color: $text-color;
-      }
-
-      .price {
-
-      }
-    }
-  }
 }
 

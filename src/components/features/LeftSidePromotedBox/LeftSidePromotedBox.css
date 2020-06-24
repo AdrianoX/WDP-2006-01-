@@ -8,29 +8,29 @@
   margin-bottom: 2rem;
 }
 
-.root .container .content {
+.root .content {
   text-align: center;
   padding: 20px;
 }
 
-.root .container .content h5 {
+.root .content h5 {
   color: #d58e32;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 1px;
 }
 
-.root .container .content a:hover {
+.root .content a:hover {
   text-decoration: none;
 }
 
-.root .container .line {
+.root .line {
   margin: 0 10px;
   border-bottom: 1px solid #2a2a2a;
   position: relative;
 }
 
-.root .container .line::before {
+.root .line::before {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -39,32 +39,5 @@
   border-bottom: 4px solid #d58e32;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-}
-
-.root .container .actions {
-  padding: 15px 10px 10px 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.root .container .actions .favor:hover {
-  background-color: #ffcc99;
-}
-
-.root .container .actions .oldPrice {
-  display: inline-block;
-  font-size: 18px;
-  font-weight: 400;
-  text-decoration: line-through;
-  text-decoration-thickness: 2px;
-  -webkit-text-decoration-color: #2a2a2a;
-          text-decoration-color: #2a2a2a;
 }
 /*# sourceMappingURL=LeftSidePromotedBox.css.map */

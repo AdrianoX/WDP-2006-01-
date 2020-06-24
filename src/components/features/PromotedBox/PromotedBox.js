@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './PromotedBox.module.scss';
 import RightSlider from '../RightSlider/RightSlider';
-import LeftSidePromotedBox from '../LeftSidePromotedBox/LeftSidePromotedBox';
+import LeftSidePromotedBox from '../LeftSidePromotedBox/LeftSidePromotedBoxContainer';
 
 const PromotedBox = () => (
   <div className={styles.root}>
