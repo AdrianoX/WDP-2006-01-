@@ -50,14 +50,17 @@ class RightSlider extends React.Component {
                 </h1>
                 <h5>SAVE UP TO 50% OF ALL FURNITURE</h5>
               </div>
-              <Button> SHOP NOW</Button>
+              <Button className={'btn btn-light ' + styles.shopnowbtn}>
+                {' '}
+                SHOP NOW
+              </Button>
             </div>
             <div className={styles.button}>
               <Button
                 className='col-6'
                 onClick={e => this.handlePageChange(e, 'next', pages)}
               >
-                <FontAwesomeIcon icon={faAngleLeft} />3
+                <FontAwesomeIcon icon={faAngleLeft} />
               </Button>
               <Button
                 className='col-6'

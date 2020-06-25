@@ -3,9 +3,8 @@
 /*Component color settings */
 /*  Hover animation settings*/
 .panelBar {
-  position: relative;
   background: #000000;
-  padding: 10px;
+  padding: 15px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -13,6 +12,8 @@
 
 .panelBar .title {
   font-size: 16px;
+  text-transform: uppercase;
+  margin: 0;
   color: #f8f5f5;
 }
 
@@ -24,8 +25,9 @@
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  top: 255px;
-  left: 90px;
+  top: 200px;
+  left: 45px;
+  display: none;
 }
 
 .time {
@@ -61,14 +63,20 @@
   font-size: 15px;
 }
 
-.addCart {
-  width: 10px;
+.addtocartbtn {
+  position: absolute;
+  top: 120px;
+  left: 120px;
+  display: none;
 }
 
 .dots {
-  position: absolute;
-  right: 10px;
-  top: -5px;
+  position: relative;
+  background: #000000;
+  padding: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .dots ul {
@@ -95,5 +103,27 @@
 
 .dots ul li a.active, .dots ul li a:hover {
   background-color: #d58e32;
+}
+
+@media (max-width: 450px) {
+  .component {
+    display: none;
+  }
+  .panelBar {
+    display: none;
+  }
+  .dots {
+    display: none;
+  }
+}
+
+.component:hover .times {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.component:hover .addtocartbtn {
+  display: inline;
 }
 /*# sourceMappingURL=LeftSlider.module.css.map */

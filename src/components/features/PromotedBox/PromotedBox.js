@@ -8,10 +8,10 @@ const PromotedBox = () => (
   <div className={styles.root}>
     <div className='container'>
       <div className={'flex-column flex-md-row col-md-12 ' + styles.content}>
-        <div className={'col-lg-5 ' + styles.item}>
+        <div className={'col-lg-4 ' + styles.item}>
           <LeftSidePromotedBox />
         </div>
-        <div className={'col-lg-7 ' + styles.item2}>
+        <div className={'col-lg-8 ' + styles.item2}>
           <RightSlider />
         </div>
       </div>

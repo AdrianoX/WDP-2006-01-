@@ -13,12 +13,14 @@
   }
 }
 
+
 .times {
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 255px;
-  left: 90px;
+  top: 200px;
+  left: 45px;
+  display: none;
 }
 
 .time {
@@ -45,8 +47,11 @@
     }
 }
 
-.addCart {
-  width: 10px;
+.addtocartbtn {
+  position: absolute;
+  top: 120px;
+  left: 120px;
+  display: none;
 }
 
 .dots {
@@ -97,3 +102,16 @@
     display: none;
   }
 }
+
+
+
+.component:hover {
+  .times {
+    display: flex;
+  }
+  .addtocartbtn {
+    display: inline;
+  }
+  
+}
+

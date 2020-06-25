@@ -105,7 +105,11 @@ class LeftSlider extends React.Component {
                 <img src={item.image} alt={item.title} />
                 <div className={styles.wrapper}></div>
                 <div className={styles.cart}>
-                  <Button noHover variant='small'>
+                  <Button
+                    noHover
+                    variant='small'
+                    className={'btn btn-dark ' + styles.addtocartbtn}
+                  >
                     <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO
                     CART
                   </Button>
