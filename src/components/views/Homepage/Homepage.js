@@ -13,7 +13,7 @@ import SaleProduct from '../../features/SaleProducts/SaleProductContainer';
 
 const Homepage = () => (
   <div className={styles.root}>
-    <div className={'flex-column flex-md-row col-md-12 ' + styles.content}>
+    <div className={'flex-column flex-md-row container ' + styles.content}>
       <div className={styles.item}>
         <LeftSlider />
       </div>
