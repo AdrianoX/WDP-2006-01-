@@ -26,6 +26,7 @@ const ProductBox = ({
   isCompare,
   setCompare,
   removeCompare,
+  compareProduct,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -61,7 +62,11 @@ const ProductBox = ({
         </Button>
         <Button
           variant='outline'
-          className={isCompare ? styles.active : styles.favor}
+          className={
+            compareProduct && compareProduct.length > 3
+              ? styles.compareEnd
+              : styles.favor
+          }
           onClick={e => {
             e.preventDefault();
             isCompare ? removeCompare({ bgImageUrl }) : setCompare({ bgImageUrl });
@@ -99,6 +104,7 @@ ProductBox.propTypes = {
   isCompare: PropTypes.number,
   setCompare: PropTypes.func,
   removeCompare: PropTypes.func,
+  compareProduct: PropTypes.array,
 };
 
 export default ProductBox;
