@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './NewFurniture.module.scss';
 import SwipeAbleWrapper from '../../common/SwipeAbleWrapper/SwipeAbleWrapper';
 import ProductBox from '../../common/ProductBox/ProductBoxContainer';
-import {Spring} from 'react-spring/renderprops';
+//import {Spring} from 'react-spring/renderprops';
 
 class NewFurniture extends React.Component {
   state = {
@@ -50,44 +50,8 @@ class NewFurniture extends React.Component {
     );
 
     const newPages = [];
-    //const dots = [];
 
     for (let i = 0; i < pagesCount; i++) {
-      /*dots.push(
-        <li key={i}>
-          <a
-            href='#test'
-            onClick={() => this.handlePageChange(i)}
-            className={(i === activePage && styles.active).toString()}
-          >
-            page {i}
-          </a>
-        </li>
-      );
-
-      newPages.push(
-        <div
-          key={'ProductList' + i + '-' + activePage}
-          className={'row ' + styles.changeForNewPage}
-        >
-          {categoryProducts
-            .slice(i * (viewPathname === '/product' ? 4 : productCount), (i + 1) * (viewPathname === '/product' ? 4 : productCount))
-            .map(item => (
-              <div key={item.id} className='col-lg-3 col-md-6 col-sm-12'>
-                <Spring
-                  from={{ opacity: 0 }}
-                  to={{ opacity: 1 }}>
-                  {props => (
-                    <div style={props}>
-                      <ProductBox {...item} />
-                    </div>
-                  )}
-                </Spring>
-              </div>
-            ))}
-        </div>
-      );*/
-
       newPages.push(
         <div
           key={'ProductList' + i + '-' + activePage}
@@ -101,6 +65,15 @@ class NewFurniture extends React.Component {
             .map(item => (
               <div key={item.id} className='col-lg-3 col-md-6 col-sm-12'>
                 <ProductBox {...item} />
+                {/* <Spring
+                  from={{ opacity: 0 }}
+                  to={{ opacity: 1 }}>
+                  {props => (
+                    <div style={props}>
+                      <ProductBox {...item} />
+                    </div>
+                  )}
+                </Spring> */}
               </div>
             ))}
         </div>
@@ -117,7 +90,8 @@ class NewFurniture extends React.Component {
           <div className={styles.panelBar}>
             <div className='row no-gutters align-items-end'>
               <div
-                className={'col-auto ' +
+                className={
+                  'col-auto ' +
                   (viewPathname === '/product' ? styles.headingProduct : styles.heading)
                 }
               >
@@ -129,7 +103,9 @@ class NewFurniture extends React.Component {
                     <li key={item.id}>
                       <a
                         href='#test'
-                        className={(item.id === activeCategory && styles.active).toString()}
+                        className={(
+                          item.id === activeCategory && styles.active
+                        ).toString()}
                         onClick={() => this.handleCategoryChange(item.id)}
                       >
                         {item.name}
@@ -138,7 +114,6 @@ class NewFurniture extends React.Component {
                   ))}
                 </ul>
               </div>
-              {/*<div className={styles.dots}><ul>{dots}</ul></div>*/}
             </div>
           </div>
           <SwipeAbleWrapper>{changeNewPages()}</SwipeAbleWrapper>
