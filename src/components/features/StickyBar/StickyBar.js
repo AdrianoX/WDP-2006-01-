@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Button from '../../common/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExchangeAlt } from '@fortawesome/free-solid-svg-icons';
+
 class StickyBar extends React.Component {
   render() {
     const { compareProduct, removeCompare } = this.props;
