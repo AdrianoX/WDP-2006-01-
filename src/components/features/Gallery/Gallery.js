@@ -10,7 +10,8 @@ class Gallery extends Component {
     super(props);
     this.state = {
       activeTab: 'featured',
-      activeProduct: {},
+      newProduct: '',
+      mainProduct: 'aenean-ru-bristique-3',
       startIndex: 0,
       finishIndex: 6,
       fade: false,
@@ -19,22 +20,32 @@ class Gallery extends Component {
 
   tabChange = (newTab, e) => {
     e.preventDefault();
+
     this.setState({ fade: true });
 
     setTimeout(() => {
       this.setState({ activeTab: newTab });
-      this.handleProductChange({});
+      const subcategoryProducts = this.props.products.filter(
+        item => item.subcategory === this.state.activeTab
+      );
+      let rand = Math.floor(Math.random() * subcategoryProducts.length);
+
+      this.setState({ mainProduct: subcategoryProducts[rand].id });
       this.setState({ fade: false });
-    }, 2600);
+    }, 1150);
   };
 
   handleProductChange(newProduct) {
-    this.setState({ activeProduct: newProduct });
+    this.setState({ fade: true });
+    setTimeout(() => {
+      this.setState({ mainProduct: newProduct });
+      this.setState({ fade: false });
+    }, 1000);
   }
 
   handleNext(event) {
     const { startIndex, finishIndex } = this.state;
-   
+
     const subcategoryProducts = this.props.products.filter(
       item => item.subcategory === this.state.activeTab
     );
@@ -63,7 +74,7 @@ class Gallery extends Component {
 
   render() {
     const { products, updateRating, galTabs } = this.props;
-    const { activeTab, startIndex, finishIndex, activeProduct, fade } = this.state;
+    const { activeTab, startIndex, finishIndex, mainProduct, fade } = this.state;
 
     const subcategoryProducts = products.filter(item => item.subcategory === activeTab);
     return (
@@ -94,11 +105,8 @@ class Gallery extends Component {
                 </ul>
               </div>
               <div className={fade ? styles.fadeInAndOut : styles.fadeContainer}>
-                {activeProduct.id
-                  ? ''
-                  : this.handleProductChange(subcategoryProducts[0])}
                 {subcategoryProducts
-                  .filter(product => product.id === activeProduct.id)
+                  .filter(item => item.id === mainProduct)
                   .map(item => (
                     <div className={styles.photoContainer} key={item.id}>
                       <img
@@ -127,7 +135,7 @@ class Gallery extends Component {
                     {subcategoryProducts.slice(startIndex, finishIndex).map(item => (
                       <div key={item.id} className={styles.thumbnail}>
                         <img
-                          onClick={() => this.handleProductChange(item)}
+                          onClick={() => this.handleProductChange(item.id)}
                           src={item.bgImageUrl}
                           alt={item.name}
                         />
@@ -168,6 +176,7 @@ Gallery.propTypes = {
       bgImageUrl: PropTypes.string,
       category: PropTypes.string,
       rated: PropTypes.bool,
+      id: PropTypes.string,
     })
   ),
   updateRating: PropTypes.func,
