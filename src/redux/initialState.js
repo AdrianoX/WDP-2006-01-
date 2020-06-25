@@ -12,6 +12,14 @@ const initialState = {
     { id: 'table', name: 'Table' },
     { id: 'dining', name: 'Dining' },
   ],
+
+  tabs: [
+    { id: 'description', label: 'Description' },
+    { id: 'reviews', label: 'Reviews (0)' },
+    { id: 'specification', label: 'Specification' },
+    { id: 'custom', label: 'Custom tab' },
+  ],
+
   products: [
     {
       id: 'aenean-ru-bristique-1',
