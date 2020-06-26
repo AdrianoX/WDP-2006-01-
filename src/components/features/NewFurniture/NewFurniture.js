@@ -96,6 +96,7 @@ class NewFurniture extends React.Component {
                 }
               >
                 <h3>New furniture</h3>
+
               </div>
               <div className={'col-sm-12 ' + styles.menu}>
                 <ul>
@@ -114,6 +115,7 @@ class NewFurniture extends React.Component {
                   ))}
                 </ul>
               </div>
+              {/* <div className={styles.dots}><ul>{dots}</ul></div> */}
             </div>
           </div>
           <SwipeAbleWrapper>{changeNewPages()}</SwipeAbleWrapper>
