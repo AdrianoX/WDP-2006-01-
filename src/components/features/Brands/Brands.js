@@ -16,9 +16,7 @@ const Brands = ({ brands }) => {
             {brands.map(brand => (
               <div
                 key={brand.id}
-                className={
-                  'flex-row d-flex flex-wrap col-lg-2 col-md-4 col-6  ' + styles.logo
-                }
+                className={'flex-row d-flex flex-wrap col-6  ' + styles.logo}
               >
                 <img src={brand.logo} alt={brand.name} />
               </div>
