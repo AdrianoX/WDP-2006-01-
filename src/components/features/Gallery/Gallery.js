@@ -32,7 +32,7 @@ class Gallery extends Component {
 
       this.setState({ mainProduct: subcategoryProducts[rand].id });
       this.setState({ fade: false });
-    }, 1150);
+    }, 600);
   };
 
   handleProductChange(newProduct) {
@@ -40,7 +40,7 @@ class Gallery extends Component {
     setTimeout(() => {
       this.setState({ mainProduct: newProduct });
       this.setState({ fade: false });
-    }, 1000);
+    }, 600);
   }
 
   handleNext(event) {
@@ -94,7 +94,7 @@ class Gallery extends Component {
                   {galTabs.map(tab => (
                     <li key={tab.id}>
                       <a
-                        href='#'
+                        href='#tmp_link'
                         className={tab.id === activeTab ? styles.active : undefined}
                         onClick={e => this.tabChange(tab.id, e)}
                       >
@@ -127,7 +127,7 @@ class Gallery extends Component {
                   ))}
                 <div className={styles.slider}>
                   <div className={styles.navigation}>
-                    <a href='#' onClick={event => this.handleNext(event)}>
+                    <a href='#tmp_link' onClick={event => this.handleNext(event)}>
                       &#x3c;
                     </a>
                   </div>
@@ -143,7 +143,7 @@ class Gallery extends Component {
                     ))}
                   </div>
                   <div className={styles.navigation}>
-                    <a href='#' onClick={event => this.handlePrev(event)}>
+                    <a href='#tmp_link' onClick={event => this.handlePrev(event)}>
                       &#x3e;
                     </a>
                   </div>
