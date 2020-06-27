@@ -6,7 +6,12 @@
   // :global(.container)> :global(.row) {
   //   height: 145px;
   // }
-
+  img {
+    max-height: 170px;
+    max-width: 170px;
+    margin: 20px 0;
+  }
+  
   .phoneNumber {
     p {
       margin: 0;

@@ -1,6 +1,6 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-
+import { Link } from 'react-router-dom';
 import styles from './CompanyClaim.module.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -17,16 +17,16 @@ const CompanyClaim = () => (
           </p>
         </div>
         <div className='col text-center'>
-          <a href='#test'>
+          <Link to={'/'}>
             <img src='/images/logo.png' alt='Bazar' />
-          </a>
+          </Link>
         </div>
         <div className={`col text-right ${styles.cart}`}>
           <a href='#test' className={styles.cartBox}>
             <div className={styles.cartIcon}>
               <FontAwesomeIcon className={styles.icon} icon={faShoppingBasket} />
             </div>
-            <div className={styles.cartCounter}>12345</div>
+            <div className={styles.cartCounter}>0</div>
           </a>
         </div>
       </div>

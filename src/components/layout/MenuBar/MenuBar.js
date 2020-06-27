@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import ProductSearch from '../../features/ProductSearch/ProductSearch';
 
 import styles from './MenuBar.module.scss';
-
+import { NavLink } from 'react-router-dom';
 import NavBar from '../../common/NavBar/NavBar';
 
 const MenuBar = ({ children }) => (
@@ -17,27 +17,39 @@ const MenuBar = ({ children }) => (
         <div className={'col-auto ' + styles.menu}>
           <ul className={'flex-wrap justify-content-around'}>
             <li>
-              <a href='#test' className={styles.active}>
+              <NavLink activeClassName={styles.active} exact to={'/'}>
                 Home
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href='#test'>Furniture</a>
+              <NavLink activeClassName={styles.active} exact to={'/shop/furniture'}>
+                Furniture
+              </NavLink>
             </li>
             <li>
-              <a href='#test'>Chair</a>
+              <NavLink activeClassName={styles.active} exact to={'/shop/chair'}>
+                Chair
+              </NavLink>
             </li>
             <li>
-              <a href='#test'>Table</a>
+              <NavLink activeClassName={styles.active} exact to={'/shop/table'}>
+                Table
+              </NavLink>
             </li>
             <li>
-              <a href='#test'>Sofa</a>
+              <NavLink activeClassName={styles.active} exact to={'/shop/sofa'}>
+                Sofa
+              </NavLink>
             </li>
             <li>
-              <a href='#test'>Bedroom</a>
+              <NavLink activeClassName={styles.active} exact to={'/shop/bedroom'}>
+                Bedroom
+              </NavLink>
             </li>
             <li>
-              <a href='#test'>Blog</a>
+              <NavLink activeClassName={styles.active} exact to={'/shop/blog'}>
+                Blog
+              </NavLink>
             </li>
           </ul>
         </div>

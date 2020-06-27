@@ -18,6 +18,12 @@ const App = () => (
         <Switch>
           <Route exact path={'/'} component={Homepage} />
           <Route exact path={'/shop/:categoryId'} component={ProductList} />
+          <Route exact path={'/shop/furniture'} component={ProductList} />
+          <Route exact path={'/shop/chair'} component={ProductList} />
+          <Route exact path={'/shop/table'} component={ProductList} />
+          <Route exact path={'/shop/sofa'} component={ProductList} />
+          <Route exact path={'/shop/bedroom'} component={ProductList} />
+          <Route exact path={'/shop/blog'} component={ProductList} />
           <Route exact path={'/product/:productId'} component={ProductPage} />
         </Switch>
       </MainLayout>
