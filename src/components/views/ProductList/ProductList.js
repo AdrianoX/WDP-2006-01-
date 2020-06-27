@@ -2,6 +2,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import styles from './ProductList.module.scss';
 import FilterCategories from '../../features/FilterCategories/FilterCategories';
+import ProductListBanner from '../../features/ProductListLeft/ProductListBanner';
 
 const ProductList = () => (
   <div className={styles.root}>
@@ -11,6 +12,10 @@ const ProductList = () => (
         <div className={'col-sm-12 col-md-3 ' + styles.right}>
           <FilterCategories />
         </div>
+        <div className={'col-sm-12 col-md-9 ' + styles.left}>
+          <ProductListBanner />
+        </div>
+        <div className={'col-sm-12 col-md-3 ' + styles.right}>Prawa kolumna</div>
       </div>
     </div>
   </div>
