@@ -4,6 +4,15 @@ export const imageData = [
   { image: 'https://cdn.pixabay.com/photo/2016/11/19/13/06/bed-1839184_960_720.jpg' },
 ];
 
+export const filterCategories = [
+  { id: 'Furniture', nr: '3' },
+  { id: 'Sofa', nr: '4' },
+  { id: 'Chair', nr: '5' },
+  { id: 'Table', nr: '5' },
+  { id: 'Bedroom', nr: '5' },
+  { id: 'Furniture', nr: '5' },
+];
+
 const initialState = {
   categories: [
     { id: 'bed', name: 'Bed' },
@@ -20,7 +29,7 @@ const initialState = {
     { id: 'custom', label: 'Custom tab' },
   ],
 
-  galTabs:[
+  galTabs: [
     { id: 'featured', name: 'Featured', active: true },
     { id: 'top seller', name: 'Top seller' },
     { id: 'sale off', name: 'Sale off' },
@@ -827,7 +836,7 @@ const initialState = {
       favorite: 'yes',
       compare: '',
       bgImageUrl:
-       'https://cdn.pixabay.com/photo/2018/05/02/09/01/children-3368013__340.jpg',
+        'https://cdn.pixabay.com/photo/2018/05/02/09/01/children-3368013__340.jpg',
     },
     {
       id: 'aenean-ru-bristique-30',
