@@ -1,55 +1,22 @@
 import React from 'react';
+import { Navbar, Nav } from 'react-bootstrap';
+import styles from './NavBar.module.scss';
 
-import styles from './NavBar.scss';
-
-class NavBar extends React.Component {
-  render() {
-    return (
-      <nav className='navbar navbar-expand-lg navbar-light bg-light visible-xs-block'>
-        <button
-          onClick={this.onClickHandler}
-          className='navbar-toggler visible-xs-block'
-          type='button'
-          data-toggle='collapse'
-          data-target='#navbarNav'
-          aria-controls='navbarNav'
-          aria-expanded='false'
-          aria-label='Toggle navigation'
-        >
-          <span className='navbar-toggler-icon'></span>
-        </button>
-      </nav>
-    );
-  }
-  onClickHandler() {
-    return (
-      <div className={styles.menubar}>
-        <ul>
-          <li>
-            <a href='#test'>Home</a>
-          </li>
-          <li>
-            <a href='#test'>Furniture</a>
-          </li>
-          <li>
-            <a href='#test'>Chair</a>
-          </li>
-          <li>
-            <a href='#test'>Table</a>
-          </li>
-          <li>
-            <a href='#test'>Sofa</a>
-          </li>
-          <li>
-            <a href='#test'>Bedroom</a>
-          </li>
-          <li>
-            <a href='#test'>Blog</a>
-          </li>
-        </ul>
-      </div>
-    );
-  }
-}
+const NavBar = () => (
+  <Navbar className={styles.navbar} expand="md">
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="mr-auto">
+        <Nav.Link href="#home">Home</Nav.Link>
+        <Nav.Link href="#Furniture">Furniture</Nav.Link>
+        <Nav.Link href="#Chair">Chair</Nav.Link>
+        <Nav.Link href="#Table">Table</Nav.Link>
+        <Nav.Link href="#Sofa">Sofa</Nav.Link>
+        <Nav.Link href="#Bedroom">Bedroom</Nav.Link>
+        <Nav.Link href="#Blog">Blog</Nav.Link>
+      </Nav>
+    </Navbar.Collapse>
+  </Navbar>
+);
 
 export default NavBar;
