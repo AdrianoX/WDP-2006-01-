@@ -8,7 +8,6 @@ import { faStar as faHeart } from '@fortawesome/free-regular-svg-icons';
 import Button from '../Button/Button';
 import StarRating from '../StarRating/StarRating';
 
-
 const ProductBox = ({
   name,
   price,
@@ -24,6 +23,10 @@ const ProductBox = ({
   isFavorite,
   setFavorite,
   removeFavorite,
+  isCompare,
+  setCompare,
+  removeCompare,
+  compareProduct,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -47,15 +50,28 @@ const ProductBox = ({
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button variant='outline' className={ isFavorite ? styles.active : styles.favor}
-          onClick={e =>{
+        <Button
+          variant='outline'
+          className={isFavorite ? styles.active : styles.favor}
+          onClick={e => {
             e.preventDefault();
-            isFavorite ?  removeFavorite(id): setFavorite(id);
+            isFavorite ? removeFavorite(id) : setFavorite(id);
           }}
         >
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
-        <Button variant='outline' className={compare === 'yes' ? styles.active : ''}>
+        <Button
+          variant='outline'
+          className={
+            compareProduct && compareProduct.length > 3
+              ? styles.compareEnd
+              : styles.favor
+          }
+          onClick={e => {
+            e.preventDefault();
+            isCompare ? removeCompare({ bgImageUrl }) : setCompare({ bgImageUrl });
+          }}
+        >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
@@ -85,6 +101,10 @@ ProductBox.propTypes = {
   isFavorite: PropTypes.number,
   setFavorite: PropTypes.func,
   removeFavorite: PropTypes.func,
+  isCompare: PropTypes.number,
+  setCompare: PropTypes.func,
+  removeCompare: PropTypes.func,
+  compareProduct: PropTypes.array,
 };
 
 export default ProductBox;
