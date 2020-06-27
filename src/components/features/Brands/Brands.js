@@ -11,41 +11,41 @@ class Brands extends React.Component {
   };
 
   handlePageChange(newPage) {
-    this.setState({ activePage: newPage });
+    setTimeout(() => this.setState({ activePage: newPage }), 200);
   }
 
-  reder() {
-    const { activePage } = this.state;
-    const newBrands = [];
-
-    for (let i = 0; i < 3; i++) {
-      newBrands.push(
-        <div key={'BrandList' + i + '-' + activePage} className={styles.logoBox}>
-          {this.props.brands.map(brand => (
-            <div key={brand.id} className={styles.logo}>
-              <img src={brand.logo} alt={brand.name} />
-            </div>
-          ))}
+  prepareBrand = () =>
+    this.props.brands.map(brand => {
+      return (
+        <div key={brand.id} className={styles.logo}>
+          <img src={brand.logo} alt={brand.name} />
         </div>
       );
-    }
+    });
 
-    const changeNewBrands = () => {
-      return newBrands;
-    };
-
+  render() {
     return (
       <div className={styles.root}>
         <div className='container'>
           <div className={styles.wrapper}>
             <div className={styles.control}>
-              <FontAwesomeIcon className={styles.icon} icon={faAngleLeft} />
+              <FontAwesomeIcon
+                className={styles.icon}
+                icon={faAngleLeft}
+                onClick={() => this.handlePageChange()}
+              />
+            </div>
+            <div className={styles.logoBox}>
+              {' '}
+              <SwipeAbleWrapper>{this.prepareBrand()}</SwipeAbleWrapper>
             </div>
 
-            <SwipeAbleWrapper>{changeNewBrands()}</SwipeAbleWrapper>
-
             <div className={styles.control}>
-              <FontAwesomeIcon className={styles.icon} icon={faAngleRight} />
+              <FontAwesomeIcon
+                className={styles.icon}
+                icon={faAngleRight}
+                onClick={() => this.handlePageChange()}
+              />
             </div>
           </div>
         </div>
