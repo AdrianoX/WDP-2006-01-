@@ -14,7 +14,10 @@ const Brands = ({ brands }) => {
           </div>
           <div className={styles.logoBox}>
             {brands.map(brand => (
-              <div key={brand.id} className={styles.logo}>
+              <div
+                key={brand.id}
+                className={'flex-row d-flex flex-wrap col-6 ' + styles.logo}
+              >
                 <img src={brand.logo} alt={brand.name} />
               </div>
             ))}
