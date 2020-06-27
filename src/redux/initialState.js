@@ -634,6 +634,8 @@ const initialState = {
     products: [],
   },
 
+  compareProducts: [],
+
   ratings: [
     {
       id: 0,
