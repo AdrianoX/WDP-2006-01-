@@ -55,11 +55,7 @@
       background-color: #ffcc99;
     }
 
-  &:hover {
-    .price > div {
-    background-color: $primary;
-    } 
-  }  
+  
     .oldPrice {
       display: inline-block;
       font-size: 18px;
@@ -68,6 +64,13 @@
       text-decoration-thickness: 2px;
       text-decoration-color: $text-color;
     }
+  }
+
+
+  &:hover {
+    .price > div {
+    background-color: $primary;
+    } 
   }
 }
 
