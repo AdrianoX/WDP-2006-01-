@@ -1,13 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './GalleryPriceDetails.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 
-const GalleryDetails = ({ name, stars, price, oldPrice }) => {
-  const starsArray = [1, 2, 3, 4, 5];
+import StarRating from '../../common/StarRating/StarRating';
 
+const GalleryPriceDetails = ({
+  name,
+  stars,
+  price,
+  oldPrice,
+  id,
+  rated,
+  updateRating,
+}) => {
   return (
     <div className={styles.details}>
       <div className={styles.price}>
@@ -16,27 +21,20 @@ const GalleryDetails = ({ name, stars, price, oldPrice }) => {
       </div>
       <div className={styles.description}>
         <h5>{name}</h5>
-        <div className={styles.stars}>
-          {starsArray.map(i => (
-            <a href='#test' key={i}>
-              {i <= stars ? (
-                <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
-              ) : (
-                <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
-              )}
-            </a>
-          ))}
-        </div>
+        <StarRating stars={stars} rated={rated} id={id} updateRating={updateRating} />
       </div>
     </div>
   );
 };
 
-GalleryDetails.propTypes = {
+GalleryPriceDetails.propTypes = {
   stars: PropTypes.number,
   name: PropTypes.string,
   price: PropTypes.number,
   oldPrice: PropTypes.number,
+  id: PropTypes.string,
+  updateRating: PropTypes.func,
+  rated: PropTypes.bool,
 };
 
-export default GalleryDetails;
+export default GalleryPriceDetails;
