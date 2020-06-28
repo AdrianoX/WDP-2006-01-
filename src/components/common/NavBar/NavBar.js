@@ -7,13 +7,13 @@ const NavBar = () => (
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="mr-auto">
-        <Nav.Link href="#home">Home</Nav.Link>
-        <Nav.Link href="#Furniture">Furniture</Nav.Link>
-        <Nav.Link href="#Chair">Chair</Nav.Link>
-        <Nav.Link href="#Table">Table</Nav.Link>
-        <Nav.Link href="#Sofa">Sofa</Nav.Link>
-        <Nav.Link href="#Bedroom">Bedroom</Nav.Link>
-        <Nav.Link href="#Blog">Blog</Nav.Link>
+        <Nav.Link href="/">Home</Nav.Link>
+        <Nav.Link href="Furniture">Furniture</Nav.Link>
+        <Nav.Link href="Chair">Chair</Nav.Link>
+        <Nav.Link href="Table">Table</Nav.Link>
+        <Nav.Link href="Sofa">Sofa</Nav.Link>
+        <Nav.Link href="Bedroom">Bedroom</Nav.Link>
+        <Nav.Link href="Blog">Blog</Nav.Link>
       </Nav>
     </Navbar.Collapse>
   </Navbar>
