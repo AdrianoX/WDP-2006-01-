@@ -20,7 +20,7 @@ const initialState = {
     { id: 'custom', label: 'Custom tab' },
   ],
 
-  galTabs:[
+  galTabs: [
     { id: 'featured', name: 'Featured', active: true },
     { id: 'top seller', name: 'Top seller' },
     { id: 'sale off', name: 'Sale off' },
@@ -827,7 +827,7 @@ const initialState = {
       favorite: 'yes',
       compare: '',
       bgImageUrl:
-       'https://cdn.pixabay.com/photo/2018/05/02/09/01/children-3368013__340.jpg',
+        'https://cdn.pixabay.com/photo/2018/05/02/09/01/children-3368013__340.jpg',
     },
     {
       id: 'aenean-ru-bristique-30',
