@@ -17,6 +17,13 @@
   color: #f8f5f5;
 }
 
+.panelBar .dots {
+  height: 15px;
+  -webkit-transform: translateY(-29px);
+          transform: translateY(-29px);
+  background-color: white;
+}
+
 .times {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -115,6 +122,10 @@
   .dots {
     display: none;
   }
+}
+
+.component img {
+  height: 224px;
 }
 
 .component:hover .times {
