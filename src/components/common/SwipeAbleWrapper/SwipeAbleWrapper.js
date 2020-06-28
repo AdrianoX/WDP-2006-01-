@@ -12,6 +12,7 @@ const SwipeAbleWrapper = ({ leftAction, rightAction, children }) => {
       type: 'bullets',
       clickable: true,
     },
+
   };
 
   return (
