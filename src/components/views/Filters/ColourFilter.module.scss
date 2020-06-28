@@ -1,0 +1,40 @@
+@import "./../../../styles/settings.scss";
+
+.colorFilter {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.filterName {
+  border-bottom: solid $darkGray2 2px;
+  padding-bottom: 10px;
+}
+
+.filterColour {
+  margin-left: 10px;
+  &:hover {
+    color: orange;
+    cursor: pointer;
+  }
+
+}
+
+.activeFilter {
+  margin-left: 20px;
+  color: orange;
+}
+
+.unactiveFilter {
+  margin-left: 0;
+}
+
+.filterList {
+ margin: 20px 0 0 0;
+ padding: 0;
+  li {
+    list-style: none;
+    position: relative;
+    padding: 3px 0;
+  }
+}
+
