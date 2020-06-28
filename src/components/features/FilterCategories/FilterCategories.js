@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './FilterCategories.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { filterCategories } from './FilterCategories.config';
 
 class FilterCategories extends React.Component {
   constructor() {
@@ -19,15 +20,6 @@ class FilterCategories extends React.Component {
   }
 
   render() {
-    const filterCategories = [
-      { id: 'Furniture', nr: '3' },
-      { id: 'Sofa', nr: '4' },
-      { id: 'Chair', nr: '5' },
-      { id: 'Table', nr: '5' },
-      { id: 'Bedroom', nr: '5' },
-      { id: 'Furniture', nr: '5' },
-    ];
-
     return (
       <div>
         <h3 className={styles.title}>Filter By Categories</h3>
