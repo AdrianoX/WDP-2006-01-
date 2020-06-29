@@ -30,23 +30,23 @@
   }
 
   .fb {
-    @include socialBtn (#3b5998);
+    @include socialBtn ($social-fb);
   }
 
   .gplus {
-    @include socialBtn(#db4437);
+    @include socialBtn($social-gplus);
   }
 
   .twitter {
-    @include socialBtn(#1da1f0);
+    @include socialBtn($social-twitter);
   }
 
   .pinterest {
-    @include socialBtn(#e60023);
+    @include socialBtn($social-pinterest);
   }
 
   .linkedin {
-    @include socialBtn(#2867b2);
+    @include socialBtn($social-linkedin);
   }
 
 

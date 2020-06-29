@@ -5,17 +5,19 @@
   .image {
     position: relative;
     height: 480px;
-    background: {
-      color: $productBox-photo-bg;
-      size: cover;
-      position: center;
-      repeat: no-repeat;
-    }
+    background-color: $productBox-photo-bg;
+
 
     .expandBtn {
       position: absolute;
       bottom: 5px;
       right: 5px;
+
+      &:hover {
+        background-color: transparent;
+        color: $primary;
+        border-color: $primary;
+      }
     }
 
     img {

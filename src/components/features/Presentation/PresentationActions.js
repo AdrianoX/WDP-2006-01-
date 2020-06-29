@@ -11,7 +11,7 @@ import {
   faMinus,
 } from '@fortawesome/free-solid-svg-icons';
 
-class Actions extends React.Component {
+class PresentationActions extends React.Component {
   render() {
     return (
       <form className={styles.actions}>
@@ -53,4 +53,4 @@ class Actions extends React.Component {
   }
 }
 
-export default Actions;
+export default PresentationActions;
