@@ -50,11 +50,13 @@ class Brands extends React.Component {
               />
             </div>
             <div className={styles.logoBox}>
-              {image.slice(activePage * 1, (activePage + 6) * 1).map(brand => (
-                <div key={brand.id} className={styles.logo}>
-                  <img src={brand.image} alt={brand.name} />
-                </div>
-              ))}
+              {image
+                .slice(activePage * 1, (activePage + 6) * 1)
+                .map((brand, element) => (
+                  <div key={element} className={styles.logo}>
+                    <img src={brand.image} alt={brand.name} />
+                  </div>
+                ))}
             </div>
             <div className={styles.control}>
               <FontAwesomeIcon
