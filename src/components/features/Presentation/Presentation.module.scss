@@ -11,14 +11,18 @@
     .heading {
       width: 100%;
       display: flex;
-      justify-content: end;
 
       h3 {
         margin-right: auto
       }
 
       .control {
-        width: 32px
+        width: 32px;
+
+        &:hover {
+          background-color: $primary;
+          border: none;
+        }
       }
     }
 
@@ -26,7 +30,7 @@
       width: 100%;
       display: flex;
       border-bottom: 1px solid $more-border;
-      padding: 5px 0;
+      padding: 5px 0 20px 0;
 
       .stars {
         a {
@@ -78,6 +82,14 @@
     .stock {
       padding: 20px 0;
       border-bottom: 1px solid $more-border;
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    p {
+      margin-bottom: 0;
     }
   }
 }

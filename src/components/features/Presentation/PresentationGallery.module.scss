@@ -40,14 +40,10 @@
 
       .thumbnail {
         height: 100px;
-        background: {
-          color: $productBox-photo-bg;
-          size: cover;
-          position: center;
-          repeat: no-repeat;
-        }
+        background-color: $productBox-photo-bg;
         margin: 10px 5px;
         text-align: center;
+        padding: 5px 0;
       }
     }
 
@@ -57,6 +53,11 @@
       transform: translateY(-50%);
       z-index: 2;
       width: 32px;
+
+      &:hover {
+        background-color: $primary;
+        border: none;
+      }
     }
 
     .controlLeft {

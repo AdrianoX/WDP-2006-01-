@@ -1,1 +1,53 @@
 @import "../../../styles/settings.scss";
+
+.socials {
+  display: flex;
+  padding: 20px 0;
+  margin-left: 0;
+
+  a {
+    height: 34px;
+    text-decoration: none;
+
+    svg {
+      margin-right: 5px;
+    }
+  }
+
+  @mixin socialBtn ($brand-color) {
+    svg {
+    color: $brand-color;
+    }
+
+    &:hover {
+      background: $brand-color;
+      border: none;
+
+      svg{
+        color: $text-color-light;
+      }
+    }
+  }
+
+  .fb {
+    @include socialBtn (#3b5998);
+  }
+
+  .gplus {
+    @include socialBtn(#db4437);
+  }
+
+  .twitter {
+    @include socialBtn(#1da1f0);
+  }
+
+  .pinterest {
+    @include socialBtn(#e60023);
+  }
+
+  .linkedin {
+    @include socialBtn(#2867b2);
+  }
+
+
+}

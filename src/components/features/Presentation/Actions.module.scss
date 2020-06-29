@@ -28,6 +28,7 @@
 
     label {
       margin: 0 20px 0 0;
+      font-weight: 600;
     }
 
     input[type="number"] {
@@ -38,6 +39,12 @@
       margin: 2px;
       padding: 0 0 0 15px;
       text-align: center;
+    }
+
+    .control:hover {
+      background-color: $text-color-light;
+      color: $primary;
+      border-color: $primary;
     }
   }
 }

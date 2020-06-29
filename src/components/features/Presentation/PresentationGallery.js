@@ -12,7 +12,7 @@ import PropTypes from 'prop-types';
 class PresentationGallery extends React.Component {
   render() {
     const { image, name } = this.props;
-    const mockProductImages = ['1', '2', '3', '4', '5'];
+    const mockProductImages = ['photo1', 'photo2', 'photo3', 'photo4', 'photo5'];
 
     return (
       <div className={styles.gallery}>
