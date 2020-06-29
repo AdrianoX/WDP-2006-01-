@@ -42,12 +42,11 @@ class Brands extends React.Component {
       <div className={styles.root}>
         <div className='container'>
           <div className={styles.wrapper}>
-            <div className={styles.control}>
-              <FontAwesomeIcon
-                className={styles.icon}
-                icon={faAngleLeft}
-                onClick={e => this.handlePageChange(e, 'next', pages)}
-              />
+            <div
+              className={styles.control}
+              onClick={e => this.handlePageChange(e, 'next', pages)}
+            >
+              <FontAwesomeIcon className={styles.icon} icon={faAngleLeft} />
             </div>
             <div className={styles.logoBox}>
               {image
@@ -58,12 +57,11 @@ class Brands extends React.Component {
                   </div>
                 ))}
             </div>
-            <div className={styles.control}>
-              <FontAwesomeIcon
-                className={styles.icon}
-                icon={faAngleRight}
-                onClick={e => this.handlePageChange(e, 'next', pages)}
-              />
+            <div
+              className={styles.control}
+              onClick={e => this.handlePageChange(e, 'next', pages)}
+            >
+              <FontAwesomeIcon className={styles.icon} icon={faAngleRight} />
             </div>
           </div>
         </div>
