@@ -5,6 +5,7 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Newsletter from '../Newsletter/Newsletter';
 import ShopBanner from '../ShopBanner/ShopBanner';
+import BreadCrumbs from '../BreadCrumbs/BreadCrumbs';
 
 const checkViewportWidth = () => {
   if (window.innerWidth < 768) {
@@ -28,6 +29,7 @@ const MainLayout = ({ children, changeViewportWidth }) => {
     <div>
       <Header />
       <ShopBanner />
+      <BreadCrumbs />
       {children}
       <Newsletter />
       <Footer />

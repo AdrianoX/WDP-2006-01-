@@ -1,18 +1,15 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-import styles from './ShopBanner.module.scss';
+import styles from './BreadCrumbs.module.scss';
 
-const ShopBanner = () => (
+const BreadCrumbs = () => (
   <div className={styles.root}>
     <div className='container'>
       <div className='row align-items-center'>
-        <div className='col text-center'>
+        <div className='col text-left'>
           <h1>
-            <span>BEDROOM</span> FURNITURE
+            HOME &gt; <span>Furniture</span>
           </h1>
-          <p>
-            ALLWAYS <span>25%</span> OFF OR MORE
-          </p>
         </div>
       </div>
     </div>
@@ -21,4 +18,4 @@ const ShopBanner = () => (
 
 // CompanyClaim.propTypes = {};
 
-export default ShopBanner;
+export default BreadCrumbs;
