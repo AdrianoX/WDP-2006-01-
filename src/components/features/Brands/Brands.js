@@ -51,7 +51,7 @@ class Brands extends React.Component {
             </div>
             <div className={styles.logoBox}>
               {image.slice(activePage * 1, (activePage + 6) * 1).map(brand => (
-                <div key={brand} className={styles.logo}>
+                <div key={brand.id} className={styles.logo}>
                   <img src={brand.image} alt={brand.name} />
                 </div>
               ))}
@@ -69,34 +69,6 @@ class Brands extends React.Component {
     );
   }
 }
-
-/*const Brands = ({ brands }) => {
-  return (
-    <div className={styles.root}>
-      <div className='container'>
-        <div className={styles.wrapper}>
-          <div className={styles.control}>
-            <FontAwesomeIcon className={styles.icon} icon={faAngleLeft} />
-          </div>
-          <div className={styles.logoBox}>
-            {brands.map(brand => (
-              <div
-                key={brand.id}
-                className={'flex-row d-flex flex-wrap col-6 ' + styles.logo}
-              >
-                <img src={brand.logo} alt={brand.name} />
-              </div>
-            ))}
-          </div>
-          <div className={styles.control}>
-            <FontAwesomeIcon className={styles.icon} icon={faAngleRight} />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-*/
 
 Brands.propTypes = {
   brands: PropTypes.arrayOf(
