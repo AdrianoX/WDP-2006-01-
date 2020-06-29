@@ -4,6 +4,49 @@ export const imageData = [
   { image: 'https://cdn.pixabay.com/photo/2016/11/19/13/06/bed-1839184_960_720.jpg' },
 ];
 
+export const brandsData = [
+  { image: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png' },
+  {
+    image: 'https://i.postimg.cc/CLxsBjkZ/Layer-139.png',
+  },
+  { image: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png' },
+  {
+    image: 'https://i.postimg.cc/vZprNkj9/Layer-142.png',
+  },
+  { image: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png' },
+  {
+    image: 'https://i.postimg.cc/vZprNkj9/Layer-142.png',
+  },
+  { image: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png' },
+  {
+    image: 'https://i.postimg.cc/vZprNkj9/Layer-142.png',
+  },
+  { image: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png' },
+  {
+    image: 'https://i.postimg.cc/vZprNkj9/Layer-142.png',
+  },
+  { image: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png' },
+  {
+    image: 'https://i.postimg.cc/CLxsBjkZ/Layer-139.png',
+  },
+  { image: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png' },
+  {
+    image: 'https://i.postimg.cc/vZprNkj9/Layer-142.png',
+  },
+  { image: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png' },
+  {
+    image: 'https://i.postimg.cc/vZprNkj9/Layer-142.png',
+  },
+  { image: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png' },
+  {
+    image: 'https://i.postimg.cc/vZprNkj9/Layer-142.png',
+  },
+  { image: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png' },
+  {
+    image: 'https://i.postimg.cc/vZprNkj9/Layer-142.png',
+  },
+];
+
 const initialState = {
   categories: [
     { id: 'bed', name: 'Bed' },

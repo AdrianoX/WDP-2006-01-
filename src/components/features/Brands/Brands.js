@@ -3,27 +3,41 @@ import styles from './Brands.module.scss';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import SwipeAbleWrapper from '../../common/SwipeAbleWrapper/SwipeAbleWrapper';
+import { brandsData } from '../../../redux/initialState';
 
 class Brands extends React.Component {
   state = {
     activePage: 0,
   };
 
-  handlePageChange(newPage) {
-    setTimeout(() => this.setState({ activePage: newPage }), 200);
+  handlePageChange(e, action, length) {
+    let newPage = this.state.activePage;
+    e.preventDefault();
+
+    if (action === 'next' && newPage < length - 1) {
+      this.setState({ activePage: newPage + 1 });
+    }
+
+    if (action === 'back' && newPage > 0) {
+      this.setState({ activePage: newPage - 1 });
+    }
   }
 
-  prepareBrand = () =>
-    this.props.brands.map(brand => {
-      return (
-        <div key={brand.id} className={styles.logo}>
-          <img src={brand.logo} alt={brand.name} />
-        </div>
-      );
-    });
+  nextPage(pages) {
+    let page = this.state.activePage;
+    if (page < pages - 1) this.setState({ activePage: page + 1 });
+  }
+
+  prevPage() {
+    let page = this.state.activePage;
+    if (page > 0) this.setState({ activePage: page - 1 });
+  }
 
   render() {
+    const { activePage } = this.state;
+    const image = brandsData;
+    const pages = image.length;
+
     return (
       <div className={styles.root}>
         <div className='container'>
@@ -32,19 +46,21 @@ class Brands extends React.Component {
               <FontAwesomeIcon
                 className={styles.icon}
                 icon={faAngleLeft}
-                onClick={() => this.handlePageChange()}
+                onClick={e => this.handlePageChange(e, 'next', pages)}
               />
             </div>
             <div className={styles.logoBox}>
-              {' '}
-              <SwipeAbleWrapper>{this.prepareBrand()}</SwipeAbleWrapper>
+              {image.slice(activePage * 1, (activePage + 6) * 1).map(brand => (
+                <div key={brand} className={styles.logo}>
+                  <img src={brand.image} alt={brand.name} />
+                </div>
+              ))}
             </div>
-
             <div className={styles.control}>
               <FontAwesomeIcon
                 className={styles.icon}
                 icon={faAngleRight}
-                onClick={() => this.handlePageChange()}
+                onClick={e => this.handlePageChange(e, 'next', pages)}
               />
             </div>
           </div>
