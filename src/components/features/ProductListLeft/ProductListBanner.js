@@ -22,13 +22,13 @@ const ProductListBanner = () => (
             </button>
             <ul>
               <li>
-                <a href='#'>Price: Highest first</a>
+                <a href='#test'>Price: Highest first</a>
               </li>
               <li>
-                <a href='#'>Rating: Highest first</a>
+                <a href='#test'>Rating: Highest first</a>
               </li>
               <li>
-                <a href='#'>Rating: Lowest first</a>
+                <a href='#test'>Rating: Lowest first</a>
               </li>
             </ul>
           </div>
@@ -45,13 +45,13 @@ const ProductListBanner = () => (
             </button>
             <ul>
               <li>
-                <a href='#'>24</a>
+                <a href='#test'>24</a>
               </li>
               <li>
-                <a href='#'>48</a>
+                <a href='#test'>48</a>
               </li>
               <li>
-                <a href='#'>64</a>
+                <a href='#test'>64</a>
               </li>
             </ul>
           </div>
