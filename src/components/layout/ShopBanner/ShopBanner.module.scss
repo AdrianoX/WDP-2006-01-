@@ -4,8 +4,7 @@
   background-color: $header-bg;
   height: 200px;
   margin-top: 20px;
-  // width: 1078px;
-  // margin-left: 155px;
+  width: 100%;
 
   h1 {
     margin: 60px 0 0 0;
@@ -50,82 +49,140 @@
 
 }
 
-// @media (max-width: 320px) {
-//   .root {
-//     div {
-//       bottom: 30px;
+@media (max-width: 320px) {
+  .root {
 
-//     }
+    h1 {
+      margin: 10px 0 0 0;
+      font-size: 27px;
+    }
 
-//     img {
-//       margin: 0 180px 0 0;
-//       width: 150px;
+    p {
+      margin: 0 0 0 8px;
+      font-size: 15px;
 
-//     }
+      span {
+        color: $orange;
+      }
+    }
 
-//     .phoneNumber {
-//       top: 115px;
+    h2 {
 
-//       p {
-//         text-align: right;
-//         font-size: 14px;
-//       }
-//     }
+      padding-top: 7px;
+      margin-top: 30px;
 
-//     .cart {
-//       bottom: 80px;
-//     }
-//   }
-// }
+    }
 
-// @media (min-width: 321px) and (max-width: 375px) {
-//   .root {
-//     div {
-//       bottom: 30px;
-//     }
+  }
+}
 
-//     img {
-//       margin: 0 180px 0 0;
-//       width: 160px;
-//     }
+@media (min-width: 321px) and (max-width: 375px) {
+  .root {
 
-//     .phoneNumber {
-//       top: 120px;
+    h1 {
+      margin: 10px 0 0 0;
+      font-size: 33px;
+    }
 
-//       p {
-//         text-align: right;
-//         font-size: 14px;
-//       }
-//     }
+    p {
+      margin: 0 0 0 8px;
+      font-size: 15px;
 
-//     .cart {
-//       bottom: 80px;
-//     }
-//   }
-// }
+      span {
+        color: $orange;
+      }
+    }
 
-// @media (min-width: 376px) and (max-width: 500px) {
-//   .root {
-//     div {
-//       bottom: 30px;
-//     }
+    h2 {
 
-//     img {
-//       margin: 0 230px 0 0;
-//       width: 160px;
-//     }
+      padding-top: 7px;
+      margin-top: 30px;
 
-//     .phoneNumber {
-//       top: 120px;
+    }
 
-//       p {
-//         text-align: right;
-//         font-size: 14px;
-//       }
-//     }
+  }
+}
 
-//     .cart {
-//       bottom: 80px;
-//     }
-//   }
-// }
+@media (min-width: 376px) and (max-width: 500px) {
+  .root {
+
+    h1 {
+      margin: 10px 0 0 0;
+      font-size: 39px;
+    }
+
+    p {
+      margin: 0 0 0 8px;
+      font-size: 15px;
+
+      span {
+        color: $orange;
+      }
+    }
+
+    h2 {
+
+      padding-top: 7px;
+      margin-top: 30px;
+
+    }
+
+  }
+
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+  .root {
+
+    h1 {
+      margin: 40px 0 0 0;
+      font-size: 39px;
+    }
+
+    p {
+      margin: 10px 0 0 8px;
+      font-size: 15px;
+
+      span {
+        color: $orange;
+      }
+    }
+
+    h2 {
+
+      padding-top: 7px;
+      margin-top: 30px;
+
+    }
+
+  }
+
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+  .root {
+
+    h1 {
+      margin: 40px 0 0 0;
+      font-size: 45px;
+    }
+
+    p {
+      margin: 10px 0 0 8px;
+      font-size: 15px;
+
+      span {
+        color: $orange;
+      }
+    }
+
+    h2 {
+
+      padding-top: 7px;
+      margin-top: 30px;
+
+    }
+
+  }
+
+}
