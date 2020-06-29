@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './ProductList.module.scss';
 import FilterCategories from '../../features/FilterCategories/FilterCategories';
 
-import ColourFilter from './../Filters/ColourFilter';
+import ColourFilter from '../../features/ColourFilter/ColourFilter';
 
 const ProductList = () => (
   <div className={styles.root}>
