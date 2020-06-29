@@ -1,0 +1,131 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  background-color: $header-bg;
+  height: 200px;
+  margin-top: 20px;
+  // width: 1078px;
+  // margin-left: 155px;
+
+  h1 {
+    margin: 60px 0 0 0;
+    font-size: 65px;
+    line-height: 42px;
+    color: $lightSilver;
+    font-weight: 500;
+
+    span {
+      font-weight: 100;
+    }
+  }
+
+  p {
+    margin: 10px 0 0 8px;
+    font-size: 30px;
+    line-height: 42px;
+    color: $lightSilver;
+    font-weight: 300;
+    letter-spacing: 11px;
+
+    span {
+      color: $orange;
+    }
+  }
+
+  h2 {
+
+    padding-top: 7px;
+    margin-top: 10px;
+    height: 30px;
+    width: 100%;
+    color: silver;
+    font-size: 14px;
+
+    span {
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+
+}
+
+// @media (max-width: 320px) {
+//   .root {
+//     div {
+//       bottom: 30px;
+
+//     }
+
+//     img {
+//       margin: 0 180px 0 0;
+//       width: 150px;
+
+//     }
+
+//     .phoneNumber {
+//       top: 115px;
+
+//       p {
+//         text-align: right;
+//         font-size: 14px;
+//       }
+//     }
+
+//     .cart {
+//       bottom: 80px;
+//     }
+//   }
+// }
+
+// @media (min-width: 321px) and (max-width: 375px) {
+//   .root {
+//     div {
+//       bottom: 30px;
+//     }
+
+//     img {
+//       margin: 0 180px 0 0;
+//       width: 160px;
+//     }
+
+//     .phoneNumber {
+//       top: 120px;
+
+//       p {
+//         text-align: right;
+//         font-size: 14px;
+//       }
+//     }
+
+//     .cart {
+//       bottom: 80px;
+//     }
+//   }
+// }
+
+// @media (min-width: 376px) and (max-width: 500px) {
+//   .root {
+//     div {
+//       bottom: 30px;
+//     }
+
+//     img {
+//       margin: 0 230px 0 0;
+//       width: 160px;
+//     }
+
+//     .phoneNumber {
+//       top: 120px;
+
+//       p {
+//         text-align: right;
+//         font-size: 14px;
+//       }
+//     }
+
+//     .cart {
+//       bottom: 80px;
+//     }
+//   }
+// }
