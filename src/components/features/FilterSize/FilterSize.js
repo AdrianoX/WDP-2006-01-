@@ -1,7 +1,5 @@
 import React from 'react';
 import styles from './FilterSize.module.scss';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import Checkbox from '@material-ui/core/Checkbox';
 import { filterSize } from './FilterSize.config';
 
@@ -10,15 +8,17 @@ class FilterSize extends React.Component {
     super();
 
     this.state = {
-      activeItem: 0,
+      activeItems: [],
     };
   }
 
-  handleItemClick(index) {
-    this.setState({
-      activeItem: index,
-      activeCheckbox: index,
-    });
+  handleItemClick(id, isActive) {
+    const { activeItems } = this.state;
+
+    const newActiveItems = isActive
+      ? activeItems.filter(el => el !== id)
+      : activeItems.concat(id);
+    this.setState({ activeItems: newActiveItems });
   }
 
   render() {
@@ -26,22 +26,24 @@ class FilterSize extends React.Component {
       <div>
         <h3 className={styles.title}>Filter By Categories</h3>
         <div className={styles.wrapper}>
-          {filterSize.map((item, index) => (
-            <div
-              key={item.id}
-              className={
-                this.state.activeItem === index ? styles.active : styles.noactive
-              }
-              onClick={this.handleItemClick.bind(this, index)}
-            >
-              <div className={styles.item}>
-                <Checkbox />
+          {filterSize.map(({ id, nr }, index) => {
+            const isActive = this.state.activeItems.includes(id);
 
-                {item.id}
-                <div className={styles.item2}>{item.nr}</div>
+            return (
+              <div
+                key={id}
+                className={isActive ? styles.active : styles.noactive}
+                onClick={this.handleItemClick.bind(this, id, isActive)}
+              >
+                <div className={styles.item}>
+                  <Checkbox checked={isActive} />
+
+                  {id}
+                  <div className={styles.item2}>{nr}</div>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     );
