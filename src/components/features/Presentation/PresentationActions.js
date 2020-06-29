@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Actions.module.scss';
+import styles from './PresentationActions.module.scss';
 import Button from '../../common/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {

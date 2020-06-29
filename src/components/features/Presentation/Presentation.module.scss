@@ -82,6 +82,19 @@
     .stock {
       padding: 20px 0;
       border-bottom: 1px solid $more-border;
+      text-transform: capitalize;
+
+      p:first-of-type {
+        span {
+        margin-right: 10px;
+        }
+      }
+
+      p:last-of-type {
+        span {
+          margin-right: 25px;
+        }
+      }
 
       span {
         font-weight: 600;

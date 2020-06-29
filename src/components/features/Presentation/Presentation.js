@@ -3,7 +3,7 @@ import styles from './Presentation.module.scss';
 import Button from '../../common/Button/Button';
 import PropTypes from 'prop-types';
 import StarsRating from '../../common/StarRating/StarRating';
-import Actions from './Actions';
+import PresentationActions from './PresentationActions';
 import PresentationGallery from './PresentationGallery';
 import SocialMedia from '../../common/SocialMedia/SocialMedia';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -55,7 +55,7 @@ class Presentation extends React.Component {
                     $ {products[0].price}
                   </Button>
                 </div>
-                <Actions />
+                <PresentationActions />
                 <div className={styles.overview}>
                   <h5>Quick Overview</h5>
                   <p>
