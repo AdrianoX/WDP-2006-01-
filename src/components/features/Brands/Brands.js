@@ -3,7 +3,6 @@ import styles from './Brands.module.scss';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import { brandsData } from '../../../redux/initialState';
 
 class Brands extends React.Component {
   state = {
@@ -35,8 +34,8 @@ class Brands extends React.Component {
 
   render() {
     const { activePage } = this.state;
-    const image = brandsData;
-    const pages = image.length;
+    const { brands } = this.props;
+    const pages = brands.length;
 
     return (
       <div className={styles.root}>
@@ -44,16 +43,16 @@ class Brands extends React.Component {
           <div className={styles.wrapper}>
             <div
               className={styles.control}
-              onClick={e => this.handlePageChange(e, 'next', pages)}
+              onClick={e => this.handlePageChange(e, 'back', pages)}
             >
               <FontAwesomeIcon className={styles.icon} icon={faAngleLeft} />
             </div>
             <div className={styles.logoBox}>
-              {image
-                .slice(activePage * 1, (activePage + 6) * 1)
+              {brands
+                .slice(activePage * 6, activePage * 6 + 6)
                 .map((brand, element) => (
                   <div key={element} className={styles.logo}>
-                    <img src={brand.image} alt={brand.name} />
+                    <img src={brand.logo} alt={brand.name} />
                   </div>
                 ))}
             </div>

@@ -1123,6 +1123,54 @@ const initialState = {
       name: 'Brand 6',
       logo: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png',
     },
+
+    {
+      id: 'Brand-7',
+      name: 'Brand 7',
+      logo: 'https://i.postimg.cc/d0r2PnPf/Layer-140.png',
+    },
+
+    {
+      id: 'Brand-8',
+      name: 'Brand 8',
+      logo: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png',
+    },
+
+    {
+      id: 'Brand-9',
+      name: 'Brand 9',
+      logo: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png',
+    },
+
+    {
+      id: 'Brand-10',
+      name: 'Brand 10',
+      logo: 'https://i.postimg.cc/CLxsBjkZ/Layer-139.png',
+    },
+
+    {
+      id: 'Brand-11',
+      name: 'Brand 11',
+      logo: 'https://i.postimg.cc/d0r2PnPf/Layer-140.png',
+    },
+
+    {
+      id: 'Brand-12',
+      name: 'Brand 12',
+      logo: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png',
+    },
+
+    {
+      id: 'Brand-13',
+      name: 'Brand 13',
+      logo: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png',
+    },
+
+    {
+      id: 'Brand-14',
+      name: 'Brand 14',
+      logo: 'https://i.postimg.cc/VkS94m7m/Layer-141.png',
+    },
   ],
 
   viewport: '',
