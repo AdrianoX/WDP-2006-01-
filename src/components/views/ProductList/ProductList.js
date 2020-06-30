@@ -2,6 +2,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import styles from './ProductList.module.scss';
 import FilterCategories from '../../features/FilterCategories/FilterCategories';
+import FilterSize from '../../features/FilterSize/FilterSize';
 import ProductListBanner from '../../features/ProductListLeft/ProductListBanner';
 import ProductListLeftContainer from '../../features/ProductListLeft/ProductListLeftContainer';
 
@@ -17,6 +18,7 @@ const ProductList = () => (
         </div>
         <div className={'col-sm-12 col-md-3 ' + styles.right}>
           <FilterCategories />
+          <FilterSize />
           <ColourFilter />
         </div>
       </div>
