@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './ProductList.module.scss';
 import FilterCategories from '../../features/FilterCategories/FilterCategories';
 import FilterSize from '../../features/FilterSize/FilterSize';
-import FeaturedProducts from '../../features/FeaturedProducts/FeaturedProducts';
+import SmallFurniture from '../../features/SmallFurniture/SmallFurniture';
 import ProductListBanner from '../../features/ProductListLeft/ProductListBanner';
 import ProductListLeftContainer from '../../features/ProductListLeft/ProductListLeftContainer';
 
@@ -21,7 +21,7 @@ const ProductList = () => (
           <FilterCategories />
           <FilterSize />
           <ColourFilter />
-          <FeaturedProducts />
+          <SmallFurniture />
         </div>
       </div>
     </div>

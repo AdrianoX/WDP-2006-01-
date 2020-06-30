@@ -1,12 +1,12 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-import styles from './FeaturedProducts.module.scss';
+import styles from './SmallFurniture.module.scss';
 import Button from '../../common/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 
-class FeaturedProducts extends React.Component {
+class SmallFurniture extends React.Component {
   constructor() {
     super();
 
@@ -103,4 +103,4 @@ class FeaturedProducts extends React.Component {
   }
 }
 
-export default FeaturedProducts;
+export default SmallFurniture;
