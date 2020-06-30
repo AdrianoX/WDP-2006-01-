@@ -9,7 +9,6 @@ import brandsReducer from './brandsRedux';
 import favoriteRedux from './favoriteRedux';
 import viewportReducer from './viewportRedux';
 import compareReducer from './compareRedux';
-
 // define reducers
 const reducers = {
   cart: cartReducer,
