@@ -1092,6 +1092,39 @@ const initialState = {
     },
   ],
 
+  posts: [
+    {
+      id: 0,
+      image: 'https://i.postimg.cc/J0jgNPNX/dddddddd.jpg',
+      imageTitle: 'image',
+      date: '26 Jun 2020',
+      title: 'Top-selling furniture 2000:',
+      comments: '1',
+      textExample:
+        'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.',
+    },
+    {
+      id: 1,
+      image: 'https://i.postimg.cc/3NLrT8q9/7777777.jpg',
+      imageTitle: 'image',
+      date: '27 Jun 2020',
+      title: 'Guide to furniture composition',
+      comments: '22',
+      textExample:
+        'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.',
+    },
+    {
+      id: 2,
+      image: 'https://i.postimg.cc/vT88kg0c/12312312312.jpg',
+      imageTitle: 'image',
+      date: '28 Jun 2020',
+      title: 'Modern furniture design',
+      comments: '4444',
+      textExample:
+        'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.',
+    },
+  ],
+
   brands: [
     {
       id: 'Brand-1',
