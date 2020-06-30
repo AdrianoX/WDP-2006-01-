@@ -7,6 +7,7 @@ import Gallery from '../../features/Gallery/GalleryContainer';
 import FeatureBoxes from '../../features/FeatureBoxes/FeatureBoxes';
 import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
 import Brands from '../../features/Brands/BrandsContainer';
+import LatestBlog from '../../features/LatestBlog/LatestBlogContainer.js';
 
 import SaleProduct from '../../features/SaleProducts/SaleProductContainer';
 
@@ -17,6 +18,7 @@ const Homepage = () => (
     <SaleProduct />
     <NewFurniture />
     <Gallery />
+    <LatestBlog />
     <Brands />
     <Feedback />
   </div>

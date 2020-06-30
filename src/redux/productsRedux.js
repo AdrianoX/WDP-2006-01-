@@ -1,5 +1,6 @@
 /* selectors */
 export const getAll = ({ products }) => products;
+export const getAllProd = ({ products }) => products;
 export const getCount = ({ products }) => products.length;
 
 export const getNew = ({ products }) =>
