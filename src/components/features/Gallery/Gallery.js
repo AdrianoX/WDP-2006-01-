@@ -4,6 +4,7 @@ import styles from './Gallery.module.scss';
 import GalleryPriceDetails from './GalleryPriceDetails';
 import GalleryIcons from './GalleryIcon';
 import GalleryRightSide from './GalleryRightSide';
+// import SwipeAbleWrapper from '../../common/SwipeAbleWrapper/SwipeAbleWrapper';
 
 class Gallery extends Component {
   constructor(props) {
@@ -81,7 +82,7 @@ class Gallery extends Component {
       <div className={styles.root}>
         <div className='container'>
           <div className='row'>
-            <div className='col-12 col-md-6'>
+            <div className='col-12 col-lg-6'>
               <div className={styles.panelBar}>
                 <div className='row no-gutters align-items-end'>
                   <div className={styles.heading}>
@@ -151,7 +152,7 @@ class Gallery extends Component {
               </div>
             </div>
             {/* Left column end */}
-            <div className='col-12 col-md-6'>
+            <div className='col-lg-6 d-none d-lg-block'>
               <GalleryRightSide
                 bgImageUrl={products[1].bgImageUrl}
                 name={products[1].name}
