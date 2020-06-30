@@ -22,7 +22,17 @@ class Gallery extends Component {
   tabChange = (newTab, e) => {
     e.preventDefault();
 
+<<<<<<< HEAD
     this.setState({ fade: true });
+=======
+    if (viewport === 'desktop') {
+      productsOnPage = 8;
+    } else if (viewport === 'tablet') {
+      productsOnPage = 4;
+    } else {
+      productsOnPage = 1;
+    }
+>>>>>>> commit before rebase
 
     setTimeout(() => {
       this.setState({ activeTab: newTab });
