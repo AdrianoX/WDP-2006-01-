@@ -4,6 +4,49 @@ export const imageData = [
   { image: 'https://cdn.pixabay.com/photo/2016/11/19/13/06/bed-1839184_960_720.jpg' },
 ];
 
+export const brandsData = [
+  { image: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png' },
+  {
+    image: 'https://i.postimg.cc/CLxsBjkZ/Layer-139.png',
+  },
+  { image: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png' },
+  {
+    image: 'https://i.postimg.cc/vZprNkj9/Layer-142.png',
+  },
+  { image: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png' },
+  {
+    image: 'https://i.postimg.cc/vZprNkj9/Layer-142.png',
+  },
+  { image: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png' },
+  {
+    image: 'https://i.postimg.cc/vZprNkj9/Layer-142.png',
+  },
+  { image: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png' },
+  {
+    image: 'https://i.postimg.cc/vZprNkj9/Layer-142.png',
+  },
+  { image: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png' },
+  {
+    image: 'https://i.postimg.cc/CLxsBjkZ/Layer-139.png',
+  },
+  { image: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png' },
+  {
+    image: 'https://i.postimg.cc/vZprNkj9/Layer-142.png',
+  },
+  { image: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png' },
+  {
+    image: 'https://i.postimg.cc/vZprNkj9/Layer-142.png',
+  },
+  { image: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png' },
+  {
+    image: 'https://i.postimg.cc/vZprNkj9/Layer-142.png',
+  },
+  { image: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png' },
+  {
+    image: 'https://i.postimg.cc/vZprNkj9/Layer-142.png',
+  },
+];
+
 const initialState = {
   categories: [
     { id: 'bed', name: 'Bed' },
@@ -1160,6 +1203,54 @@ const initialState = {
       id: 'Brand-6',
       name: 'Brand 6',
       logo: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png',
+    },
+
+    {
+      id: 'Brand-7',
+      name: 'Brand 7',
+      logo: 'https://i.postimg.cc/d0r2PnPf/Layer-140.png',
+    },
+
+    {
+      id: 'Brand-8',
+      name: 'Brand 8',
+      logo: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png',
+    },
+
+    {
+      id: 'Brand-9',
+      name: 'Brand 9',
+      logo: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png',
+    },
+
+    {
+      id: 'Brand-10',
+      name: 'Brand 10',
+      logo: 'https://i.postimg.cc/CLxsBjkZ/Layer-139.png',
+    },
+
+    {
+      id: 'Brand-11',
+      name: 'Brand 11',
+      logo: 'https://i.postimg.cc/d0r2PnPf/Layer-140.png',
+    },
+
+    {
+      id: 'Brand-12',
+      name: 'Brand 12',
+      logo: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png',
+    },
+
+    {
+      id: 'Brand-13',
+      name: 'Brand 13',
+      logo: 'https://i.postimg.cc/9FgtGrYL/Layer-138.png',
+    },
+
+    {
+      id: 'Brand-14',
+      name: 'Brand 14',
+      logo: 'https://i.postimg.cc/VkS94m7m/Layer-141.png',
     },
   ],
 
